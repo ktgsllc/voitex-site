@@ -1,5 +1,3 @@
-import Breadcrumbs from '@/components/Breadcrumbs';
-
 export default function QuickSumPage() {
   return (
     <main className="py-8">

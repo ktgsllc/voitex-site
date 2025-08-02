@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 px-4 py-20 text-center">
@@ -35,9 +37,11 @@ export default function Hero() {
             </a>
           </div>
           <div className="mt-12">
-            <img
+            <Image
               src="/hero-image.webp" // ← 差し替え予定の画像
               alt="ボイテキ！UIイメージ"
+              width={800}
+              height={400}
               className="mx-auto w-full max-w-4xl rounded shadow-lg"
             />
           </div>

@@ -104,7 +104,7 @@ export default function Steps() {
             {/* 背景の線（lg画面のみ表示） */}
             <div className="absolute left-0 right-0 top-5 z-0 hidden h-0.5 bg-gray-300 lg:block"></div>
 
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <div key={step.id} className="relative z-10 text-center">
                 <div className="flex flex-col items-center space-y-3">
                   <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">

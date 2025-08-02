@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Features() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -154,9 +155,11 @@ export default function Features() {
 
                 {feature.image && (
                   <div className="mb-4">
-                    <img
+                    <Image
                       src={feature.image}
                       alt={`${feature.title}の画面イメージ`}
+                      width={400}
+                      height={192}
                       className="h-48 w-full cursor-pointer rounded-lg object-cover shadow-sm transition-opacity hover:opacity-80"
                       onClick={() => setSelectedImage(feature.image)}
                     />
@@ -251,9 +254,11 @@ export default function Features() {
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={selectedImage}
                 alt="拡大表示"
+                width={800}
+                height={600}
                 className="h-auto max-h-[98vh] w-full rounded-lg object-contain shadow-2xl"
               />
               <button

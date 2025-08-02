@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         publishedTime: data.publishedAt,
       },
     };
-  } catch (e) {
+  } catch {
     return {
       title: '記事が見つかりません | ボイテキ！',
     };

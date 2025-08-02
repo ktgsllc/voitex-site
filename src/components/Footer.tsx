@@ -52,7 +52,9 @@ export default function Footer() {
 
           {/* サポート・お問い合わせ */}
           <div>
-            <h3 className="mb-4 font-bold text-gray-800">サポート・お問い合わせ</h3>
+            <h3 className="mb-4 font-bold text-gray-800">
+              サポート・お問い合わせ
+            </h3>
             <nav className="space-y-2">
               <a
                 href="https://forms.gle/jCp4fEqMV5fGaoWu6"
@@ -108,11 +110,11 @@ export default function Footer() {
         <div className="mt-8 border-t pt-8">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <div>
-              <Image 
-                src="/logo.png" 
-                alt="Voitex" 
-                width={169} 
-                height={34} 
+              <Image
+                src="/logo.png"
+                alt="Voitex"
+                width={169}
+                height={34}
                 className="mb-2"
               />
               <p>© {new Date().getFullYear()} KTGS.llc</p>

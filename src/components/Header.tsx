@@ -11,8 +11,18 @@ const navItems = [
   { label: '導入事例', href: '/cases', icon: '💼' },
   { label: 'FAQ', href: '/faq', icon: '❓' },
   { label: 'お知らせ', href: '/news', icon: '📢' },
-  { label: 'マニュアル', href: 'https://manual.voitex.site/', external: true, icon: '📖' },
-  { label: 'ブログ', href: 'https://manual.voitex.site/blog/', external: true, icon: '✍️' },
+  {
+    label: 'マニュアル',
+    href: 'https://manual.voitex.site/',
+    external: true,
+    icon: '📖',
+  },
+  {
+    label: 'ブログ',
+    href: 'https://manual.voitex.site/blog/',
+    external: true,
+    icon: '✍️',
+  },
   {
     label: 'お問い合わせ',
     href: 'https://docs.google.com/forms/d/e/1FAIpQLSdsOxJVvVHtMUDbPUiS58s_vDJcGGhQLGIE9HLjiqxlQxfbgg/viewform',
@@ -32,20 +42,20 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-        <Link href="/" className="hover:opacity-80 transition-opacity">
-          <Image 
-            src="/logo.png" 
-            alt="ボイテキ！" 
-            width={169} 
-            height={34} 
+        <Link href="/" className="transition-opacity hover:opacity-80">
+          <Image
+            src="/logo.png"
+            alt="ボイテキ！"
+            width={169}
+            height={34}
             className="h-8 w-auto"
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center space-x-6">
+        <nav className="hidden items-center space-x-6 lg:flex">
           {navItems.slice(0, 4).map(({ label, href, external }) =>
             external ? (
               <a
@@ -53,7 +63,7 @@ export default function Header() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors text-sm"
+                className="text-sm text-gray-600 transition-colors hover:text-primary"
               >
                 {label}
               </a>
@@ -62,7 +72,9 @@ export default function Header() {
                 key={href}
                 href={href}
                 className={`text-sm transition-colors ${
-                  pathname === href ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'
+                  pathname === href
+                    ? 'font-medium text-primary'
+                    : 'text-gray-600 hover:text-primary'
                 }`}
               >
                 {label}
@@ -76,7 +88,7 @@ export default function Header() {
               onClick={() => setSisterServicesOpen(!sisterServicesOpen)}
               className={`text-sm transition-colors ${
                 sisterServices.some((service) => pathname === service.href)
-                  ? 'text-primary font-medium'
+                  ? 'font-medium text-primary'
                   : 'text-gray-600 hover:text-primary'
               }`}
             >
@@ -85,15 +97,15 @@ export default function Header() {
             </button>
 
             {sisterServicesOpen && (
-              <div className="absolute left-0 top-full mt-1 min-w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
+              <div className="absolute left-0 top-full mt-1 min-w-48 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
                 {sisterServices.map(({ label, href }) => (
                   <Link
                     key={href}
                     href={href}
                     className={`block px-4 py-2 text-sm transition-colors ${
                       pathname === href
-                        ? 'text-primary bg-gray-50'
-                        : 'text-gray-600 hover:text-primary hover:bg-gray-50'
+                        ? 'bg-gray-50 text-primary'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-primary'
                     }`}
                     onClick={() => setSisterServicesOpen(false)}
                   >
@@ -105,7 +117,7 @@ export default function Header() {
           </div>
 
           {/* Secondary nav items */}
-          <div className="flex items-center space-x-4 ml-6 pl-6 border-l border-gray-200">
+          <div className="ml-6 flex items-center space-x-4 border-l border-gray-200 pl-6">
             {navItems.slice(4).map(({ label, href, external }) =>
               external ? (
                 <a
@@ -113,7 +125,7 @@ export default function Header() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-primary transition-colors text-sm"
+                  className="text-sm text-gray-500 transition-colors hover:text-primary"
                 >
                   {label}
                 </a>
@@ -122,7 +134,9 @@ export default function Header() {
                   key={href}
                   href={href}
                   className={`text-sm transition-colors ${
-                    pathname === href ? 'text-primary font-medium' : 'text-gray-500 hover:text-primary'
+                    pathname === href
+                      ? 'font-medium text-primary'
+                      : 'text-gray-500 hover:text-primary'
                   }`}
                 >
                   {label}
@@ -134,23 +148,33 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden p-3 text-gray-600 hover:text-primary transition-colors rounded-lg hover:bg-gray-100"
+          className="rounded-lg p-3 text-gray-600 transition-colors hover:bg-gray-100 hover:text-primary lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="メニュー"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden border-t border-gray-100 bg-white shadow-lg">
+        <div className="border-t border-gray-100 bg-white shadow-lg lg:hidden">
           <div className="px-4 py-4">
             {/* Primary nav items */}
             <div className="mb-6">
-              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-1">
+              <div className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
                 メインメニュー
               </div>
               <div className="space-y-1">
@@ -161,7 +185,7 @@ export default function Header() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-3 px-3 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-gray-700 transition-colors hover:bg-gray-50 hover:text-primary"
                       onClick={() => setOpen(false)}
                     >
                       <span className="text-lg">{icon}</span>
@@ -172,10 +196,10 @@ export default function Header() {
                     <Link
                       key={href}
                       href={href}
-                      className={`flex items-center space-x-3 px-3 py-3 rounded-lg transition-colors ${
-                        pathname === href 
-                          ? 'text-primary bg-primary/5 font-medium' 
-                          : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                      className={`flex items-center space-x-3 rounded-lg px-3 py-3 transition-colors ${
+                        pathname === href
+                          ? 'bg-primary/5 font-medium text-primary'
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
                       }`}
                       onClick={() => setOpen(false)}
                     >
@@ -192,7 +216,7 @@ export default function Header() {
 
             {/* Sister Services */}
             <div className="mb-6">
-              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-1">
+              <div className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
                 姉妹サービス
               </div>
               <div className="space-y-1">
@@ -200,10 +224,10 @@ export default function Header() {
                   <Link
                     key={href}
                     href={href}
-                    className={`flex items-center space-x-3 px-3 py-3 rounded-lg transition-colors ${
-                      pathname === href 
-                        ? 'text-primary bg-primary/5 font-medium' 
-                        : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                    className={`flex items-center space-x-3 rounded-lg px-3 py-3 transition-colors ${
+                      pathname === href
+                        ? 'bg-primary/5 font-medium text-primary'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
                     }`}
                     onClick={() => setOpen(false)}
                   >
@@ -219,7 +243,7 @@ export default function Header() {
 
             {/* Secondary nav items */}
             <div>
-              <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 px-1">
+              <div className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
                 その他
               </div>
               <div className="space-y-1">
@@ -230,7 +254,7 @@ export default function Header() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-3 px-3 py-3 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-gray-600 transition-colors hover:bg-gray-50 hover:text-primary"
                       onClick={() => setOpen(false)}
                     >
                       <span className="text-lg">{icon}</span>
@@ -241,10 +265,10 @@ export default function Header() {
                     <Link
                       key={href}
                       href={href}
-                      className={`flex items-center space-x-3 px-3 py-3 rounded-lg transition-colors ${
-                        pathname === href 
-                          ? 'text-primary bg-primary/5 font-medium' 
-                          : 'text-gray-600 hover:text-primary hover:bg-gray-50'
+                      className={`flex items-center space-x-3 rounded-lg px-3 py-3 transition-colors ${
+                        pathname === href
+                          ? 'bg-primary/5 font-medium text-primary'
+                          : 'text-gray-600 hover:bg-gray-50 hover:text-primary'
                       }`}
                       onClick={() => setOpen(false)}
                     >
