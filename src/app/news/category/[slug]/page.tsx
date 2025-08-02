@@ -22,12 +22,12 @@ type Category = {
 };
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
-  searchParams: {
+  }>;
+  searchParams: Promise<{
     page?: string;
-  };
+  }>;
 };
 
 // 静的生成用のパラメータ生成
@@ -43,7 +43,7 @@ export async function generateStaticParams() {
 
 // SEO用のメタデータ生成
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
 
   const categoryRes = await client.getList<Category>({
     endpoint: 'category',
@@ -69,8 +69,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CategoryPage({ params, searchParams }: Props) {
-  const { slug } = params;
-  const page = parseInt(searchParams.page || '1');
+  const { slug } = await params;
+  const { page: pageParam } = await searchParams;
+  const page = parseInt(pageParam || '1');
   const limit = 10;
   const offset = (page - 1) * limit;
 

@@ -16,9 +16,9 @@ type NewsDetail = {
 };
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 // 静的生成用のパラメータ生成
@@ -39,7 +39,7 @@ export async function generateStaticParams() {
 
 // SEO用のメタデータ生成
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   
   // 日本語スラッグをデコード
   const decodedSlug = decodeURIComponent(slug);
@@ -98,7 +98,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function NewsDetailPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   
   // 日本語スラッグをデコード
   const decodedSlug = decodeURIComponent(slug);
