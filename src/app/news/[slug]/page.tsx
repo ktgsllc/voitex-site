@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 type NewsDetail = {
+  id: string;
   title: string;
   content: string;
   publishedAt: string;
@@ -30,10 +31,8 @@ export async function generateStaticParams() {
     },
   });
 
-      
-
   return news.contents.map((item: NewsDetail) => ({
-    slug: item.slug, // 元のスラッグをそのまま返す
+    slug: item.slug,
   }));
 }
 
@@ -52,23 +51,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       endpoint: 'news',
       queries: {
         filters: `slug[equals]${decodedSlug}`,
-        fields: 'id',
+        fields: 'id,title,content,publishedAt',
       },
     });
 
     let article = newsRes.contents[0];
     
-         // デコードされたスラッグで見つからない場合、元のスラッグでも試行
-     if (!article) {
-       const newsResOriginal = await client.getList<NewsDetail>({
-         endpoint: 'news',
-         queries: {
-           filters: `slug[equals]${slug}`,
-           fields: 'id',
-         },
-       });
-       article = newsResOriginal.contents[0];
-     }
+    // デコードされたスラッグで見つからない場合、元のスラッグでも試行
+    if (!article) {
+      const newsResOriginal = await client.getList<NewsDetail>({
+        endpoint: 'news',
+        queries: {
+          filters: `slug[equals]${slug}`,
+          fields: 'id,title,content,publishedAt',
+        },
+      });
+      article = newsResOriginal.contents[0];
+    }
     
          if (!article) {
        throw new Error('Article not found');
@@ -211,23 +210,23 @@ export default async function NewsDetailPage({ params }: Props) {
       endpoint: 'news',
       queries: {
         filters: `slug[equals]${decodedSlug}`,
-        fields: 'id',
+        fields: 'id,title,content,publishedAt,category',
       },
     });
 
     let article = newsRes.contents[0];
     
-         // デコードされたスラッグで見つからない場合、元のスラッグでも試行
-     if (!article) {
-       const newsResOriginal = await client.getList<NewsDetail>({
-         endpoint: 'news',
-         queries: {
-           filters: `slug[equals]${slug}`,
-           fields: 'id',
-         },
-       });
-       article = newsResOriginal.contents[0];
-     }
+    // デコードされたスラッグで見つからない場合、元のスラッグでも試行
+    if (!article) {
+      const newsResOriginal = await client.getList<NewsDetail>({
+        endpoint: 'news',
+        queries: {
+          filters: `slug[equals]${slug}`,
+          fields: 'id,title,content,publishedAt,category',
+        },
+      });
+      article = newsResOriginal.contents[0];
+    }
     
          if (!article) {
        throw new Error('Article not found');
