@@ -47,6 +47,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-68QTZ1MSD0"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-68QTZ1MSD0');
+            `,
+          }}
+        />
+      </head>
       <body>
         <Header />
         <div className="mx-auto max-w-5xl px-4">
