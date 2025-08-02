@@ -110,33 +110,40 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const totalPages = Math.ceil(totalCount / limit);
 
   return (
-    <section className="py-12 px-4 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">#{category.name} のお知らせ</h1>
+    <section className="mx-auto max-w-4xl px-4 py-12">
+      <h1 className="mb-6 text-3xl font-bold">#{category.name} のお知らせ</h1>
 
       <div className="mb-4">
-        <Link href="/news" className="text-blue-600 hover:underline text-sm">
+        <Link href="/news" className="text-sm text-blue-600 hover:underline">
           ← お知らせ一覧へ戻る
         </Link>
       </div>
 
       {newsRes.contents.length === 0 ? (
-        <div className="text-center py-12">
-          <p className="text-gray-500 text-lg">このカテゴリにはまだお知らせがありません。</p>
+        <div className="py-12 text-center">
+          <p className="text-lg text-gray-500">
+            このカテゴリにはまだお知らせがありません。
+          </p>
         </div>
       ) : (
         <>
-          <ul className="space-y-6 mb-8">
+          <ul className="mb-8 space-y-6">
             {newsRes.contents.map((item) => (
               <li key={item.id} className="border-b border-gray-100 pb-4">
-                <div className="flex items-start justify-between mb-2">
-                  <p className="text-sm text-gray-500">{item.publishedAt.slice(0, 10)}</p>
+                <div className="mb-2 flex items-start justify-between">
+                  <p className="text-sm text-gray-500">
+                    {item.publishedAt.slice(0, 10)}
+                  </p>
                   {item.category?.name && (
-                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                    <span className="rounded bg-blue-100 px-2 py-1 text-xs text-blue-700">
                       #{item.category.name}
                     </span>
                   )}
                 </div>
-                <Link href={`/news/${item.slug}`} className="text-lg text-blue-700 hover:underline block">
+                <Link
+                  href={`/news/${item.slug}`}
+                  className="block text-lg text-blue-700 hover:underline"
+                >
                   {item.title}
                 </Link>
               </li>
@@ -145,24 +152,24 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
           {/* ページネーション */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center space-x-2">
+            <div className="flex items-center justify-center space-x-2">
               {page > 1 && (
                 <Link
                   href={`/news/category/${slug}?page=${page - 1}`}
-                  className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors"
+                  className="rounded bg-gray-200 px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-300"
                 >
                   前へ
                 </Link>
               )}
-              
+
               <span className="text-sm text-gray-600">
                 {page} / {totalPages} ページ
               </span>
-              
+
               {page < totalPages && (
                 <Link
                   href={`/news/category/${slug}?page=${page + 1}`}
-                  className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                  className="rounded bg-blue-600 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-700"
                 >
                   次へ
                 </Link>
@@ -170,7 +177,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
             </div>
           )}
 
-          <div className="text-sm text-gray-500 text-center mt-4">
+          <div className="mt-4 text-center text-sm text-gray-500">
             全 {totalCount} 件
           </div>
         </>

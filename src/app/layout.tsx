@@ -9,11 +9,8 @@ export const metadata = {
     '通話・対話の音声データをAIで自動分析・要約・可視化。感情検出、NGワード警告、応対スコアリングでコールセンターの品質向上をサポートするクラウドサービス「ボイテキ！」',
   metadataBase: new URL('https://www.voitex.site'), // ← 必ずドメインに変更
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.png', type: 'image/png' }
-    ],
-    shortcut: '/favicon.ico',
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
@@ -24,7 +21,7 @@ export const metadata = {
     siteName: 'ボイテキ！',
     images: [
       {
-        url: '/og-image.png', // ← /public配下に配置（サイズ 1200x630）
+        url: '/og-image.webp', // ← /public配下に配置（サイズ 1200x630）
         width: 1200,
         height: 630,
         alt: 'ボイテキ！サービスの紹介イメージ',
@@ -36,18 +33,23 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ボイテキ！｜音声解析・感情分析AIサービス公式サイト',
-    description: '声の中に、答えがある。AIが通話を自動分析・要約・感情検出します。',
+    description:
+      '声の中に、答えがある。AIが通話を自動分析・要約・感情検出します。',
     images: ['/og-image.webp'],
     creator: '@ktgsllc', // ← X（旧Twitter）アカウントがあれば
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ja">
       <body>
         <Header />
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="mx-auto max-w-5xl px-4">
           <Breadcrumbs /> {/* ←全ページ共通で表示 */}
           {children}
         </div>
@@ -56,4 +58,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

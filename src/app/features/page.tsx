@@ -77,10 +77,7 @@ export default function Features() {
       description:
         'テキスト化された内容に対してNGワードをハイライト表示。検出粒度も柔軟に調整可能です。',
       image: '/features/ng-words.webp',
-      points: [
-        '単語単位 or 漢字単位のNG設定',
-        '表現揺れや類語対策に柔軟対応',
-      ],
+      points: ['単語単位 or 漢字単位のNG設定', '表現揺れや類語対策に柔軟対応'],
     },
     {
       id: 'users',
@@ -117,23 +114,25 @@ export default function Features() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-white py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-12"
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            className="mb-12 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">ボイテキ！の機能一覧</h2>
-            <p className="text-gray-600 text-lg">
+            <h2 className="mb-4 text-3xl font-bold text-primary">
+              ボイテキ！の機能一覧
+            </h2>
+            <p className="text-lg text-gray-600">
               音声の可視化・分析・改善提案までを1つのサービスで完結。柔軟で強力なツール群をご紹介します。
             </p>
           </motion.div>
 
-          <motion.div 
-            className="grid md:grid-cols-2 gap-8"
+          <motion.div
+            className="grid gap-8 md:grid-cols-2"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -141,29 +140,33 @@ export default function Features() {
             {features.map((feature, idx) => (
               <motion.div
                 key={feature.id}
-                className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition-all duration-300 hover:scale-105"
+                className="rounded-xl bg-gray-50 p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-md"
                 variants={itemVariants}
               >
-                <div className="flex items-start mb-4">
-                  <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                <div className="mb-4 flex items-start">
+                  <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
                     {idx + 1}
                   </div>
-                  <h3 className="text-xl font-semibold text-primary">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-primary">
+                    {feature.title}
+                  </h3>
                 </div>
-                
+
                 {feature.image && (
                   <div className="mb-4">
                     <img
                       src={feature.image}
                       alt={`${feature.title}の画面イメージ`}
-                      className="w-full h-48 object-cover rounded-lg shadow-sm cursor-pointer hover:opacity-80 transition-opacity"
+                      className="h-48 w-full cursor-pointer rounded-lg object-cover shadow-sm transition-opacity hover:opacity-80"
                       onClick={() => setSelectedImage(feature.image)}
                     />
                   </div>
                 )}
-                
-                <p className="text-gray-700 mb-4 ml-11">{feature.description}</p>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 ml-11">
+
+                <p className="mb-4 ml-11 text-gray-700">
+                  {feature.description}
+                </p>
+                <ul className="ml-11 list-inside list-disc space-y-1 text-sm text-gray-600">
                   {feature.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -172,34 +175,57 @@ export default function Features() {
             ))}
           </motion.div>
 
-          <motion.div 
-            className="text-center mt-16 bg-gradient-to-r from-primary to-blue-600 text-white p-8 rounded-xl"
+          <motion.div
+            className="mt-16 rounded-xl bg-gradient-to-r from-primary to-blue-600 p-8 text-center text-white"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-4">ボイテキ！を導入しませんか？</h3>
-            <p className="text-lg mb-6 opacity-90">
-              音声分析の可能性を体験してください。<br />
+            <h3 className="mb-4 text-2xl font-bold">
+              ボイテキ！を導入しませんか？
+            </h3>
+            <p className="mb-6 text-lg opacity-90">
+              音声分析の可能性を体験してください。
+              <br />
               専門スタッフが丁寧にサポートいたします。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a
                 href="https://forms.gle/jCp4fEqMV5fGaoWu6"
-                className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
               >
                 デモを申し込む
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </a>
               <a
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors inline-flex items-center justify-center"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
               >
                 お問い合わせ
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                <svg
+                  className="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
                 </svg>
               </a>
             </div>
@@ -211,31 +237,41 @@ export default function Features() {
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
-              className="relative max-w-7xl max-h-full"
+              className="relative max-h-full max-w-7xl"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={selectedImage}
                 alt="拡大表示"
-                className="w-full h-auto max-h-[98vh] object-contain rounded-lg shadow-2xl"
+                className="h-auto max-h-[98vh] w-full rounded-lg object-contain shadow-2xl"
               />
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 w-10 h-10 bg-white bg-opacity-90 rounded-full flex items-center justify-center text-gray-800 hover:bg-opacity-100 transition-all duration-200 shadow-lg"
+                className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-90 text-gray-800 shadow-lg transition-all duration-200 hover:bg-opacity-100"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </motion.div>

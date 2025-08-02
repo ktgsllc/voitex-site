@@ -27,8 +27,8 @@ export default function Breadcrumbs() {
   if (pathSegments.length === 0) return null;
 
   return (
-    <nav className="text-sm text-gray-600 mb-4" aria-label="Breadcrumb">
-      <ol className="list-none flex flex-wrap items-center gap-2">
+    <nav className="mb-4 text-sm text-gray-600" aria-label="Breadcrumb">
+      <ol className="flex list-none flex-wrap items-center gap-2">
         <li>
           <Link href="/" className="text-blue-600 hover:underline">
             ホーム
@@ -45,7 +45,7 @@ export default function Breadcrumbs() {
             <li key={href} className="flex items-center">
               <span className="mx-1">/</span>
               {isLast ? (
-                <span className="text-gray-800 font-semibold">{label}</span>
+                <span className="font-semibold text-gray-800">{label}</span>
               ) : (
                 <Link href={href} className="text-blue-600 hover:underline">
                   {label}

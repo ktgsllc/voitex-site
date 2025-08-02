@@ -28,16 +28,16 @@ export default async function NewsListPage({
   const categories = await client.getList({ endpoint: 'category' });
 
   return (
-    <section className="py-12 px-4 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">お知らせ一覧</h1>
+    <section className="mx-auto max-w-4xl px-4 py-12">
+      <h1 className="mb-6 text-3xl font-bold">お知らせ一覧</h1>
 
       {/* カテゴリ一覧 */}
-      <div className="flex gap-3 flex-wrap mb-8">
+      <div className="mb-8 flex flex-wrap gap-3">
         {categories.contents.map((cat) => (
           <Link
             key={cat.id}
             href={`/news/category/${cat.slug}`}
-            className="px-3 py-1 bg-gray-200 hover:bg-blue-600 hover:text-white rounded text-sm"
+            className="rounded bg-gray-200 px-3 py-1 text-sm hover:bg-blue-600 hover:text-white"
           >
             #{cat.name}
           </Link>
@@ -46,23 +46,28 @@ export default async function NewsListPage({
 
       {/* お知らせ一覧 */}
       {!news.contents.length ? (
-        <div className="text-center py-12">
-          <p className="text-gray-500 text-lg">お知らせはまだありません。</p>
+        <div className="py-12 text-center">
+          <p className="text-lg text-gray-500">お知らせはまだありません。</p>
         </div>
       ) : (
         <>
-          <ul className="space-y-6 mb-8">
+          <ul className="mb-8 space-y-6">
             {news.contents.map((item) => (
               <li key={item.id} className="border-b border-gray-100 pb-4">
-                <div className="flex items-start justify-between mb-2">
-                  <p className="text-sm text-gray-500">{item.publishedAt.slice(0, 10)}</p>
+                <div className="mb-2 flex items-start justify-between">
+                  <p className="text-sm text-gray-500">
+                    {item.publishedAt.slice(0, 10)}
+                  </p>
                   {item.category?.name && (
-                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                    <span className="rounded bg-blue-100 px-2 py-1 text-xs text-blue-700">
                       #{item.category.name}
                     </span>
                   )}
                 </div>
-                <Link href={`/news/${item.slug}`} className="text-lg text-blue-700 hover:underline block">
+                <Link
+                  href={`/news/${item.slug}`}
+                  className="block text-lg text-blue-700 hover:underline"
+                >
                   {item.title}
                 </Link>
               </li>
@@ -71,24 +76,24 @@ export default async function NewsListPage({
 
           {/* ページネーション */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center space-x-2">
+            <div className="flex items-center justify-center space-x-2">
               {page > 1 && (
                 <Link
                   href={`/news?page=${page - 1}`}
-                  className="px-4 py-2 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors"
+                  className="rounded bg-gray-200 px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-300"
                 >
                   前へ
                 </Link>
               )}
-              
+
               <span className="text-sm text-gray-600">
                 {page} / {totalPages} ページ
               </span>
-              
+
               {page < totalPages && (
                 <Link
                   href={`/news?page=${page + 1}`}
-                  className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                  className="rounded bg-blue-600 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-700"
                 >
                   次へ
                 </Link>
@@ -96,7 +101,7 @@ export default async function NewsListPage({
             </div>
           )}
 
-          <div className="text-sm text-gray-500 text-center mt-4">
+          <div className="mt-4 text-center text-sm text-gray-500">
             全 {totalCount} 件
           </div>
         </>

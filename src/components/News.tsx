@@ -19,14 +19,16 @@ export default function News() {
   }, []);
 
   return (
-    <section className="py-12 px-4 bg-gray-50">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">お知らせ</h2>
+    <section className="bg-gray-50 px-4 py-12">
+      <h2 className="mb-6 text-2xl font-bold text-gray-800">お知らせ</h2>
       <ul className="space-y-4">
         {news.map((item) => (
           <li key={item.id}>
-            <p className="text-gray-600 text-sm">{item.publishedAt.slice(0, 10)}</p>
+            <p className="text-sm text-gray-600">
+              {item.publishedAt.slice(0, 10)}
+            </p>
             <Link href={`/news/${item.id}`}>
-              <p className="text-lg text-blue-700 hover:underline cursor-pointer">
+              <p className="cursor-pointer text-lg text-blue-700 hover:underline">
                 {item.title}
               </p>
             </Link>
