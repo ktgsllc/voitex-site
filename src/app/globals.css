@@ -3,11 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Voitexブランドカラー */
+  --primary: #172a88;
+  --primary-light: #3b4fc4;
+  --primary-dark: #0e1c66;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +22,10 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --primary: #3b4fc4; /* 明るめブルーに変更してもOK */
+    --primary-light: #6372e6;
+    --primary-dark: #0b1b66;
   }
 }
 
@@ -23,4 +33,274 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ニュース記事用カスタムクラス */
+.news-highlight {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-callout {
+  background: linear-gradient(135deg, #fff5f5 0%, #fef2f2 100%);
+  border: 2px solid #fecaca;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* 絵文字を削除 */
+/* .news-callout::before {
+  content: "💡";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: white;
+  padding: 0 8px;
+  font-size: 1.2rem;
+} */
+
+.news-warning {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* 絵文字を削除 */
+/* .news-warning::before {
+  content: "⚠️";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: white;
+  padding: 0 8px;
+  font-size: 1.2rem;
+} */
+
+.news-success {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border: 2px solid #10b981;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* 絵文字を削除 */
+/* .news-success::before {
+  content: "✅";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: white;
+  padding: 0 8px;
+  font-size: 1.2rem;
+} */
+
+.news-code-block {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--primary);
+}
+
+.news-image-caption {
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.news-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.news-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+}
+
+.news-timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.news-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* 読み手へのメッセージ用クラス */
+.news-message {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-left: 6px solid var(--primary);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 絵文字を削除 */
+/* .news-message::before {
+  content: "💬";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 0 12px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.news-message p {
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.news-message p:last-child {
+  margin-bottom: 0;
+}
+
+/* 重要なメッセージ用クラス */
+.news-message-important {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-left: 6px solid #d97706;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 絵文字を削除 */
+/* .news-message-important::before {
+  content: "📢";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 0 12px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.news-message-important p {
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #92400e;
+  font-weight: 500;
+}
+
+.news-message-important p:last-child {
+  margin-bottom: 0;
+}
+
+/* 感謝のメッセージ用クラス */
+.news-message-thanks {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border: 2px solid #10b981;
+  border-left: 6px solid #059669;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 絵文字を削除 */
+/* .news-message-thanks::before {
+  content: "🙏";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 0 12px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.news-message-thanks p {
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #065f46;
+  font-weight: 500;
+}
+
+.news-message-thanks p:last-child {
+  margin-bottom: 0;
+}
+
+/* 説明メッセージ用クラス */
+.news-message-info {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 2px solid #3b82f6;
+  border-left: 6px solid #2563eb;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 絵文字を削除 */
+/* .news-message-info::before {
+  content: "ℹ️";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 0 12px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.news-message-info p {
+  margin: 0 0 1rem 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.news-message-info p:last-child {
+  margin-bottom: 0;
 }
