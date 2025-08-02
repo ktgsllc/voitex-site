@@ -8,6 +8,16 @@ export const metadata = {
   description:
     '通話・対話の音声データをAIで自動分析・要約・可視化。感情検出、NGワード警告、応対スコアリングでコールセンターの品質向上をサポートするクラウドサービス「ボイテキ！」',
   metadataBase: new URL('https://www.voitex.site'), // ← 必ずドメインに変更
+  keywords:
+    '音声解析,AI,感情分析,コールセンター,音声認識,要約,NGワード,応対品質,ボイテキ,QuickSum',
+  authors: [{ name: 'KTGS.llc' }],
+  creator: 'KTGS.llc',
+  publisher: 'KTGS.llc',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: [{ url: '/favicon.png', type: 'image/png' }],
     shortcut: '/favicon.png',
@@ -38,6 +48,9 @@ export const metadata = {
     images: ['/og-image.webp'],
     creator: '@ktgsllc', // ← X（旧Twitter）アカウントがあれば
   },
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
@@ -61,6 +74,85 @@ export default function RootLayout({
               gtag('js', new Date());
               gtag('config', 'G-68QTZ1MSD0');
             `,
+          }}
+        />
+        {/* 構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: 'ボイテキ！',
+              description:
+                '音声データをAIで分析・要約・可視化し、応対品質を見える化するクラウドサービス',
+              url: 'https://www.voitex.site',
+              applicationCategory: 'BusinessApplication',
+              operatingSystem: 'Web',
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'JPY',
+                availability: 'https://schema.org/InStock',
+              },
+              provider: {
+                '@type': 'Organization',
+                name: 'KTGS.llc',
+                url: 'https://www.voitex.site',
+              },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.8',
+                ratingCount: '50',
+              },
+              featureList: [
+                '音声テキスト化',
+                '感情分析',
+                'NGワード検出',
+                '自動要約',
+                'スピーカー分離',
+                '応対スコアリング',
+              ],
+              screenshot: 'https://www.voitex.site/hero-image.webp',
+              softwareVersion: '3.12.0',
+              releaseNotes: 'SMS自動送信機能を追加',
+            }),
+          }}
+        />
+        {/* FAQ構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'ボイテキ！は誰でも使えますか？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'はい、PCとインターネット環境があれば、どなたでもご利用いただけます。特別なソフトや知識は不要です。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '対応している音声ファイルの形式を教えてください。',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'WAV / MP3 / FLAC / OGG の各形式に対応しています。1ファイル最大200MBまでアップロード可能です。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: '感情やNGワードの判定精度はどの程度ですか？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '日本語に最適化されたLLMを活用しており、実務での活用にも耐えうる精度を実現しています。',
+                  },
+                },
+              ],
+            }),
           }}
         />
       </head>
