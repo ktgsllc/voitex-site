@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 
       
 
-  return news.contents.map((item: any) => ({
+  return news.contents.map((item: NewsDetail) => ({
     slug: item.slug, // 元のスラッグをそのまま返す
   }));
 }
