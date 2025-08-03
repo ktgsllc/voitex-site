@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
   { label: 'ホーム', href: '/', icon: '🏠' },
@@ -40,6 +40,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [sisterServicesOpen, setSisterServicesOpen] = useState(false);
   const pathname = usePathname();
+
+  // モバイルメニューの開閉時にbodyのスクロールを制御
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // クリーンアップ関数
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm">
@@ -170,8 +184,8 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-gray-100 bg-white shadow-lg lg:hidden">
-          <div className="px-4 py-4">
+        <div className="fixed inset-0 top-[73px] z-40 bg-white lg:hidden">
+          <div className="h-full overflow-y-auto px-4 py-4">
             {/* Primary nav items */}
             <div className="mb-6">
               <div className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
