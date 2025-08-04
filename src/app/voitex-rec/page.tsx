@@ -1,3 +1,12 @@
+import { Metadata } from 'next';
+import { generateMetadata } from '@/libs/seo';
+
+export const metadata: Metadata = generateMetadata(
+  'ボイテキ！レコーダー｜音声録音専用アプリ',
+  'ボイテキ！レコーダーは音声録音専用アプリ。高品質録音で音声解析AIの精度向上。カスハラ対策にも活用できる録音機能を提供。',
+  '/voitex-rec'
+);
+
 export default function VoitexRecPage() {
   return (
     <main className="bg-gray-100 py-8">

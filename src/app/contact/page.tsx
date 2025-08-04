@@ -1,3 +1,12 @@
+import { Metadata } from 'next';
+import { generateMetadata } from '@/libs/seo';
+
+export const metadata: Metadata = generateMetadata(
+  'お問い合わせ｜ボイテキ！音声解析AIサービス',
+  'ボイテキ！のお問い合わせはこちら。音声解析AIの導入相談、デモンストレーション、料金プランについて。カスハラ対策支援も含めてご相談ください。',
+  '/contact'
+);
+
 export default function Page() {
   return (
     <main className="p-8">

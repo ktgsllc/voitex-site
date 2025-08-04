@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   '導入事例｜ボイテキ！音声解析AIの活用事例',
-  'ボイテキ！の導入事例をご紹介。証券会社、保険会社、弁護士事務所、税理士事務所など、様々な業界での音声解析AI活用事例とカスハラ対策への効果を掲載。',
+  'ボイテキ！の導入事例をご紹介。証券会社、保険会社、弁護士事務所など様々な業界での音声解析AI活用事例とカスハラ対策への効果を掲載。',
   '/cases'
 );
 

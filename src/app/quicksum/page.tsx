@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'QuickSum｜ACW削減AI要約ツール｜ボイテキ！姉妹サービス',
-  'QuickSumはコールセンターのACW（アフターコールワーク）を削減するAI要約ツール。通話内容を即座に要約し、CRMへのコピーペーストだけで後処理完了。応対品質向上とカスハラ対策を支援。',
+  'QuickSumはコールセンターのACW削減AI要約ツール。通話内容を即座に要約し、CRMへのコピーペーストだけで後処理完了。応対品質向上を支援。',
   '/quicksum'
 );
 

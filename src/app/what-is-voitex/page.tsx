@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキとは？｜音声解析AI SaaSツールの詳細解説',
-  'ボイテキとは、音声解析AI SaaSツールです。コールセンターの応対品質向上とカスハラ対策を支援する音声解析AIサービスとして、NGワード検出・感情分析・自動要約機能を提供。',
+  'ボイテキとは音声解析AI SaaSツール。コールセンターの応対品質向上とカスハラ対策を支援。NGワード検出・感情分析・自動要約機能で品質管理を効率化。',
   '/what-is-voitex'
 );
 

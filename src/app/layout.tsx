@@ -18,6 +18,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  themeColor: '#2563eb',
+  manifest: '/manifest.json',
   icons: {
     icon: [{ url: '/favicon.png', type: 'image/png' }],
     shortcut: '/favicon.png',
@@ -160,6 +168,28 @@ export default function RootLayout({
                     text: 'NGワード検出機能により、ハラスメント発言を自動検出し、早期発見・対策を支援します。感情分析で従業員のストレス状態も把握できます。',
                   },
                 },
+              ],
+            }),
+          }}
+        />
+        {/* モバイルSEO構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'ボイテキ！',
+              url: 'https://www.voitex.site',
+              description: 'モバイル対応の音声解析AIサービス',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://www.voitex.site/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+              sameAs: [
+                'https://twitter.com/ktgsllc',
+                'https://www.facebook.com/ktgsllc/',
               ],
             }),
           }}

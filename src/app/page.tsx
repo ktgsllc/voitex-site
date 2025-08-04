@@ -13,7 +13,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキ！｜音声解析AIで応対品質を見える化',
-  '音声解析AI SaaS「ボイテキ！」は、応対品質の向上とカスハラ対策を支援します。NGワード検出・感情分析・自動要約で、コールセンターの品質管理を効率化。',
+  '音声解析AI SaaS「ボイテキ！」で応対品質を向上。NGワード検出・感情分析・自動要約でコールセンターの品質管理を効率化。カスハラ対策にも活用可能。',
   '/'
 );
 

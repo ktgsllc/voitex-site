@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキとは？｜開発ストーリーと理念',
-  '音声解析AIサービス「ボイテキ！」の開発ストーリーと企業理念をご紹介。KTGS.llcと株式会社ノウデルの共同事業として、カスハラ対策と応対品質向上を支援します。',
+  '音声解析AIサービス「ボイテキ！」の開発ストーリーと企業理念。KTGS.llcと株式会社ノウデルの共同事業として、カスハラ対策と応対品質向上を支援。',
   '/company'
 );
 

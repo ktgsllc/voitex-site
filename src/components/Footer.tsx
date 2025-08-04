@@ -83,9 +83,14 @@ export default function Footer() {
               <Link href="/news" className="block hover:text-blue-600">
                 お知らせ
               </Link>
-              <Link href="/blog" className="block hover:text-blue-600">
+              <a
+                href="https://manual.voitex.site/blog/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-blue-600"
+              >
                 ブログ
-              </Link>
+              </a>
               <a
                 href="https://twitter.com/ktgsllc"
                 target="_blank"

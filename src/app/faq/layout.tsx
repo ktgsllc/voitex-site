@@ -3,7 +3,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'よくあるご質問（FAQ）｜ボイテキ！音声解析AIサービス',
-  'ボイテキ！に関するよくあるご質問と回答をまとめています。音声解析、NGワード検出、感情分析、カスハラ対策など、サービス利用に関する疑問にお答えします。',
+  'ボイテキ！に関するよくある質問をまとめました。音声解析AIの使い方、対応ファイル形式、感情分析精度、カスハラ対策への活用方法など。',
   '/faq'
 );
 

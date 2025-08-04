@@ -58,7 +58,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <Link href="/" className="transition-opacity hover:opacity-80">
           <Image
             src="/logo.png"
@@ -78,7 +78,7 @@ export default function Header() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-gray-600 transition-colors hover:text-primary"
+                className="flex items-center text-sm text-gray-600 transition-colors hover:text-primary"
               >
                 {label}
               </a>
@@ -86,7 +86,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`text-sm transition-colors ${
+                className={`flex items-center text-sm transition-colors ${
                   pathname === href
                     ? 'font-medium text-primary'
                     : 'text-gray-600 hover:text-primary'
@@ -98,10 +98,10 @@ export default function Header() {
           )}
 
           {/* Sister Services Dropdown */}
-          <div className="relative">
+          <div className="relative flex items-center">
             <button
               onClick={() => setSisterServicesOpen(!sisterServicesOpen)}
-              className={`text-sm transition-colors ${
+              className={`flex h-full items-center text-sm transition-colors ${
                 sisterServices.some((service) => pathname === service.href)
                   ? 'font-medium text-primary'
                   : 'text-gray-600 hover:text-primary'
@@ -140,7 +140,7 @@ export default function Header() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 transition-colors hover:text-primary"
+                  className="flex items-center text-sm text-gray-500 transition-colors hover:text-primary"
                 >
                   {label}
                 </a>
@@ -148,7 +148,7 @@ export default function Header() {
                 <Link
                   key={href}
                   href={href}
-                  className={`text-sm transition-colors ${
+                  className={`flex items-center text-sm transition-colors ${
                     pathname === href
                       ? 'font-medium text-primary'
                       : 'text-gray-500 hover:text-primary'
