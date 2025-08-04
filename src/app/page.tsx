@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Hero from '@/components/Hero';
 import Cta from '@/components/Cta';
 import Intro from '@/components/Intro';
@@ -7,10 +8,21 @@ import SisterServices from '@/components/SisterServices';
 import Testimonials from '@/components/Testimonials';
 import FaqSnippet from '@/components/FaqSnippet';
 import Steps from '@/components/Steps';
+import StructuredData from '@/components/StructuredData';
+import { generateMetadata } from '@/libs/seo';
+
+export const metadata: Metadata = generateMetadata(
+  'ボイテキ！｜音声解析AIで応対品質を見える化',
+  '音声解析AI SaaS「ボイテキ！」は、応対品質の向上とカスハラ対策を支援します。NGワード検出・感情分析・自動要約で、コールセンターの品質管理を効率化。',
+  '/'
+);
 
 export default function Home() {
   return (
     <>
+      <StructuredData type="softwareApplication" />
+      <StructuredData type="faq" />
+
       {/* 1. Hero - 印象的なグラデーション */}
       <Hero />
 

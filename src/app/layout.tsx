@@ -112,6 +112,7 @@ export default function RootLayout({
                 '自動要約',
                 'スピーカー分離',
                 '応対スコアリング',
+                'カスハラ対策',
               ],
               screenshot: 'https://www.voitex.site/hero-image.webp',
               softwareVersion: '3.12.0',
@@ -149,6 +150,14 @@ export default function RootLayout({
                   acceptedAnswer: {
                     '@type': 'Answer',
                     text: '日本語に最適化されたLLMを活用しており、実務での活用にも耐えうる精度を実現しています。',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'カスハラ対策にどのように活用できますか？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'NGワード検出機能により、ハラスメント発言を自動検出し、早期発見・対策を支援します。感情分析で従業員のストレス状態も把握できます。',
                   },
                 },
               ],

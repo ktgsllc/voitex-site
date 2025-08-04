@@ -22,7 +22,8 @@ export default function Intro() {
             <br />
             社員を守り、経営を守り、信頼される組織をつくる。
             <br />
-            ボイテキ！はそのためのAIです。
+            <strong>ボイテキ！</strong>はそのための
+            <strong>音声解析AI SaaSツール</strong>です。
           </p>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -47,7 +48,7 @@ export default function Intro() {
                 業務の効率化
               </h3>
               <p className="text-gray-600">
-                手作業による情報整理を自動化し、
+                ボイテキ！の音声解析AIにより手作業による情報整理を自動化し、
                 <br />
                 オペレーションの無駄を省いて本来業務に集中できます。
               </p>
@@ -74,7 +75,7 @@ export default function Intro() {
                 見逃さない正確性
               </h3>
               <p className="text-gray-600">
-                感情やNGワードの兆候を的確に捉え、
+                ボイテキ！の音声解析AIが感情やNGワードの兆候を的確に捉え、
                 <br />
                 ミスや聞き逃しによるリスクを削減します。
               </p>
@@ -101,7 +102,7 @@ export default function Intro() {
                 社員と経営を守る仕組み
               </h3>
               <p className="text-gray-600">
-                カスハラ・過剰要求・誤解などのリスクから、
+                ボイテキ！の音声解析AIでカスハラ・過剰要求・誤解などのリスクから、
                 <br />
                 証拠と可視化で現場をサポート。
                 <br />

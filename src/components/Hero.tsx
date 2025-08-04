@@ -11,7 +11,7 @@ export default function Hero() {
           <p className="mt-6 text-lg leading-relaxed text-gray-600">
             音声データをAIで分析・要約・可視化し、
             <br className="hidden sm:inline" />
-            応対品質を見える化するクラウドサービス{' '}
+            応対品質を見える化する<strong>音声解析AI SaaSツール</strong>{' '}
             <strong>「ボイテキ！」</strong>。<br />
             感情やNGワードの
             <span className="font-semibold text-primary">自動検出</span>

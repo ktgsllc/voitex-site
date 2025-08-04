@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 
 const navItems = [
   { label: 'ホーム', href: '/', icon: '🏠' },
+  { label: 'ボイテキとは？', href: '/what-is-voitex', icon: 'ℹ️' },
   { label: '機能一覧', href: '/features', icon: '⚡' },
   { label: '料金', href: '/pricing', icon: '💰' },
   { label: '導入事例', href: '/cases', icon: '💼' },
