@@ -23,6 +23,12 @@ export default function Footer() {
               <Link href="/voitex-rec" className="block hover:text-blue-600">
                 ボイテキレック！
               </Link>
+              <Link
+                href="/voitex-converter"
+                className="block hover:text-blue-600"
+              >
+                ボイテキコンバーター！
+              </Link>
             </nav>
           </div>
 

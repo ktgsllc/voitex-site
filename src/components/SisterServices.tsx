@@ -7,7 +7,7 @@ export default function SisterServices() {
             姉妹サービス紹介
           </h2>
 
-          <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500">
                 <svg
@@ -62,6 +62,36 @@ export default function SisterServices() {
               </p>
               <a
                 href="/voitex-rec"
+                className="font-medium text-primary hover:text-primary-dark"
+              >
+                詳細を見る →
+              </a>
+            </div>
+
+            <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500">
+                <svg
+                  className="h-6 w-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2M9 8h6m-6 4h6m-6 4h6"
+                  />
+                </svg>
+              </div>
+              <h3 className="mb-3 text-xl font-semibold text-gray-800">
+                ボイテキコンバーター！
+              </h3>
+              <p className="mb-4 text-gray-600">
+                動画・音声ファイルをWAV形式に変換するWindowsネイティブアプリ。音声認識API対応フォーマットに自動変換。
+              </p>
+              <a
+                href="/voitex-converter"
                 className="font-medium text-primary hover:text-primary-dark"
               >
                 詳細を見る →

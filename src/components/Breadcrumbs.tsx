@@ -21,6 +21,7 @@ const breadcrumbMap: Record<string, string> = {
   security: 'セキュリティ',
   'what-is-voitex': 'ボイテキ！とは',
   'voitex-rec': 'ボイテキ！レコーダー',
+  'voitex-converter': 'ボイテキコンバーター！',
   agreement: '利用規約',
 };
 

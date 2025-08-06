@@ -18,13 +18,6 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
-  themeColor: '#2563eb',
   manifest: '/manifest.json',
   icons: {
     icon: [{ url: '/favicon.png', type: 'image/png' }],
@@ -59,6 +52,14 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#2563eb',
 };
 
 export default function RootLayout({
