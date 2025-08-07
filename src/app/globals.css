@@ -315,7 +315,11 @@ body {
 
 /* モバイルSEO最適化 */
 /* タッチターゲットの最小サイズ確保 */
-button, a, input, select, textarea {
+button,
+a,
+input,
+select,
+textarea {
   min-height: 44px;
   min-width: 44px;
 }
@@ -328,7 +332,7 @@ button, a, input, select, textarea {
     font-size: 16px;
     line-height: 1.5;
   }
-  
+
   /* モバイルでの読みやすさ向上 */
   body {
     font-size: 16px;
@@ -336,21 +340,24 @@ button, a, input, select, textarea {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
-  
+
   /* モバイルでの画像最適化 */
   img {
     max-width: 100%;
     height: auto;
   }
-  
+
   /* モバイルでのフォーム最適化 */
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 16px;
     padding: 12px;
   }
-  
+
   /* モバイルでのナビゲーション最適化 */
-  nav a, nav button {
+  nav a,
+  nav button {
     padding: 12px 16px;
     margin: 4px 0;
   }
@@ -393,27 +400,27 @@ html {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     border-left-color: var(--primary-light);
   }
-  
+
   .news-callout {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     border-color: #dc2626;
   }
-  
+
   .news-warning {
     background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
     border-color: #f59e0b;
   }
-  
+
   .news-success {
     background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
     border-color: #10b981;
   }
-  
+
   .news-message {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     border-color: #475569;
   }
-  
+
   .news-message-info {
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
     border-color: #3b82f6;

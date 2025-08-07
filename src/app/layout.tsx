@@ -2,6 +2,8 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import CookieConsent from '@/components/CookieConsent';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'ボイテキ！｜音声解析・感情分析AIサービス公式サイト',
@@ -70,21 +72,30 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        {/* Google Analytics */}
-        <script
-          async
+        {/* Google Analytics - クッキー同意対応 */}
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-68QTZ1MSD0"
+          strategy="afterInteractive"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-68QTZ1MSD0');
-            `,
-          }}
-        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            // クッキー同意の状態をチェック
+            const consent = localStorage.getItem('voitex_cookie_consent');
+            if (consent === 'accepted') {
+              gtag('config', 'G-68QTZ1MSD0', {
+                'analytics_storage': 'granted'
+              });
+            } else {
+              gtag('config', 'G-68QTZ1MSD0', {
+                'analytics_storage': 'denied'
+              });
+            }
+          `}
+        </Script>
         {/* 構造化データ */}
         <script
           type="application/ld+json"
@@ -203,6 +214,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
