@@ -61,14 +61,11 @@ export default function FaqPage() {
 
   if (loading) {
     return (
-      <>
-        <StructuredData type="faq" />
-        <main className="p-8">
-          <div className="flex h-64 items-center justify-center">
-            <div className="text-gray-500">読み込み中...</div>
-          </div>
-        </main>
-      </>
+      <main className="p-8">
+        <div className="flex h-64 items-center justify-center">
+          <div className="text-gray-500">読み込み中...</div>
+        </div>
+      </main>
     );
   }
 

@@ -21,7 +21,6 @@ export default function Home() {
   return (
     <>
       <StructuredData type="softwareApplication" />
-      <StructuredData type="faq" />
 
       {/* 1. Hero - 印象的なグラデーション */}
       <Hero />
