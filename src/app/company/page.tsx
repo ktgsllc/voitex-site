@@ -144,7 +144,7 @@ export default function CompanyPage() {
                   </div>
                   <div>
                     <h3 className="mb-2 text-xl font-semibold text-gray-800">
-                      ボイテキレック
+                      ボイテキレック！
                     </h3>
                     <p className="text-gray-600">
                       ひかり電話の通話録音サービス（ボイテキ！連携対応）

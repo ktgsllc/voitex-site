@@ -9,9 +9,9 @@ export const metadata = {
   title: 'ボイテキ！｜音声解析・感情分析AIサービス公式サイト',
   description:
     '通話・対話の音声データをAIで自動分析・要約・可視化。感情検出、NGワード警告、応対スコアリングでコールセンターの品質向上をサポートするクラウドサービス「ボイテキ！」',
-  metadataBase: new URL('https://www.voitex.site'), // ← 必ずドメインに変更
+  metadataBase: new URL('https://www.voitex.site'),
   keywords:
-    '音声解析,AI,感情分析,コールセンター,音声認識,要約,NGワード,応対品質,ボイテキ,QuickSum',
+    '音声解析,AI,感情分析,コールセンター,音声認識,要約,NGワード,応対品質,ボイテキ,QuickSum,VoitexRec',
   authors: [{ name: 'KTGS.llc' }],
   creator: 'KTGS.llc',
   publisher: 'KTGS.llc',
@@ -25,31 +25,6 @@ export const metadata = {
     icon: [{ url: '/favicon.png', type: 'image/png' }],
     shortcut: '/favicon.png',
     apple: '/favicon.png',
-  },
-  openGraph: {
-    title: 'ボイテキ！｜音声解析・感情分析AIサービス公式サイト',
-    description:
-      '声の中に、答えがある。ボイテキ！は通話内容をAIで自動要約・分析し、感情やリスクも"見える化"。コールセンターの応対品質を向上させます。',
-    url: '/',
-    siteName: 'ボイテキ！',
-    images: [
-      {
-        url: '/og-image.webp', // ← /public配下に配置（サイズ 1200x630）
-        width: 1200,
-        height: 630,
-        alt: 'ボイテキ！サービスの紹介イメージ',
-      },
-    ],
-    locale: 'ja_JP',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'ボイテキ！｜音声解析・感情分析AIサービス公式サイト',
-    description:
-      '声の中に、答えがある。AIが通話を自動分析・要約・感情検出します。',
-    images: ['/og-image.webp'],
-    creator: '@ktgsllc', // ← X（旧Twitter）アカウントがあれば
   },
   alternates: {
     canonical: '/',

@@ -55,7 +55,7 @@ export default function SisterServices() {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-semibold text-gray-800">
-                ボイテキレック
+                ボイテキレック！
               </h3>
               <p className="mb-4 text-gray-600">
                 ひかり電話の通話録音サービスでボイテキ！連携可能です。

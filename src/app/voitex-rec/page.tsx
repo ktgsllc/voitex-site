@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { generateMetadata } from '@/libs/seo';
+import { generateOptimizedMetadata } from '@/libs/seo';
 
-export const metadata: Metadata = generateMetadata(
-  'VoitexRec｜中小企業向け通話録音・音声分析システム',
-  'VoitexRecは、最大32ch同時対応のSIP通話自動録音から音声認識、検索・分析まで、中小企業の通話管理を完全サポートする統合システムです。',
+export const metadata: Metadata = generateOptimizedMetadata(
+  'ボイテキ！レコーダー｜通話録音・音声分析システム - ボイテキ！',
+  'voitexRec',
   '/voitex-rec'
 );
 
@@ -26,29 +26,29 @@ export default function VoitexRecPage() {
               />
             </div>
             <h1 className="mb-6 text-5xl font-bold text-primary md:text-6xl">
-              中小企業の通話管理を
+              ボイテキレック！
               <br />
-              シンプルに
+              通話録音をシンプルに
             </h1>
-            <p className="mx-auto mb-8 max-w-4xl text-xl leading-relaxed text-gray-600 md:text-2xl">
-              最大32ch同時対応のSIP通話自動録音から、AI音声認識、検索・分析まで。
+                          <p className="mx-auto mb-8 max-w-4xl text-xl leading-relaxed text-gray-600 md:text-2xl">
+              <a href="/" className="text-primary hover:underline">ボイテキ！</a>の音声解析AIと連携する、最大32ch同時対応のSIP通話録音から、AI音声認識（テキスト化）まで。
               <br />
-              中小企業でも導入しやすい、コストパフォーマンスに優れた統合システム。
+              通話録音の検索・再生も可能。音声ファイルはオンプレミスサーバーに保存し、セキュリティを最優先。感情解析やテキストマイニングはボイテキ！で連携対応。
             </p>
 
             {/* 機能タグ */}
             <div className="mb-12 flex flex-wrap justify-center gap-3">
               <span className="transform rounded-full bg-blue-500 px-6 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                最大32ch同時対応
+                通話録音システム
               </span>
               <span className="transform rounded-full bg-green-500 px-6 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                AI音声認識
+                最大32ch同時対応
               </span>
               <span className="transform rounded-full bg-purple-500 px-6 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                中小企業向け
+                AI音声認識
               </span>
               <span className="transform rounded-full bg-orange-500 px-6 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                コスト効率
+                ボイテキ！連携
               </span>
             </div>
 
@@ -111,6 +111,71 @@ export default function VoitexRecPage() {
             </div>
           </div>
 
+          {/* セキュリティの強みセクション */}
+          <div className="mb-20">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 p-10 text-white shadow-2xl md:p-16">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="relative z-10 text-center">
+                <div className="mb-6 flex items-center justify-center">
+                  <div className="mr-4 rounded-full bg-white/20 p-3">
+                    <svg
+                      className="h-8 w-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-2xl font-bold">セキュリティ最優先</span>
+                </div>
+                <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+                  時代に逆行する
+                  <br />
+                  <span className="inline-block rounded-2xl bg-white px-6 py-2 text-blue-600 mb-2">
+                    セキュリティ重視
+                  </span>
+                  <br />
+                  の設計
+                </h2>
+                <div className="mb-6">
+                  <span className="inline-block rounded-2xl bg-yellow-400 px-6 py-2 text-gray-900 font-bold text-lg">
+                    カスハラ防止条例対応
+                  </span>
+                </div>
+                <p className="mb-6 text-xl opacity-90">
+                  音声ファイルは個人情報・機密情報の塊。クラウド化の流れに逆行し、オンプレミスサーバーでの保存を採用。
+                  <br />
+                  金融・医療・法務など、厳格なセキュリティが求められる業界でも安心してご利用いただけます。
+                  <br />
+                  <span className="font-semibold">東京都カスハラ防止条例奨励金制度の対象となり、最大40万円の支援が受けられます。</span>
+                </p>
+                <div className="grid gap-6 md:grid-cols-3">
+                  <div className="rounded-xl bg-white/20 p-6">
+                    <div className="mb-3 text-3xl">🔒</div>
+                    <div className="mb-2 font-semibold text-lg">オンプレミス保存</div>
+                    <div className="text-sm opacity-90 leading-relaxed">自社サーバーで完全管理</div>
+                  </div>
+                  <div className="rounded-xl bg-white/20 p-6">
+                    <div className="mb-3 text-3xl">🛡️</div>
+                    <div className="mb-2 font-semibold text-lg">暗号化対応</div>
+                    <div className="text-sm opacity-90 leading-relaxed">AES暗号化で安全保存</div>
+                  </div>
+                  <div className="rounded-xl bg-white/20 p-6">
+                    <div className="mb-3 text-3xl">📋</div>
+                    <div className="mb-2 font-semibold text-lg">カスハラ対策</div>
+                    <div className="text-sm opacity-90 leading-relaxed">奨励金制度対象・証拠保全対応</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* ターゲット市場セクション */}
           <div className="mb-20">
             <div className="mb-12 text-center">
@@ -118,7 +183,7 @@ export default function VoitexRecPage() {
                 こんな企業様におすすめ
               </h2>
               <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                小〜中規模の企業様でも安心して導入いただける、最適なソリューションです
+                PBX側で録音できない環境や、独自の通話管理システムを構築したい企業様、専門サービス業に最適です
               </p>
             </div>
 
@@ -136,15 +201,15 @@ export default function VoitexRecPage() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
                       />
                     </svg>
                   </div>
                   <h4 className="mb-4 text-center text-2xl font-bold text-gray-900">
-                    コールセンター
+                    営業・販売会社
                   </h4>
                   <p className="text-center leading-relaxed text-gray-600">
-                    小〜中規模のコールセンターで通話品質向上と顧客満足度アップを実現
+                    外出先での通話録音で営業活動の記録・分析を実現。顧客との約束事を確実に記録
                   </p>
                 </div>
               </div>
@@ -162,15 +227,15 @@ export default function VoitexRecPage() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
                   </div>
                   <h4 className="mb-4 text-center text-2xl font-bold text-gray-900">
-                    営業・販売会社
+                    専門サービス業
                   </h4>
                   <p className="text-center leading-relaxed text-gray-600">
-                    営業活動の記録・分析で売上向上と顧客関係の強化をサポート
+                    弁護士・税理士・コンサルタントなど、顧客対応の品質向上とコンプライアンス対応
                   </p>
                 </div>
               </div>
@@ -188,16 +253,85 @@ export default function VoitexRecPage() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
                       />
                     </svg>
                   </div>
                   <h4 className="mb-4 text-center text-2xl font-bold text-gray-900">
-                    サービス業
+                    中小企業・スタートアップ
                   </h4>
                   <p className="text-center leading-relaxed text-gray-600">
-                    顧客対応の品質向上とコンプライアンス対応で信頼性を向上
+                    独自の通話管理システム構築で、大手企業に負けない顧客対応品質を実現
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* カスハラ防止セクション */}
+          <div className="mb-20">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-red-600 via-red-700 to-red-800 p-10 text-white shadow-2xl md:p-16">
+              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="relative z-10 text-center">
+                <div className="mb-6 flex items-center justify-center">
+                  <div className="mr-4 rounded-full bg-white/20 p-3">
+                    <svg
+                      className="h-8 w-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-2xl font-bold">カスハラ防止対策</span>
+                </div>
+                <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+                  ボイテキレック！ × ボイテキ！
+                  <br />
+                  <span className="inline-block rounded-2xl bg-white px-8 py-3 text-red-600 mb-2">
+                    カスハラ防止の最強タッグ
+                  </span>
+                  <br />
+                  の組み合わせ
+                </h2>
+                <p className="mb-6 text-xl opacity-90">
+                  録音・証拠保全から感情分析・NGワード検出まで、カスハラ防止に必要な機能を完全網羅。
+                  <br />
+                  東京都カスハラ防止条例奨励金制度の対象となり、最大40万円の支援が受けられます。
+                </p>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="rounded-xl bg-white/20 p-6">
+                    <div className="mb-3 text-3xl">🎙️</div>
+                    <div className="mb-2 font-semibold text-lg">ボイテキレック！</div>
+                    <div className="text-sm opacity-90 leading-relaxed">
+                      • 通話の完全録音・証拠保全<br/>
+                      • オンプレミス保存でセキュリティ重視<br/>
+                      • 奨励金制度対象
+                    </div>
+                  </div>
+                  <div className="rounded-xl bg-white/20 p-6">
+                    <div className="mb-3 text-3xl">🤖</div>
+                    <div className="mb-2 font-semibold text-lg">ボイテキ！</div>
+                    <div className="text-sm opacity-90 leading-relaxed">
+                      • AI感情分析・NGワード検出<br/>
+                      • 問題の早期発見・警告<br/>
+                      • 自動要約・可視化
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-8">
+                  <a
+                    href="/"
+                    className="inline-block transform rounded-xl bg-white px-8 py-4 text-lg font-semibold text-red-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-50"
+                  >
+                    ボイテキ！の詳細を見る
+                  </a>
                 </div>
               </div>
             </div>
@@ -623,8 +757,8 @@ export default function VoitexRecPage() {
                 導入をご検討の方へ
               </h2>
               <p className="mx-auto mb-8 max-w-3xl text-xl opacity-90">
-                VoitexRecは、企業の通話管理を革新する統合システムです。
-                詳しい導入方法や料金、デモンストレーションについては、お気軽にお問い合わせください。
+                ボイテキレック！は、<a href="/" className="text-white underline hover:no-underline">ボイテキ！</a>の音声解析AIと連携する通話録音システムです。
+                通話録音の検索・再生も可能。感情解析やテキストマイニングはボイテキ！で連携対応。詳しい導入方法や料金、デモンストレーションについては、お気軽にお問い合わせください。
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a
