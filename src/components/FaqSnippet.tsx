@@ -1,47 +1,33 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { client } from '@/libs/client';
 
 type FaqItem = {
   id: string;
   question: string;
   answer: string;
-  category?: {
-    name: string;
-  };
 };
 
 export default function FaqSnippet() {
-  const [faqData, setFaqData] = useState<FaqItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchFaqData = async () => {
-      try {
-        const data = await client.getList<FaqItem>({ endpoint: 'faq' });
-        // 最初の3件のみを取得
-        setFaqData(data.contents.slice(0, 3));
-      } catch (error) {
-        console.error('FAQデータの取得に失敗しました:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFaqData();
-  }, []);
-
-  if (loading) {
-    return (
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-6xl text-center">
-            <div className="text-gray-500">読み込み中...</div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  // ハードコーディングされたFAQデータ（最初の3件）
+  const faqData: FaqItem[] = [
+    {
+      id: '1',
+      question: 'ボイテキ！は誰でも使えますか？',
+      answer:
+        'はい、PCとインターネット環境があれば、どなたでもご利用いただけます。特別なソフトや知識は不要です。',
+    },
+    {
+      id: '2',
+      question: '対応している音声ファイルの形式を教えてください。',
+      answer:
+        'WAV / MP3 / FLAC / OGG の各形式に対応しています。1ファイル最大200MBまでアップロード可能です。',
+    },
+    {
+      id: '3',
+      question: '感情やNGワードの判定精度はどの程度ですか？',
+      answer:
+        '日本語に最適化されたLLMを活用しており、実務での活用にも耐えうる精度を実現しています。',
+    },
+  ];
 
   return (
     <section className="bg-gray-50 py-16">

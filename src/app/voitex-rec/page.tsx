@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { generateOptimizedMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateOptimizedMetadata(
@@ -30,8 +31,11 @@ export default function VoitexRecPage() {
               <br />
               通話録音をシンプルに
             </h1>
-                          <p className="mx-auto mb-8 max-w-4xl text-xl leading-relaxed text-gray-600 md:text-2xl">
-              <a href="/" className="text-primary hover:underline">ボイテキ！</a>の音声解析AIと連携する、最大32ch同時対応のSIP通話録音から、AI音声認識（テキスト化）まで。
+            <p className="mx-auto mb-8 max-w-4xl text-xl leading-relaxed text-gray-600 md:text-2xl">
+              <Link href="/" className="text-primary hover:underline">
+                ボイテキ！
+              </Link>
+              の音声解析AIと連携する、最大32ch同時対応のSIP通話録音から、AI音声認識（テキスト化）まで。
               <br />
               通話録音の検索・再生も可能。音声ファイルはオンプレミスサーバーに保存し、セキュリティを最優先。感情解析やテキストマイニングはボイテキ！で連携対応。
             </p>
@@ -137,14 +141,14 @@ export default function VoitexRecPage() {
                 <h2 className="mb-4 text-4xl font-bold md:text-5xl">
                   時代に逆行する
                   <br />
-                  <span className="inline-block rounded-2xl bg-white px-6 py-2 text-blue-600 mb-2">
+                  <span className="mb-2 inline-block rounded-2xl bg-white px-6 py-2 text-blue-600">
                     セキュリティ重視
                   </span>
                   <br />
                   の設計
                 </h2>
                 <div className="mb-6">
-                  <span className="inline-block rounded-2xl bg-yellow-400 px-6 py-2 text-gray-900 font-bold text-lg">
+                  <span className="inline-block rounded-2xl bg-yellow-400 px-6 py-2 text-lg font-bold text-gray-900">
                     カスハラ防止条例対応
                   </span>
                 </div>
@@ -153,23 +157,35 @@ export default function VoitexRecPage() {
                   <br />
                   金融・医療・法務など、厳格なセキュリティが求められる業界でも安心してご利用いただけます。
                   <br />
-                  <span className="font-semibold">東京都カスハラ防止条例奨励金制度の対象となり、最大40万円の支援が受けられます。</span>
+                  <span className="font-semibold">
+                    東京都カスハラ防止条例奨励金制度の対象となり、最大40万円の支援が受けられます。
+                  </span>
                 </p>
                 <div className="grid gap-6 md:grid-cols-3">
                   <div className="rounded-xl bg-white/20 p-6">
                     <div className="mb-3 text-3xl">🔒</div>
-                    <div className="mb-2 font-semibold text-lg">オンプレミス保存</div>
-                    <div className="text-sm opacity-90 leading-relaxed">自社サーバーで完全管理</div>
+                    <div className="mb-2 text-lg font-semibold">
+                      オンプレミス保存
+                    </div>
+                    <div className="text-sm leading-relaxed opacity-90">
+                      自社サーバーで完全管理
+                    </div>
                   </div>
                   <div className="rounded-xl bg-white/20 p-6">
                     <div className="mb-3 text-3xl">🛡️</div>
-                    <div className="mb-2 font-semibold text-lg">暗号化対応</div>
-                    <div className="text-sm opacity-90 leading-relaxed">AES暗号化で安全保存</div>
+                    <div className="mb-2 text-lg font-semibold">暗号化対応</div>
+                    <div className="text-sm leading-relaxed opacity-90">
+                      AES暗号化で安全保存
+                    </div>
                   </div>
                   <div className="rounded-xl bg-white/20 p-6">
                     <div className="mb-3 text-3xl">📋</div>
-                    <div className="mb-2 font-semibold text-lg">カスハラ対策</div>
-                    <div className="text-sm opacity-90 leading-relaxed">奨励金制度対象・証拠保全対応</div>
+                    <div className="mb-2 text-lg font-semibold">
+                      カスハラ対策
+                    </div>
+                    <div className="text-sm leading-relaxed opacity-90">
+                      奨励金制度対象・証拠保全対応
+                    </div>
                   </div>
                 </div>
               </div>
@@ -294,7 +310,7 @@ export default function VoitexRecPage() {
                 <h2 className="mb-6 text-4xl font-bold md:text-5xl">
                   ボイテキレック！ × ボイテキ！
                   <br />
-                  <span className="inline-block rounded-2xl bg-white px-8 py-3 text-red-600 mb-2">
+                  <span className="mb-2 inline-block rounded-2xl bg-white px-8 py-3 text-red-600">
                     カスハラ防止の最強タッグ
                   </span>
                   <br />
@@ -308,30 +324,34 @@ export default function VoitexRecPage() {
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="rounded-xl bg-white/20 p-6">
                     <div className="mb-3 text-3xl">🎙️</div>
-                    <div className="mb-2 font-semibold text-lg">ボイテキレック！</div>
-                    <div className="text-sm opacity-90 leading-relaxed">
-                      • 通話の完全録音・証拠保全<br/>
-                      • オンプレミス保存でセキュリティ重視<br/>
-                      • 奨励金制度対象
+                    <div className="mb-2 text-lg font-semibold">
+                      ボイテキレック！
+                    </div>
+                    <div className="text-sm leading-relaxed opacity-90">
+                      • 通話の完全録音・証拠保全
+                      <br />
+                      • オンプレミス保存でセキュリティ重視
+                      <br />• 奨励金制度対象
                     </div>
                   </div>
                   <div className="rounded-xl bg-white/20 p-6">
                     <div className="mb-3 text-3xl">🤖</div>
-                    <div className="mb-2 font-semibold text-lg">ボイテキ！</div>
-                    <div className="text-sm opacity-90 leading-relaxed">
-                      • AI感情分析・NGワード検出<br/>
-                      • 問題の早期発見・警告<br/>
-                      • 自動要約・可視化
+                    <div className="mb-2 text-lg font-semibold">ボイテキ！</div>
+                    <div className="text-sm leading-relaxed opacity-90">
+                      • AI感情分析・NGワード検出
+                      <br />
+                      • 問題の早期発見・警告
+                      <br />• 自動要約・可視化
                     </div>
                   </div>
                 </div>
                 <div className="mt-8">
-                  <a
+                  <Link
                     href="/"
                     className="inline-block transform rounded-xl bg-white px-8 py-4 text-lg font-semibold text-red-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-50"
                   >
                     ボイテキ！の詳細を見る
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -757,7 +777,14 @@ export default function VoitexRecPage() {
                 導入をご検討の方へ
               </h2>
               <p className="mx-auto mb-8 max-w-3xl text-xl opacity-90">
-                ボイテキレック！は、<a href="/" className="text-white underline hover:no-underline">ボイテキ！</a>の音声解析AIと連携する通話録音システムです。
+                ボイテキレック！は、
+                <Link
+                  href="/"
+                  className="text-white underline hover:no-underline"
+                >
+                  ボイテキ！
+                </Link>
+                の音声解析AIと連携する通話録音システムです。
                 通話録音の検索・再生も可能。感情解析やテキストマイニングはボイテキ！で連携対応。詳しい導入方法や料金、デモンストレーションについては、お気軽にお問い合わせください。
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">

@@ -34,7 +34,7 @@ const navItems = [
 
 const sisterServices = [
   { label: 'QuickSum', href: '/quicksum', icon: '📝' },
-          { label: 'ボイテキレック！', href: '/voitex-rec', icon: '🎙️' },
+  { label: 'ボイテキレック！', href: '/voitex-rec', icon: '🎙️' },
   { label: 'ボイテキコンバーター！', href: '/voitex-converter', icon: '🔄' },
 ];
 
