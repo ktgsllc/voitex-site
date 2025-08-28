@@ -9,25 +9,19 @@ type NewsItem = {
 };
 
 export default function News() {
-  // ハードコーディングされたニュースデータ（最新3件）
+  // ハードコーディングされたニュースデータ（最新2件）
   const news: NewsItem[] = [
     {
       id: '1',
-      title: 'ボイテキレック！リリース予定のお知らせ',
-      publishedAt: '2024-12-01',
-      slug: 'voitexrec-release-announcement',
+      title: '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
+      publishedAt: '2025-07-06',
+      slug: 'iso-27017-acquisition-status',
     },
     {
       id: '2',
-      title: '東京都カスハラ防止条例奨励金制度への対応',
-      publishedAt: '2024-11-15',
-      slug: 'kasuhara-prevention-ordinance-support',
-    },
-    {
-      id: '3',
-      title: '音声解析AIの精度向上について',
-      publishedAt: '2024-10-20',
-      slug: 'ai-accuracy-improvement',
+      title: '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
+      publishedAt: '2025-08-01',
+      slug: 'voitex-official-release',
     },
   ];
 

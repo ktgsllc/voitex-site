@@ -12,39 +12,21 @@ export const metadata: Metadata = generateMetadata(
 const newsData = [
   {
     id: '1',
-    title: 'ボイテキレック！リリース予定のお知らせ',
-    date: '2024-12-01',
-    category: 'リリース',
+    title: '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
+    date: '2025-07-06',
+    category: 'セキュリティ',
     excerpt:
-      'ボイテキ！と連携する通話録音システム「ボイテキレック！」のリリース予定をお知らせします。',
-    slug: 'voitexrec-release-announcement',
+      '当社（ケーティージーエス合同会社）では、クラウドサービスをご利用いただく皆様に、より安心してお使いいただける環境を提供するため、国際的な情報セキュリティ規格「ISO/IEC 27017」の取得に向けた取り組みを進めております。',
+    slug: 'iso-27017-acquisition-status',
   },
   {
     id: '2',
-    title: '東京都カスハラ防止条例奨励金制度への対応',
-    date: '2024-11-15',
-    category: 'お知らせ',
+    title: '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
+    date: '2025-08-01',
+    category: 'リリース',
     excerpt:
-      '東京都のカスハラ防止条例奨励金制度の対象となり、最大40万円の支援が受けられることをお知らせします。',
-    slug: 'kasuhara-prevention-ordinance-support',
-  },
-  {
-    id: '3',
-    title: '音声解析AIの精度向上について',
-    date: '2024-10-20',
-    category: '機能改善',
-    excerpt:
-      'ボイテキ！の音声解析AIの精度が大幅に向上し、より正確な感情分析とNGワード検出が可能になりました。',
-    slug: 'ai-accuracy-improvement',
-  },
-  {
-    id: '4',
-    title: 'セキュリティ強化のお知らせ',
-    date: '2024-09-30',
-    category: 'セキュリティ',
-    excerpt:
-      'データセキュリティの強化により、より安全な音声データの取り扱いが可能になりました。',
-    slug: 'security-enhancement',
+      '2025年8月1日、音声解析クラウド「ボイテキ！」は正式リリースを迎えました。カスタマーハラスメント対策や、通話品質評価・離職防止を支援するため、録音データをAIで解析・可視化するバッチ処理特化型サービスです。',
+    slug: 'voitex-official-release',
   },
 ];
 
