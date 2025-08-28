@@ -12,7 +12,8 @@ export const metadata: Metadata = generateMetadata(
 const newsData = [
   {
     id: '1',
-    title: '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
+    title:
+      '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
     date: '2025-07-06',
     category: 'セキュリティ',
     excerpt:
@@ -21,7 +22,8 @@ const newsData = [
   },
   {
     id: '2',
-    title: '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
+    title:
+      '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
     date: '2025-08-01',
     category: 'リリース',
     excerpt:

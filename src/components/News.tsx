@@ -13,13 +13,15 @@ export default function News() {
   const news: NewsItem[] = [
     {
       id: '1',
-      title: '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
+      title:
+        '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
       publishedAt: '2025-07-06',
       slug: 'iso-27017-acquisition-status',
     },
     {
       id: '2',
-      title: '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
+      title:
+        '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
       publishedAt: '2025-08-01',
       slug: 'voitex-official-release',
     },

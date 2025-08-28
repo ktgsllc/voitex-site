@@ -8,13 +8,14 @@ import Tag from '@/components/Tag';
 const newsData = [
   {
     id: '1',
-    title: '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
+    title:
+      '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
     date: '2025-07-06',
     category: 'セキュリティ',
     excerpt:
       '当社（ケーティージーエス合同会社）では、クラウドサービスをご利用いただく皆様に、より安心してお使いいただける環境を提供するため、国際的な情報セキュリティ規格「ISO/IEC 27017」の取得に向けた取り組みを進めております。',
     slug: 'iso-27017-acquisition-status',
-         content: `
+    content: `
        <div class="mb-8">
          <h2 class="text-2xl font-bold text-gray-800 mb-4">ISO/IEC 27017とは？</h2>
          <p class="text-gray-700 leading-relaxed mb-6">ISO/IEC 27017 は、クラウドサービスの安全性と信頼性を強化するために設けられた国際規格で、クラウド特有のリスクに対応する管理策を定めています。</p>
@@ -110,17 +111,18 @@ const newsData = [
            <p class="text-gray-700">引き続き、情報セキュリティの向上とサービス品質の強化に努めてまいります。</p>
          </div>
        </div>
-     `
+     `,
   },
   {
     id: '2',
-    title: '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
+    title:
+      '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
     date: '2025-08-01',
     category: 'リリース',
     excerpt:
       '2025年8月1日、音声解析クラウド「ボイテキ！」は正式リリースを迎えました。カスタマーハラスメント対策や、通話品質評価・離職防止を支援するため、録音データをAIで解析・可視化するバッチ処理特化型サービスです。',
     slug: 'voitex-official-release',
-         content: `
+    content: `
        <div class="mb-8">
          <h2 class="text-2xl font-bold text-gray-800 mb-4">現在は以下の機能を提供中です：</h2>
          <div class="grid md:grid-cols-2 gap-6">
@@ -177,18 +179,23 @@ const newsData = [
            お問い合わせフォーム
          </div>
        </div>
-     `
-  }
+     `,
+  },
 ];
 
 // 動的メタデータ生成
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const news = newsData.find(item => item.slug === params.slug);
-  
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const news = newsData.find((item) => item.slug === slug);
+
   if (!news) {
     return {
       title: 'お知らせが見つかりません | ボイテキ！',
-      description: 'お探しのお知らせが見つかりませんでした。'
+      description: 'お探しのお知らせが見つかりませんでした。',
     };
   }
 
@@ -199,9 +206,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   );
 }
 
-export default function NewsDetailPage({ params }: { params: { slug: string } }) {
-  const news = newsData.find(item => item.slug === params.slug);
-  
+export default async function NewsDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const news = newsData.find((item) => item.slug === slug);
+
   if (!news) {
     notFound();
   }
@@ -213,9 +225,17 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
           {/* パンくずリスト */}
           <nav className="mb-8">
             <ol className="flex items-center space-x-2 text-sm text-gray-500">
-              <li><Link href="/" className="hover:text-primary">ホーム</Link></li>
+              <li>
+                <Link href="/" className="hover:text-primary">
+                  ホーム
+                </Link>
+              </li>
               <li>/</li>
-              <li><Link href="/news" className="hover:text-primary">お知らせ</Link></li>
+              <li>
+                <Link href="/news" className="hover:text-primary">
+                  お知らせ
+                </Link>
+              </li>
               <li>/</li>
               <li className="text-gray-900">{news.title}</li>
             </ol>
@@ -232,16 +252,14 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
             <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
               {news.title}
             </h1>
-            <p className="mt-4 text-lg text-gray-600">
-              {news.excerpt}
-            </p>
+            <p className="mt-4 text-lg text-gray-600">{news.excerpt}</p>
           </header>
 
           {/* 記事本文 */}
           <article className="prose prose-lg max-w-none">
-            <div 
+            <div
               dangerouslySetInnerHTML={{ __html: news.content }}
-              className="text-gray-700 leading-relaxed"
+              className="leading-relaxed text-gray-700"
             />
           </article>
 
