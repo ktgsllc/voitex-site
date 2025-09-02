@@ -11,15 +11,19 @@ export default function Hero() {
           <p className="mt-6 text-lg leading-relaxed text-gray-600">
             音声データをAIで分析・要約・可視化し、
             <br className="hidden sm:inline" />
-            応対品質を見える化する<strong>音声解析AI SaaSツール</strong>{' '}
+            応対品質と<strong>営業セールス分析</strong>を見える化する
+            <strong>音声解析AI SaaSツール</strong>{' '}
             <strong>「ボイテキ！」</strong>。<br />
             感情やNGワードの
             <span className="font-semibold text-primary">自動検出</span>
-            にも対応しています。
+            で、コールセンターから営業活動まで幅広く活用できます。
           </p>
           <div className="mt-6 text-center">
             <p className="text-lg font-medium text-gray-700">
               AIの力で、コミュニケーションの質を守る
+            </p>
+            <p className="mt-2 text-sm text-gray-600">
+              お客様の業務に合わせたカスタマイズと専門スタッフのサポートで、効果的な活用を実現
             </p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

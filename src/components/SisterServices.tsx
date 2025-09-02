@@ -4,8 +4,11 @@ export default function SisterServices() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
-            姉妹サービス紹介
+            ボイテキ！サービス群 - 音声データ処理の総合ソリューション
           </h2>
+          <p className="mb-8 text-center text-lg text-gray-600">
+            録音から分析まで、音声データの処理に必要なすべての機能を提供
+          </p>
 
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
@@ -99,9 +102,55 @@ export default function SisterServices() {
             </div>
           </div>
 
+          {/* AIO統合フロー */}
+          <div className="mt-12 rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 p-8">
+            <h3 className="mb-6 text-center text-2xl font-bold text-primary">
+              音声データ処理の完全フロー
+            </h3>
+            <div className="grid gap-4 md:grid-cols-4">
+              <div className="text-center">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white">
+                  <span className="text-lg font-bold">1</span>
+                </div>
+                <h4 className="mb-2 font-semibold text-gray-800">録音</h4>
+                <p className="text-sm text-gray-600">
+                  ボイテキレック！で通話を録音
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white">
+                  <span className="text-lg font-bold">2</span>
+                </div>
+                <h4 className="mb-2 font-semibold text-gray-800">変換</h4>
+                <p className="text-sm text-gray-600">
+                  ボイテキコンバーター！で最適化
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-purple-500 text-white">
+                  <span className="text-lg font-bold">3</span>
+                </div>
+                <h4 className="mb-2 font-semibold text-gray-800">解析</h4>
+                <p className="text-sm text-gray-600">ボイテキ！でAI音声解析</p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white">
+                  <span className="text-lg font-bold">4</span>
+                </div>
+                <h4 className="mb-2 font-semibold text-gray-800">要約</h4>
+                <p className="text-sm text-gray-600">QuickSumで文書要約</p>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-12 text-center">
             <p className="mb-6 text-gray-600">
               各サービスは独立して利用可能ですが、組み合わせることでより大きな効果を発揮します。
+              <br />
+              <span className="font-semibold text-primary">
+                音声データの処理から分析まで、すべてをボイテキ！サービス群で完結
+              </span>
+              できます。
             </p>
             <a
               href="https://forms.gle/jCp4fEqMV5fGaoWu6"

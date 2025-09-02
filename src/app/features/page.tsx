@@ -37,17 +37,25 @@ export default function Features() {
       id: 'evaluation',
       title: '自動化された対話評価',
       description:
-        '顧客対応の品質を自動スコア化。改善点の提示も含め、継続的な品質向上を支援します。',
+        '顧客対応の品質を自動スコア化。改善点の提示も含め、継続的な品質向上を支援します。営業トークの効果分析にも対応。',
       image: '/features/evaluation.webp',
-      points: ['自動評価による品質スコア', '改善提案の提示'],
+      points: [
+        '自動評価による品質スコア',
+        '改善提案の提示',
+        '営業トークの効果測定',
+      ],
     },
     {
       id: 'dashboard',
       title: 'ダッシュボード統計',
       description:
-        'ジョブ数、NGワード件数、料金情報などをリアルタイムで確認。日次・週次・月次の集計に対応します。',
+        'ジョブ数、NGワード件数、料金情報などをリアルタイムで確認。日次・週次・月次の集計に対応します。営業活動の成果分析も可視化。',
       image: '/features/dashboard.webp',
-      points: ['統計指標の可視化', '利用状況の時系列分析'],
+      points: [
+        '統計指標の可視化',
+        '利用状況の時系列分析',
+        '営業成果の分析レポート',
+      ],
     },
     {
       id: 'filter',
@@ -61,9 +69,13 @@ export default function Features() {
       id: 'prompt',
       title: 'プロンプト管理',
       description:
-        'AI要約や感情分類に使う命令文（プロンプト）をGUIで編集・試行可能です。',
+        'AI要約や感情分類に使う命令文（プロンプト）をGUIで編集・試行可能です。営業セールス分析に特化したプロンプトも設定可能。',
       image: '/features/prompt.webp',
-      points: ['プロンプト編集・保存', '要約テストで即時結果確認'],
+      points: [
+        'プロンプト編集・保存',
+        '要約テストで即時結果確認',
+        '営業分析用プロンプトテンプレート',
+      ],
     },
     {
       id: 'tags',
@@ -77,9 +89,13 @@ export default function Features() {
       id: 'ng-words',
       title: 'NGワード管理',
       description:
-        'テキスト化された内容に対してNGワードをハイライト表示。検出粒度も柔軟に調整可能です。',
+        'テキスト化された内容に対してNGワードをハイライト表示。検出粒度も柔軟に調整可能です。営業で避けるべき表現も設定可能。',
       image: '/features/ng-words.webp',
-      points: ['単語単位 or 漢字単位のNG設定', '表現揺れや類語対策に柔軟対応'],
+      points: [
+        '単語単位 or 漢字単位のNG設定',
+        '表現揺れや類語対策に柔軟対応',
+        '営業向けNGワードテンプレート',
+      ],
     },
     {
       id: 'users',
@@ -216,7 +232,7 @@ export default function Features() {
                   </svg>
                 </a>
                 <a
-                  href="/contact"
+                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
                 >
                   お問い合わせ

@@ -88,16 +88,26 @@ export const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'ボイテキ！',
+    alternateName: 'Voitex',
     description:
-      '音声データをAIで分析・要約・可視化し、応対品質を見える化するクラウドサービス',
+      '音声解析AI SaaSツール。音声データをAIで自動分析・要約・可視化し、応対品質と営業セールス分析を見える化。NGワード検出・感情分析・自動要約でコールセンターの品質管理と営業活動の分析を効率化。カスハラ対策にも活用可能。',
     url: 'https://www.voitex.site',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
+    browserRequirements: 'HTML5対応ブラウザ',
     offers: {
       '@type': 'Offer',
-      price: '0',
+      price: '1500',
       priceCurrency: 'JPY',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: '1500',
+        priceCurrency: 'JPY',
+        unitText: '1時間',
+        billingIncrement: '1',
+      },
       availability: 'https://schema.org/InStock',
+      validFrom: '2024-01-01',
     },
     provider: {
       '@type': 'Organization',
@@ -117,6 +127,11 @@ export const structuredData = {
       'スピーカー分離',
       '応対スコアリング',
       'カスハラ対策',
+      '営業セールス分析',
+      'プロンプト管理',
+      'タグ管理',
+      'ユーザー管理',
+      'ダッシュボード',
     ],
     screenshot: 'https://www.voitex.site/hero-image.webp',
     softwareVersion: '3.12.0',
@@ -282,7 +297,7 @@ export const optimizedDescriptions = {
   blog: 'ボイテキ！のブログ。音声解析AIの活用方法、コールセンターの品質向上、カスハラ対策など、実務に役立つ情報を発信。',
 
   voitexRec:
-    'ボイテキレック！は音声解析AI「ボイテキ！」と連携する通話録音システム。最大32ch同時対応のSIP通話録音からAI音声認識（テキスト化）まで。音声ファイルはオンプレミスサーバーに保存し、セキュリティを最優先。カスハラ防止条例奨励金制度対象。金融・医療・法務など厳格なセキュリティが求められる業界でも安心。',
+    'ボイテキレック！は通話録音システムと音声解析AIの統合ソリューション。最大32ch同時録音、SIP通話対応、オンプレミス保存でセキュリティ重視。金融・医療・法務業界向け。カスハラ防止条例奨励金制度対象。録音からAI分析まで一貫対応。',
 
   security:
     'ボイテキ！のセキュリティ対策について。音声データの暗号化、アクセス制御、プライバシー保護など、企業の機密情報を安全に保護。',

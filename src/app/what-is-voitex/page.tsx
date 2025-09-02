@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキとは？｜音声解析AI SaaSツールの詳細解説',
-  'ボイテキとは音声解析AI SaaSツール。コールセンターの応対品質向上とカスハラ対策を支援。NGワード検出・感情分析・自動要約機能で品質管理を効率化。',
+  'ボイテキとは音声解析AI SaaSツール。コールセンターの応対品質向上とカスハラ対策、営業セールス分析を支援。NGワード検出・感情分析・自動要約機能で品質管理と営業活動の分析を効率化。',
   '/what-is-voitex'
 );
 
@@ -131,6 +131,230 @@ export default function WhatIsVoitexPage() {
               </div>
             </div>
 
+            {/* 営業セールス分析での活用 */}
+            <div className="mb-12">
+              <h2 className="mb-8 text-3xl font-bold text-primary">
+                営業セールス分析での活用
+              </h2>
+              <div className="mb-8 rounded-lg bg-blue-50 p-6">
+                <h3 className="mb-4 text-xl font-semibold text-blue-800">
+                  営業活動の品質向上を支援
+                </h3>
+                <p className="mb-4 text-blue-700">
+                  ボイテキ！の音声解析AIは、営業セールス分析に特化した機能を提供します。
+                  営業電話の録音データを分析し、営業成果の向上に直結する洞察を提供します。
+                </p>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-blue-800">
+                      営業トークの効果分析
+                    </h4>
+                    <p className="text-sm text-blue-600">
+                      顧客の感情変化を追跡し、どの営業トークが効果的かを客観的に分析
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-blue-800">
+                      ウィークポイント抽出
+                    </h4>
+                    <p className="text-sm text-blue-600">
+                      営業担当者の躊躇や自信のなさを感情分析で発見し、改善点を特定
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-blue-800">
+                      顧客反応の可視化
+                    </h4>
+                    <p className="text-sm text-blue-600">
+                      顧客の関心度や購買意欲を感情分析で測定し、アプローチのタイミングを最適化
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-blue-800">
+                      成功パターンの分析
+                    </h4>
+                    <p className="text-sm text-blue-600">
+                      成功した営業トークの共通点を抽出し、チーム全体のスキル向上に活用
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 営業セールス分析での具体的な設定例 */}
+              <div className="mt-8 rounded-lg bg-green-50 p-6">
+                <h3 className="mb-4 text-xl font-semibold text-green-800">
+                  営業セールス分析での具体的な設定例
+                </h3>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-3 font-semibold text-green-800">
+                      プロンプト設定例
+                    </h4>
+                    <div className="space-y-2 text-sm text-green-700">
+                      <p>
+                        <strong>営業トーク分析用：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「この営業電話の効果を分析し、顧客の反応と営業担当者のスキルを評価してください」
+                      </p>
+                      <p>
+                        <strong>成功要因抽出用：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「契約に至った営業トークの成功要因を特定し、再現可能なポイントを抽出してください」
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-3 font-semibold text-green-800">
+                      NGワード設定例
+                    </h4>
+                    <div className="space-y-2 text-sm text-green-700">
+                      <p>
+                        <strong>営業で避けるべき表現：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「絶対に」「必ず」「今すぐ」「急いで」「無理やり」
+                      </p>
+                      <p>
+                        <strong>顧客の反応を損なう表現：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「分からない」「知らない」「できない」「困る」
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 rounded-lg bg-green-100 p-4">
+                  <h4 className="mb-2 font-semibold text-green-800">
+                    活用のポイント
+                  </h4>
+                  <ul className="space-y-1 text-sm text-green-700">
+                    <li>
+                      • 営業チームの特性に合わせてプロンプトをカスタマイズ
+                    </li>
+                    <li>• 業界や商品に応じたNGワードを設定</li>
+                    <li>• 成功事例と失敗事例を比較分析して改善点を特定</li>
+                    <li>• 定期的にプロンプトとNGワードを見直し、精度を向上</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* カスハラ対策での活用 */}
+            <div className="mb-12">
+              <h2 className="mb-8 text-3xl font-bold text-primary">
+                カスハラ対策での活用
+              </h2>
+              <div className="mb-8 rounded-lg bg-red-50 p-6">
+                <h3 className="mb-4 text-xl font-semibold text-red-800">
+                  職場のハラスメントを早期発見・防止
+                </h3>
+                <p className="mb-4 text-red-700">
+                  ボイテキ！の音声解析AIは、カスハラ対策に特化した機能を提供します。
+                  職場での会話を分析し、ハラスメントの兆候を早期に発見し、予防的な対策を支援します。
+                </p>
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-red-800">
+                      ハラスメント発言の検出
+                    </h4>
+                    <p className="text-sm text-red-600">
+                      不適切な発言やパワハラ、セクハラの兆候を自動検出し、早期発見を支援
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-red-800">
+                      感情状態の監視
+                    </h4>
+                    <p className="text-sm text-red-600">
+                      従業員のストレスや不安、恐怖などの感情変化を分析し、サポートが必要な状況を特定
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-red-800">
+                      証拠の記録・保存
+                    </h4>
+                    <p className="text-sm text-red-600">
+                      ハラスメントの証拠となる音声データを安全に記録・保存し、適切な対応を支援
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-2 font-semibold text-red-800">
+                      予防的な対策
+                    </h4>
+                    <p className="text-sm text-red-600">
+                      ハラスメントが深刻化する前の段階で対策を講じ、職場環境の改善を支援
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* カスハラ対策での具体的な設定例 */}
+              <div className="mt-8 rounded-lg bg-orange-50 p-6">
+                <h3 className="mb-4 text-xl font-semibold text-orange-800">
+                  カスハラ対策での具体的な設定例
+                </h3>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-3 font-semibold text-orange-800">
+                      プロンプト設定例
+                    </h4>
+                    <div className="space-y-2 text-sm text-orange-700">
+                      <p>
+                        <strong>ハラスメント検出用：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「この会話にハラスメントの兆候がないか分析し、不適切な発言やパワハラの可能性を評価してください」
+                      </p>
+                      <p>
+                        <strong>感情状態分析用：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「話者の感情状態を分析し、ストレスや不安、恐怖などの負の感情がないか確認してください」
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-white p-4">
+                    <h4 className="mb-3 font-semibold text-orange-800">
+                      NGワード設定例
+                    </h4>
+                    <div className="space-y-2 text-sm text-orange-700">
+                      <p>
+                        <strong>パワハラ関連：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「バカ」「無能」「使えない」「辞めろ」「クビ」
+                      </p>
+                      <p>
+                        <strong>セクハラ関連：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「可愛い」「美人」「スタイル」「デート」「付き合う」
+                      </p>
+                      <p>
+                        <strong>人格否定：</strong>
+                      </p>
+                      <p className="ml-4">
+                        「お前は」「君は」「どうせ」「所詮」「役立たず」
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 rounded-lg bg-orange-100 p-4">
+                  <h4 className="mb-2 font-semibold text-orange-800">
+                    活用のポイント
+                  </h4>
+                  <ul className="space-y-1 text-sm text-orange-700">
+                    <li>• 業界や職場の特性に合わせてNGワードをカスタマイズ</li>
+                    <li>• 文脈を考慮したハラスメント検出のプロンプトを設定</li>
+                    <li>• 定期的な分析結果のレビューと対策の見直し</li>
+                    <li>• 従業員のプライバシー保護と適切な情報管理</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* ボイテキの活用シーン */}
             <div className="mb-12">
               <h2 className="mb-8 text-3xl font-bold text-primary">
@@ -148,11 +372,12 @@ export default function WhatIsVoitexPage() {
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6">
                   <h3 className="mb-3 text-xl font-semibold text-primary">
-                    営業活動の振り返り
+                    営業活動の振り返り・セールス分析
                   </h3>
                   <p className="text-gray-600">
                     ボイテキ！の音声解析AIで営業電話を分析し、
                     成功要因や改善点を客観的に把握。営業スキルの向上に活用できます。
+                    感情分析で顧客の反応を測定し、営業トークの効果を可視化。
                   </p>
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6">
@@ -171,6 +396,96 @@ export default function WhatIsVoitexPage() {
                   <p className="text-gray-600">
                     ボイテキ！の音声解析AIで法的リスクを自動検出。
                     カスハラ対策を含むコンプライアンス管理を強化します。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* その他の活用例 */}
+            <div className="mb-12">
+              <h2 className="mb-8 text-3xl font-bold text-primary">
+                その他の活用例
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    医療・介護現場での活用
+                  </h3>
+                  <p className="text-gray-600">
+                    患者・利用者との会話を分析し、コミュニケーション品質の向上と
+                    医療事故防止に活用。感情分析で患者の不安や不満を早期発見。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    教育・研修の効果測定
+                  </h3>
+                  <p className="text-gray-600">
+                    研修や授業の音声を分析し、教育効果を客観的に測定。
+                    受講者の理解度や関心度を感情分析で把握し、教育プログラムの改善に活用。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    カスタマーサポートの品質向上
+                  </h3>
+                  <p className="text-gray-600">
+                    顧客対応の品質を自動評価し、満足度向上に直結する
+                    改善点を特定。NGワード検出で不適切な対応を防止。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    面接・人事評価の支援
+                  </h3>
+                  <p className="text-gray-600">
+                    面接の音声を分析し、候補者の適性や企業との相性を
+                    客観的に評価。面接官の質問スキル向上にも活用可能。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    会議・ミーティングの分析
+                  </h3>
+                  <p className="text-gray-600">
+                    会議の音声を分析し、参加者の発言量や感情状態を可視化。
+                    会議の効率性向上と参加者の満足度改善に活用。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    法務・弁護士事務所での活用
+                  </h3>
+                  <p className="text-gray-600">
+                    相談内容の要約と感情分析で、クライアントの状況を
+                    正確に把握。法的リスクの早期発見と適切な対応を支援。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    不動産・金融業界での活用
+                  </h3>
+                  <p className="text-gray-600">
+                    顧客との商談を分析し、契約成功率の向上に直結する
+                    要因を特定。リスク管理とコンプライアンス強化にも対応。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    テレワーク・リモートワーク支援
+                  </h3>
+                  <p className="text-gray-600">
+                    オンライン会議や電話会議の品質を分析し、
+                    リモートワーク環境でのコミュニケーション改善を支援。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6">
+                  <h3 className="mb-3 text-xl font-semibold text-primary">
+                    多言語対応・グローバル展開
+                  </h3>
+                  <p className="text-gray-600">
+                    多言語での音声解析に対応し、グローバル企業での
+                    コミュニケーション品質管理と文化間の理解促進を支援。
                   </p>
                 </div>
               </div>
@@ -240,7 +555,7 @@ export default function WhatIsVoitexPage() {
                   </svg>
                 </a>
                 <a
-                  href="/contact"
+                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
                 >
                   お問い合わせ

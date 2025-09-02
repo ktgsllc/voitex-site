@@ -299,7 +299,7 @@ export default function Page() {
                 料金の詳細やトライアルについて、専門スタッフがご説明いたします
               </p>
               <a
-                href="/contact"
+                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                 className="inline-flex items-center rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 transition-colors hover:bg-gray-100"
               >
                 お問い合わせ

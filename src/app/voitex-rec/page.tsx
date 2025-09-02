@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { generateOptimizedMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateOptimizedMetadata(
-  'ボイテキ！レコーダー｜通話録音・音声分析システム - ボイテキ！',
+  'ボイテキレック！｜通話録音システムとAI音声解析の統合ソリューション',
   'voitexRec',
   '/voitex-rec'
 );
@@ -65,7 +65,7 @@ export default function VoitexRecPage() {
                 無料相談・資料請求
               </a>
               <a
-                href="/contact"
+                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                 className="transform rounded-xl border-2 border-primary px-8 py-4 text-lg font-semibold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
               >
                 詳細を見る
@@ -795,7 +795,7 @@ export default function VoitexRecPage() {
                   お問い合わせ
                 </a>
                 <a
-                  href="/contact"
+                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                   className="transform rounded-xl border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary"
                 >
                   詳細資料請求
