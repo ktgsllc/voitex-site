@@ -30,6 +30,36 @@ export default function Intro() {
             <strong>音声解析AI SaaSツール</strong>です。
           </p>
 
+          {/* 新機能のアピール */}
+          <div className="mb-12 rounded-lg border border-green-200 bg-gradient-to-r from-green-50 to-blue-50 p-8">
+            <div className="mb-4 text-center">
+              <span className="inline-block rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-800">
+                🎉 2025年9月 大型アップデート
+              </span>
+            </div>
+            <h3 className="mb-4 text-2xl font-bold text-primary">
+              会話評価機能を大幅刷新！
+            </h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h4 className="mb-3 text-lg font-semibold text-green-700">
+                  📊 感情解析結果の視覚化
+                </h4>
+                <p className="text-gray-600">
+                  感情解析結果をカード形式で直感的に表示。差の数値を色分けして強調し、パッと見て分かるUIで営業・カスタマーサポートの効率化を実現。
+                </p>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h4 className="mb-3 text-lg font-semibold text-blue-700">
+                  🔄 AI改善アドバイスと再生成機能
+                </h4>
+                <p className="text-gray-600">
+                  感情解析結果と改善アドバイスを分離表示。必要に応じて再生成機能で結果を調整でき、より実用的な分析結果を提供します。
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {/* ブロック1 */}
             <div className="rounded-lg bg-gray-50 p-6 shadow-sm">

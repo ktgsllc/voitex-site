@@ -15,8 +15,9 @@ export default function Hero() {
             <strong>音声解析AI SaaSツール</strong>{' '}
             <strong>「ボイテキ！」</strong>。<br />
             感情やNGワードの
-            <span className="font-semibold text-primary">自動検出</span>
-            で、コールセンターから営業活動まで幅広く活用できます。
+            <span className="font-semibold text-primary">自動検出</span>と
+            <strong className="text-primary">視覚化された感情解析結果</strong>
+            で、 コールセンターから営業活動まで幅広く活用できます。
           </p>
           <div className="mt-6 text-center">
             <p className="text-lg font-medium text-gray-700">

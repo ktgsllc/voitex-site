@@ -7,6 +7,8 @@ import {
   Share2,
   Brain,
   ShieldCheck,
+  BarChart3,
+  RefreshCw,
 } from 'lucide-react';
 
 const features = [
@@ -39,6 +41,18 @@ const features = [
     title: '感情のギャップ分析',
     description:
       'オペレーターと顧客の感情のズレを分析し、共感やトラブル発生の兆候を見える化。営業と顧客の心理的距離も測定し、対応力向上に役立ちます。',
+  },
+  {
+    icon: <BarChart3 className="h-10 w-10 text-primary" />,
+    title: '感情解析結果の視覚化（NEW!）',
+    description:
+      '感情解析結果をカード形式で直感的に表示。差の数値を色分けして強調し、パッと見て分かるUIで営業・カスタマーサポートの効率化を実現。',
+  },
+  {
+    icon: <RefreshCw className="h-10 w-10 text-primary" />,
+    title: 'AI改善アドバイスと再生成機能（NEW!）',
+    description:
+      '感情解析結果と改善アドバイスを分離表示。必要に応じて再生成機能で結果を調整でき、より実用的な分析結果を提供します。',
   },
   {
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
