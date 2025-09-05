@@ -7,6 +7,229 @@ import Tag from '@/components/Tag';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '3',
+    title:
+      'ボイテキ！、会話評価機能を大幅刷新 - 感情解析結果の視覚化とAI改善アドバイスを実装',
+    date: '2025-09-05',
+    category: 'アップデート',
+    excerpt:
+      '音声解析プラットフォーム「ボイテキ！」の会話評価機能を大幅に刷新しました。感情解析結果をカード形式で視覚化し、AI改善アドバイスを分離表示することで、営業・カスタマーサポートの効率化を実現します。',
+    slug: 'voitex-evaluation-feature-update',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎉 大型アップデートの概要</h2>
+         <p class="text-gray-700 leading-relaxed mb-6">「ボイテキ！」の会話評価機能を大幅に刷新し、より直感的で実用的な機能を実装しました。感情解析結果の視覚化とAI改善アドバイスの分離表示により、営業・カスタマーサポートの現場でより効果的にご活用いただけます。</p>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">✨ 主な新機能</h2>
+         <div class="grid md:grid-cols-2 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">感情解析結果の視覚化</h3>
+             </div>
+             <p class="text-gray-700">従来のテキストベースから、カード形式の直感的な表示へ変更。感情指標を色分けして強調表示し、パッと見て分かるUIを実現しました。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">AI評価の分離表示</h3>
+             </div>
+             <p class="text-gray-700">感情解析結果サマリと改善アドバイスを明確に分離。それぞれの目的に応じた情報を効率的に確認できます。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-purple-800">Markdown風パーサー</h3>
+             </div>
+             <p class="text-gray-700">情報の階層化により読みやすさを大幅向上。見出し、箇条書き、番号付きリストを適切に表示します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-orange-800">再生成機能</h3>
+             </div>
+             <p class="text-gray-700">結果に満足できない場合、簡単に再生成できる機能を追加。より良い結果を得るまで何度でも試すことができます。</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎨 UI/UXの改善</h2>
+         <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
+           <ul class="space-y-3 text-gray-700">
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+               感情指標をカード形式で表示
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+               差の数値を色分けして強調
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+               見出しの階層化と色分け
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+               箇条書きと番号付きリストの適切な表示
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+               問題の概要をタグ形式で視覚化
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🚀 システムの安定性向上</h2>
+         <div class="space-y-6">
+           <div class="bg-gray-50 p-6 rounded-lg">
+             <h3 class="text-lg font-semibold text-gray-800 mb-2">データ処理の最適化</h3>
+             <p class="text-gray-700">音声データの処理速度を向上させ、よりスムーズな操作を実現しました。</p>
+           </div>
+           
+           <div class="bg-gray-50 p-6 rounded-lg">
+             <h3 class="text-lg font-semibold text-gray-800 mb-2">分析精度の向上</h3>
+             <p class="text-gray-700">感情分析のアルゴリズムを改良し、より正確で詳細な分析結果を提供できるようになりました。</p>
+           </div>
+           
+           <div class="bg-gray-50 p-6 rounded-lg">
+             <h3 class="text-lg font-semibold text-gray-800 mb-2">エラー処理の改善</h3>
+             <p class="text-gray-700">システムの安定性を向上させ、より確実にサービスをご利用いただけるようになりました。</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">💼 ビジネス価値</h2>
+         <div class="grid md:grid-cols-3 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200 text-center">
+             <div class="text-3xl mb-3">📈</div>
+             <h3 class="text-lg font-semibold text-blue-800 mb-2">営業効率化</h3>
+             <p class="text-gray-700 text-sm">感情ギャップを視覚的に把握し、営業活動の質を向上</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200 text-center">
+             <div class="text-3xl mb-3">🎯</div>
+             <h3 class="text-lg font-semibold text-green-800 mb-2">カスタマーサポート強化</h3>
+             <p class="text-gray-700 text-sm">具体的な改善アドバイスでサポート品質を向上</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200 text-center">
+             <div class="text-3xl mb-3">💰</div>
+             <h3 class="text-lg font-semibold text-purple-800 mb-2">コスト削減</h3>
+             <p class="text-gray-700 text-sm">再生成機能により無駄な処理を削減</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📢 既存ユーザー様へのお知らせ</h2>
+         <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
+           <div class="flex items-start">
+             <div class="text-2xl mr-3">🔄</div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">自動アップデートについて</h3>
+               <p class="text-gray-700 mb-2">既存のユーザー様の環境には、順次アップデートが適用されます。特別な操作は不要で、次回ログイン時から新しい機能をご利用いただけます。</p>
+               <p class="text-gray-700 text-sm">※アップデートの適用時期は、お客様の環境により異なる場合がございます。</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🚀 今後の展望</h2>
+         <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white">
+           <h3 class="text-2xl font-bold mb-4">継続的な改善を推進</h3>
+           <p class="text-blue-100 mb-4">今回のアップデートを皮切りに、ユーザーの皆様からのフィードバックを基に、さらなる機能改善と新機能の追加を予定しています。</p>
+           <p class="text-blue-100">「ボイテキ！」は、音声解析を通じて「働く環境を守る」という使命のもと、より良いコミュニケーションの実現を目指します。</p>
+         </div>
+       </div>
+       
+       <div class="bg-gradient-to-r from-green-600 to-green-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-green-100 mb-6">新機能についてのご質問や、「ボイテキ！」の導入に関するお問い合わせは、お気軽にお声がけください。</p>
+         <div class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
+    id: '2',
+    title:
+      '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
+    date: '2025-08-01',
+    category: 'リリース',
+    excerpt:
+      '2025年8月1日、音声解析クラウド「ボイテキ！」は正式リリースを迎えました。カスタマーハラスメント対策や、通話品質評価・離職防止を支援するため、録音データをAIで解析・可視化するバッチ処理特化型サービスです。',
+    slug: 'voitex-official-release',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">現在は以下の機能を提供中です：</h2>
+         <div class="grid md:grid-cols-2 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">感情分類（20種）による心理傾向の可視化</h3>
+             </div>
+             <p class="text-gray-700">音声から感情を自動分析し、心理状態を可視化します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">重要発言のAI要約</h3>
+             </div>
+             <p class="text-gray-700">長時間の通話も要点を自動要約し、重要なポイントを抽出します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-lg border border-red-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-red-800">NGワード自動検出</h3>
+             </div>
+             <p class="text-gray-700">ハラスメントや問題発言を自動検出し、早期対応を支援します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-purple-800">タグ・プロンプトによる業種別カスタマイズ</h3>
+             </div>
+             <p class="text-gray-700">業界や用途に応じてカスタマイズ可能な分析設定を提供します。</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
+           <h3 class="text-lg font-semibold text-green-800 mb-2">料金体系</h3>
+           <p class="text-gray-700 mb-2">月額不要・従量課金型で、お気軽にトライアルもご利用いただけます。</p>
+           <p class="text-gray-700">使用した分だけお支払いいただくため、コストを抑えて導入できます。</p>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <p class="text-lg text-gray-700 leading-relaxed">正式リリースを機に、より多くの職場で「声から働く環境を守る」支援をしてまいります。</p>
+       </div>
+       
+       <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-blue-100 mb-6">ボイテキ！についてのご質問や導入に関するお問い合わせは、お気軽にお声がけください。</p>
+         <div class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
     id: '1',
     title:
       '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
@@ -109,74 +332,6 @@ const newsData = [
          <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
            <p class="text-gray-700 mb-2">認証取得が完了次第、改めて当サイト上でご報告いたします。</p>
            <p class="text-gray-700">引き続き、情報セキュリティの向上とサービス品質の強化に努めてまいります。</p>
-         </div>
-       </div>
-     `,
-  },
-  {
-    id: '2',
-    title:
-      '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
-    date: '2025-08-01',
-    category: 'リリース',
-    excerpt:
-      '2025年8月1日、音声解析クラウド「ボイテキ！」は正式リリースを迎えました。カスタマーハラスメント対策や、通話品質評価・離職防止を支援するため、録音データをAIで解析・可視化するバッチ処理特化型サービスです。',
-    slug: 'voitex-official-release',
-    content: `
-       <div class="mb-8">
-         <h2 class="text-2xl font-bold text-gray-800 mb-4">現在は以下の機能を提供中です：</h2>
-         <div class="grid md:grid-cols-2 gap-6">
-           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
-             <div class="flex items-center mb-3">
-               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-               <h3 class="text-lg font-semibold text-blue-800">感情分類（20種）による心理傾向の可視化</h3>
-             </div>
-             <p class="text-gray-700">音声から感情を自動分析し、心理状態を可視化します。</p>
-           </div>
-           
-           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
-             <div class="flex items-center mb-3">
-               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-               <h3 class="text-lg font-semibold text-green-800">重要発言のAI要約</h3>
-             </div>
-             <p class="text-gray-700">長時間の通話も要点を自動要約し、重要なポイントを抽出します。</p>
-           </div>
-           
-           <div class="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-lg border border-red-200">
-             <div class="flex items-center mb-3">
-               <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
-               <h3 class="text-lg font-semibold text-red-800">NGワード自動検出</h3>
-             </div>
-             <p class="text-gray-700">ハラスメントや問題発言を自動検出し、早期対応を支援します。</p>
-           </div>
-           
-           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
-             <div class="flex items-center mb-3">
-               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
-               <h3 class="text-lg font-semibold text-purple-800">タグ・プロンプトによる業種別カスタマイズ</h3>
-             </div>
-             <p class="text-gray-700">業界や用途に応じてカスタマイズ可能な分析設定を提供します。</p>
-           </div>
-         </div>
-       </div>
-       
-       <div class="mb-8">
-         <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
-           <h3 class="text-lg font-semibold text-green-800 mb-2">料金体系</h3>
-           <p class="text-gray-700 mb-2">月額不要・従量課金型で、お気軽にトライアルもご利用いただけます。</p>
-           <p class="text-gray-700">使用した分だけお支払いいただくため、コストを抑えて導入できます。</p>
-         </div>
-       </div>
-       
-       <div class="mb-8">
-         <p class="text-lg text-gray-700 leading-relaxed">正式リリースを機に、より多くの職場で「声から働く環境を守る」支援をしてまいります。</p>
-       </div>
-       
-       <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white text-center">
-         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
-         <p class="text-blue-100 mb-6">ボイテキ！についてのご質問や導入に関するお問い合わせは、お気軽にお声がけください。</p>
-         <div class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
-           お問い合わせフォーム
          </div>
        </div>
      `,
