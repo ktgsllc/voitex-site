@@ -26,7 +26,7 @@ export default function VoitexConverterPage() {
               </h2>
               <p className="mb-6 text-gray-600">
                 ボイテキコンバーター！は、MP4などの動画ファイルやMP3などの音声ファイルから、音声を抽出・WAV形式へ変換する
-                Windows アプリです。 AmiVoice
+                Windows アプリです。音声認識エンジン
                 や音声認識APIで扱いやすいフォーマット（16kHz / モノラル /
                 16bit）に自動変換されます。
               </p>

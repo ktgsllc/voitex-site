@@ -66,7 +66,7 @@ export default function QuickSumPage() {
                 はそのACW時間を大幅に削減するために開発されました。
               </p>
               <p className="text-gray-600">
-                既にAmiVoiceなどでテキスト化された通話内容をもとに、SVが事前に作成したプロンプトで要約することで、オペレーターごとのばらつきを抑え、一定品質の要約が実現できると考えています。
+                既に音声認識エンジンなどでテキスト化された通話内容をもとに、SVが事前に作成したプロンプトで要約することで、オペレーターごとのばらつきを抑え、一定品質の要約が実現できると考えています。
               </p>
             </div>
 
@@ -254,7 +254,7 @@ export default function QuickSumPage() {
                     テキスト化済みの内容を入力
                   </h3>
                   <p className="text-sm text-gray-600">
-                    通話音声をAmiVoiceなどでテキスト化し、QuickSumに貼り付けます。
+                    通話音声を音声認識エンジンなどでテキスト化し、QuickSumに貼り付けます。
                   </p>
                 </div>
                 <div className="text-center">
