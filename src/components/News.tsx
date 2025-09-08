@@ -12,6 +12,13 @@ export default function News() {
   // ハードコーディングされたニュースデータ（最新3件）
   const news: NewsItem[] = [
     {
+      id: '4',
+      title:
+        'セキュリティ強化のお知らせ - WAF導入とファイルアップロード検証の改善',
+      publishedAt: '2025-09-08',
+      slug: 'security-enhancement-waf-file-upload',
+    },
+    {
       id: '3',
       title:
         'ボイテキ！、会話評価機能を大幅刷新 - 感情解析結果の視覚化とAI改善アドバイスを実装',
@@ -24,13 +31,6 @@ export default function News() {
         '「ボイテキ！」正式リリース｜録音音声をAIで解析するバッチ処理型クラウド',
       publishedAt: '2025-08-01',
       slug: 'voitex-official-release',
-    },
-    {
-      id: '1',
-      title:
-        '【ご案内】ISO/IEC 27017（クラウド情報セキュリティ）取得に向けた対応状況について',
-      publishedAt: '2025-07-06',
-      slug: 'iso-27017-acquisition-status',
     },
   ];
 

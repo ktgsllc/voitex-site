@@ -7,6 +7,187 @@ import Tag from '@/components/Tag';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '4',
+    title:
+      'セキュリティ強化のお知らせ - WAF導入とファイルアップロード検証の改善',
+    date: '2025-09-08',
+    category: 'セキュリティ',
+    excerpt:
+      'Webアプリケーションファイアウォール（WAF）の導入とファイルアップロード時のセキュリティ検証の改善を実施いたします。より安全なサービス利用環境を提供するため、9月13日より順次リリースされます。',
+    slug: 'security-enhancement-waf-file-upload',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔒 セキュリティ強化の概要</h2>
+         <p class="text-gray-700 leading-relaxed mb-6">ボイテキ！では、お客様により安全で信頼性の高いサービスをご提供するため、継続的なセキュリティ強化に取り組んでおります。今回、Webアプリケーションファイアウォール（WAF）の導入とファイルアップロード時のセキュリティ検証の改善を実施いたします。</p>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">✨ 今回の改善内容</h2>
+         <div class="grid md:grid-cols-2 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">Webアプリケーションファイアウォール（WAF）の導入</h3>
+             </div>
+             <p class="text-gray-700">Webアプリケーションに対する攻撃を自動検出・防御するWAFを導入し、不正アクセスや悪意のあるリクエストからサービスを保護します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">ファイルアップロード検証の改善</h3>
+             </div>
+             <p class="text-gray-700">アップロードされるファイルの検証プロセスを強化し、悪意のあるファイルや不正な形式のファイルのアップロードを防止します。</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🛡️ セキュリティ強化の詳細</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200">
+             <h3 class="text-lg font-semibold text-blue-800 mb-3">WAF（Webアプリケーションファイアウォール）について</h3>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 SQLインジェクション攻撃の自動検出・防御
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 XSS（クロスサイトスクリプティング）攻撃の防止
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 不正なリクエストパターンの検出・ブロック
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 24時間365日の自動監視・防御
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <h3 class="text-lg font-semibold text-green-800 mb-3">ファイルアップロード検証の改善</h3>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 ファイル形式の厳格な検証
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 ファイルサイズ制限の強化
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 マルウェア検出機能の向上
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 アップロード前の事前スキャン
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📅 リリーススケジュール</h2>
+         <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
+           <div class="flex items-start">
+             <div class="text-2xl mr-3">📅</div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">2025年9月13日（金）より順次リリース</h3>
+               <p class="text-gray-700 mb-2">セキュリティ強化の実装は、2025年9月13日より順次開始されます。</p>
+               <p class="text-gray-700 text-sm">※リリースの完了時期は、システムの状況により若干前後する場合がございます。</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">👥 お客様への影響</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
+             <h3 class="text-lg font-semibold text-yellow-800 mb-3">メンテナンスについて</h3>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                 <strong>メンテナンス中はサービス停止となります</strong> - セキュリティ強化の実装のため
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                 <strong>事前にご案内いたします</strong> - メンテナンス時間は事前にお知らせします
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                 <strong>他機能のリリースも同時実施</strong> - 複数の改善をまとめて実施いたします
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
+             <h3 class="text-lg font-semibold text-green-800 mb-3">メンテナンス後の改善</h3>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 <strong>セキュリティの大幅強化</strong> - WAFとファイル検証の改善により、より安全なサービスを提供
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 <strong>パフォーマンスの向上</strong> - システムの安定性と処理速度の改善
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 <strong>追加設定は不要</strong> - お客様側での設定変更は必要ありません
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔍 セキュリティへの取り組み</h2>
+         <div class="grid md:grid-cols-3 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200 text-center">
+             <div class="text-3xl mb-3">🛡️</div>
+             <h3 class="text-lg font-semibold text-blue-800 mb-2">多層防御</h3>
+             <p class="text-gray-700 text-sm">複数のセキュリティ層でお客様のデータを保護</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200 text-center">
+             <div class="text-3xl mb-3">🔍</div>
+             <h3 class="text-lg font-semibold text-green-800 mb-2">継続監視</h3>
+             <p class="text-gray-700 text-sm">24時間365日の自動監視で脅威を検出</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200 text-center">
+             <div class="text-3xl mb-3">⚡</div>
+             <h3 class="text-lg font-semibold text-purple-800 mb-2">迅速対応</h3>
+             <p class="text-gray-700 text-sm">検出された脅威への即座な対応</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📢 今後のセキュリティ強化について</h2>
+         <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white">
+           <h3 class="text-2xl font-bold mb-4">継続的なセキュリティ向上</h3>
+           <p class="text-blue-100 mb-4">今回のセキュリティ強化は、ボイテキ！の継続的なセキュリティ向上の一環です。</p>
+           <p class="text-blue-100">今後も最新のセキュリティ技術を導入し、お客様のデータとプライバシーを最優先に保護してまいります。</p>
+         </div>
+       </div>
+       
+       <div class="bg-gradient-to-r from-green-600 to-green-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-green-100 mb-6">セキュリティ強化についてのご質問や、ボイテキ！のセキュリティ対策に関するお問い合わせは、お気軽にお声がけください。</p>
+         <div class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
     id: '3',
     title:
       'ボイテキ！、会話評価機能を大幅刷新 - 感情解析結果の視覚化とAI改善アドバイスを実装',

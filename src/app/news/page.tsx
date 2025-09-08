@@ -11,6 +11,16 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '4',
+    title:
+      'セキュリティ強化のお知らせ - WAF導入とファイルアップロード検証の改善',
+    date: '2025-09-08',
+    category: 'セキュリティ',
+    excerpt:
+      'Webアプリケーションファイアウォール（WAF）の導入とファイルアップロード時のセキュリティ検証の改善を実施いたします。より安全なサービス利用環境を提供するため、9月13日より順次リリースされます。',
+    slug: 'security-enhancement-waf-file-upload',
+  },
+  {
     id: '3',
     title:
       'ボイテキ！、会話評価機能を大幅刷新 - 感情解析結果の視覚化とAI改善アドバイスを実装',
