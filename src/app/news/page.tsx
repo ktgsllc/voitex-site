@@ -11,6 +11,16 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '5',
+    title:
+      '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',
+    date: '2025-09-15',
+    category: 'リリース',
+    excerpt:
+      '対面商談での音声記録を簡単にするiPhoneアプリ「ボイテキ！クライアント」のリリースを予定しております。商談に集中しながら確実な記録を実現し、営業活動の効率化を支援します。',
+    slug: 'voitex-iphone-app-voitexclient-release',
+  },
+  {
     id: '4',
     title:
       'セキュリティ強化のお知らせ - WAF導入とファイルアップロード検証の改善',
