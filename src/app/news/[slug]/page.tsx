@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { generateMetadata as generateSeoMetadata } from '@/libs/seo';
 import Tag from '@/components/Tag';
+import NewsDetailClient from './NewsDetailClient';
 
 // ハードコーディングされたニュースデータ
 const newsData = [
@@ -25,19 +26,19 @@ const newsData = [
            <h3 class="text-xl font-semibold text-gray-800 mb-4">iPhone版アプリ画面</h3>
            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-iphone-01.png" alt="ボイテキ！クライアント iPhone ログイン画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-iphone-01.png', 'ボイテキ！クライアント iPhone ログイン画面')">
+               <img src="/voitex-client/voitex-client-iphone-01.png" alt="ボイテキ！クライアント iPhone ログイン画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-iphone-01.png', caption: 'ボイテキ！クライアント iPhone ログイン画面' })}>
                <p class="text-sm text-gray-600">ログイン画面</p>
              </div>
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-iphone-02.png" alt="ボイテキ！クライアント iPhone 録音の承諾を得る画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-iphone-02.png', 'ボイテキ！クライアント iPhone 録音の承諾を得る画面')">
+               <img src="/voitex-client/voitex-client-iphone-02.png" alt="ボイテキ！クライアント iPhone 録音の承諾を得る画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-iphone-02.png', caption: 'ボイテキ！クライアント iPhone 録音の承諾を得る画面' })}>
                <p class="text-sm text-gray-600">録音の承諾を得る画面</p>
              </div>
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-iphone-03.png" alt="ボイテキ！クライアント iPhone 録音画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-iphone-03.png', 'ボイテキ！クライアント iPhone 録音画面')">
+               <img src="/voitex-client/voitex-client-iphone-03.png" alt="ボイテキ！クライアント iPhone 録音画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-iphone-03.png', caption: 'ボイテキ！クライアント iPhone 録音画面' })}>
                <p class="text-sm text-gray-600">録音画面</p>
              </div>
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-iphone-04.png" alt="ボイテキ！クライアント iPhone 録音停止画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-iphone-04.png', 'ボイテキ！クライアント iPhone 録音停止画面')">
+               <img src="/voitex-client/voitex-client-iphone-04.png" alt="ボイテキ！クライアント iPhone 録音停止画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-iphone-04.png', caption: 'ボイテキ！クライアント iPhone 録音停止画面' })}>
                <p class="text-sm text-gray-600">録音停止画面</p>
              </div>
            </div>
@@ -48,19 +49,19 @@ const newsData = [
            <h3 class="text-xl font-semibold text-gray-800 mb-4">iPad版アプリ画面</h3>
            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-ipad-01.png" alt="ボイテキ！クライアント iPad ログイン画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-ipad-01.png', 'ボイテキ！クライアント iPad ログイン画面')">
+               <img src="/voitex-client/voitex-client-ipad-01.png" alt="ボイテキ！クライアント iPad ログイン画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-ipad-01.png', caption: 'ボイテキ！クライアント iPad ログイン画面' })}>
                <p class="text-sm text-gray-600">ログイン画面</p>
              </div>
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-ipad-02.png" alt="ボイテキ！クライアント iPad 録音の承諾を得る画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-ipad-02.png', 'ボイテキ！クライアント iPad 録音の承諾を得る画面')">
+               <img src="/voitex-client/voitex-client-ipad-02.png" alt="ボイテキ！クライアント iPad 録音の承諾を得る画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-ipad-02.png', caption: 'ボイテキ！クライアント iPad 録音の承諾を得る画面' })}>
                <p class="text-sm text-gray-600">録音の承諾を得る画面</p>
              </div>
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-ipad-03.png" alt="ボイテキ！クライアント iPad 録音画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-ipad-03.png', 'ボイテキ！クライアント iPad 録音画面')">
+               <img src="/voitex-client/voitex-client-ipad-03.png" alt="ボイテキ！クライアント iPad 録音画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-ipad-03.png', caption: 'ボイテキ！クライアント iPad 録音画面' })}>
                <p class="text-sm text-gray-600">録音画面</p>
              </div>
              <div class="text-center">
-               <img src="/voitex-client/voitex-client-ipad-04.png" alt="ボイテキ！クライアント iPad 録音停止画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onclick="openModal('/voitex-client/voitex-client-ipad-04.png', 'ボイテキ！クライアント iPad 録音停止画面')">
+               <img src="/voitex-client/voitex-client-ipad-04.png" alt="ボイテキ！クライアント iPad 録音停止画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSelectedImage({ src: '/voitex-client/voitex-client-ipad-04.png', caption: 'ボイテキ！クライアント iPad 録音停止画面' })}>
                <p class="text-sm text-gray-600">録音停止画面</p>
              </div>
            </div>
@@ -245,44 +246,6 @@ const newsData = [
          </div>
        </div>
        
-       <!-- 画像拡大表示モーダル -->
-       <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
-         <div class="relative max-w-4xl max-h-full">
-           <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 z-10">
-             ×
-           </button>
-           <img id="modalImage" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl">
-           <p id="modalCaption" class="text-white text-center mt-4 text-lg"></p>
-         </div>
-       </div>
-       
-       <script>
-         function openModal(imageSrc, caption) {
-           document.getElementById('modalImage').src = imageSrc;
-           document.getElementById('modalCaption').textContent = caption;
-           document.getElementById('imageModal').classList.remove('hidden');
-           document.body.style.overflow = 'hidden';
-         }
-         
-         function closeModal() {
-           document.getElementById('imageModal').classList.add('hidden');
-           document.body.style.overflow = 'auto';
-         }
-         
-         // ESCキーでモーダルを閉じる
-         document.addEventListener('keydown', function(event) {
-           if (event.key === 'Escape') {
-             closeModal();
-           }
-         });
-         
-         // モーダルの背景をクリックして閉じる
-         document.getElementById('imageModal').addEventListener('click', function(event) {
-           if (event.target === this) {
-             closeModal();
-           }
-         });
-       </script>
      `,
   },
   {
@@ -870,13 +833,8 @@ export default async function NewsDetailPage({
             <p className="mt-4 text-lg text-gray-600">{news.excerpt}</p>
           </header>
 
-          {/* 記事本文 */}
-          <article className="prose prose-lg max-w-none">
-            <div
-              dangerouslySetInnerHTML={{ __html: news.content }}
-              className="leading-relaxed text-gray-700"
-            />
-          </article>
+          {/* 記事本文とクライアント機能 */}
+          <NewsDetailClient news={news} />
 
           {/* 戻るボタン */}
           <div className="mt-12 text-center">
