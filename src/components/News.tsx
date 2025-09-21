@@ -13,8 +13,7 @@ export default function News() {
   const news: NewsItem[] = [
     {
       id: '6',
-      title:
-        '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
+      title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
       publishedAt: '2025-09-21',
       slug: 'voitex-v1-3-0-prompt-specification',
     },

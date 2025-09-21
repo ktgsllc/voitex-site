@@ -12,8 +12,7 @@ export const metadata: Metadata = generateMetadata(
 const newsData = [
   {
     id: '6',
-    title:
-      '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
+    title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
     date: '2025-09-21',
     category: 'アップデート',
     excerpt:

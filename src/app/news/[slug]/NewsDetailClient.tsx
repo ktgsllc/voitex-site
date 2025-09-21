@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface NewsDetailClientProps {
   news: {
@@ -117,9 +118,11 @@ export default function NewsDetailClient({ news }: NewsDetailClientProps) {
             className="relative max-h-full max-w-7xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
+            <Image
               src={selectedImage.src}
               alt={selectedImage.caption}
+              width={800}
+              height={600}
               className="h-auto max-h-[98vh] w-full rounded-lg object-contain shadow-2xl"
             />
             <p className="mt-4 text-center text-lg text-white">
