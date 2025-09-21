@@ -12,6 +12,13 @@ export default function News() {
   // ハードコーディングされたニュースデータ（最新3件）
   const news: NewsItem[] = [
     {
+      id: '6',
+      title:
+        '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
+      publishedAt: '2025-09-21',
+      slug: 'voitex-v1-3-0-prompt-specification',
+    },
+    {
       id: '5',
       title:
         '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',
@@ -24,13 +31,6 @@ export default function News() {
         'セキュリティ強化のお知らせ - WAF導入とファイルアップロード検証の改善',
       publishedAt: '2025-09-08',
       slug: 'security-enhancement-waf-file-upload',
-    },
-    {
-      id: '3',
-      title:
-        'ボイテキ！、会話評価機能を大幅刷新 - 感情解析結果の視覚化とAI改善アドバイスを実装',
-      publishedAt: '2025-09-05',
-      slug: 'voitex-evaluation-feature-update',
     },
   ];
 

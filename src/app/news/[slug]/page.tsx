@@ -8,6 +8,213 @@ import NewsDetailClient from './NewsDetailClient';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '6',
+    title:
+      '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
+    date: '2025-09-21',
+    category: 'アップデート',
+    excerpt:
+      'Voitex v1.3.0がリリースされました！プロンプト指定機能により、用途に応じた最適な音声解析が可能になります。営業・カスタマーサポート・会議など、シーン別の解析で精度向上と効率化を実現します。',
+    slug: 'voitex-v1-3-0-prompt-specification',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎉 Voitex v1.3.0 リリース概要</h2>
+         <p class="text-gray-700 leading-relaxed mb-6">Voitex v1.3.0がリリースされました！今回のアップデートでは、プロンプト指定機能を追加し、用途に応じた最適な音声解析が可能になります。営業・カスタマーサポート・会議など、シーン別の解析で精度向上と効率化を実現します。</p>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">✨ 主な新機能</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">1. プロンプト指定機能</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 ファイルアップロード時に解析用のプロンプトを選択可能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 用途に応じた最適な解析結果を実現
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 営業・カスタマーサポート・会議など、シーン別の解析が可能
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">2. プロンプト管理機能の強化</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 プロンプトID表示・コピー機能で管理が簡単に
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 使用回数の自動カウントで効果測定が可能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 複数のプロンプトを効率的に管理
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-purple-800">3. 解析結果の可視化向上</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                 解析結果画面で使用されたプロンプトIDを表示
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                 解析状況画面でもプロンプトIDを確認可能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                 どのプロンプトで解析されたかが一目で分かる
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎯 ビジネス価値</h2>
+         <div class="grid md:grid-cols-2 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200">
+             <div class="text-3xl mb-3">📈</div>
+             <h3 class="text-lg font-semibold text-blue-800 mb-2">精度向上</h3>
+             <p class="text-gray-700 text-sm">用途に特化したプロンプトで解析精度が向上</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="text-3xl mb-3">⚡</div>
+             <h3 class="text-lg font-semibold text-green-800 mb-2">効率化</h3>
+             <p class="text-gray-700 text-sm">シーン別のプロンプトで作業効率がアップ</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200">
+             <div class="text-3xl mb-3">📊</div>
+             <h3 class="text-lg font-semibold text-purple-800 mb-2">品質管理</h3>
+             <p class="text-gray-700 text-sm">使用回数カウントでプロンプトの効果を測定</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <div class="text-3xl mb-3">🔍</div>
+             <h3 class="text-lg font-semibold text-orange-800 mb-2">透明性</h3>
+             <p class="text-gray-700 text-sm">どのプロンプトで解析されたかが明確</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔧 技術的改善</h2>
+         <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-lg border border-gray-200">
+           <ul class="space-y-3 text-gray-700">
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               ワーカープロセスでのプロンプト処理ロジックを統一
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               ファイルアップロード時は指定プロンプト、S3ダウンロード時はデフォルトプロンプトを使用
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               重複リクエスト防止機能を強化
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               データベーススキーマの最適化
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📈 期待される効果</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
+             <h3 class="text-lg font-semibold text-green-800 mb-3">解析精度の向上</h3>
+             <p class="text-gray-700">用途に応じたプロンプトでより適切な解析結果を実現</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
+             <h3 class="text-lg font-semibold text-blue-800 mb-3">運用効率の改善</h3>
+             <p class="text-gray-700">シーン別の最適化された解析プロセスで作業効率を向上</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200">
+             <h3 class="text-lg font-semibold text-purple-800 mb-3">品質管理の強化</h3>
+             <p class="text-gray-700">プロンプト使用状況の可視化と効果測定で品質管理を強化</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <h3 class="text-lg font-semibold text-orange-800 mb-3">ユーザビリティの向上</h3>
+             <p class="text-gray-700">直感的なプロンプト選択と管理機能で使いやすさを向上</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📝 マーケティング用キーポイント</h2>
+         <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
+           <div class="grid md:grid-cols-2 gap-4">
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「用途別解析」</h3>
+               <p class="text-gray-700 text-sm">営業・サポート・会議など、シーンに応じた最適な解析</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「精度向上」</h3>
+               <p class="text-gray-700 text-sm">プロンプト指定により解析精度が大幅に向上</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「効率化」</h3>
+               <p class="text-gray-700 text-sm">シーン別プロンプトで作業効率がアップ</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「透明性」</h3>
+               <p class="text-gray-700 text-sm">使用プロンプトの可視化で品質管理が強化</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「使いやすさ」</h3>
+               <p class="text-gray-700 text-sm">直感的なプロンプト選択で誰でも簡単に使用可能</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📋 詳細情報</h2>
+         <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white">
+           <h3 class="text-2xl font-bold mb-4">システム内のリリースノートでご確認ください</h3>
+           <p class="text-blue-100 mb-4">詳細は、システム内のリリースノート（サイドバーの🎉アイコン）でご確認いただけます。</p>
+           <p class="text-blue-100">新機能の使い方や設定方法についても、そちらで詳しくご案内しております。</p>
+         </div>
+       </div>
+       
+       <div class="bg-gradient-to-r from-green-600 to-green-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-green-100 mb-6">Voitex v1.3.0の新機能についてのご質問や、プロンプト指定機能の使い方に関するお問い合わせは、お気軽にお声がけください。</p>
+         <div class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
     id: '5',
     title:
       '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',

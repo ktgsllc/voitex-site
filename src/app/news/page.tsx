@@ -11,6 +11,16 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '6',
+    title:
+      '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
+    date: '2025-09-21',
+    category: 'アップデート',
+    excerpt:
+      'Voitex v1.3.0がリリースされました！プロンプト指定機能により、用途に応じた最適な音声解析が可能になります。営業・カスタマーサポート・会議など、シーン別の解析で精度向上と効率化を実現します。',
+    slug: 'voitex-v1-3-0-prompt-specification',
+  },
+  {
     id: '5',
     title:
       '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',
