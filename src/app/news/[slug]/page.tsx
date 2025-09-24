@@ -214,6 +214,229 @@ const newsData = [
      `,
   },
   {
+    id: '7',
+    title: '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
+    date: '2025-09-25',
+    category: 'リリース',
+    excerpt:
+      'Appleの審査を通過し、iPhoneアプリ「ボイテキ！クライアント」が正式にリリースされました！対面商談での音声記録を簡単にし、営業活動の効率化を支援する専用アプリです。',
+    slug: 'voitex-iphone-app-voitexclient-official-release',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎉 ボイテキ！クライアントアプリ正式リリース！</h2>
+         <p class="text-gray-700 leading-relaxed mb-6">Appleの審査を通過し、iPhoneアプリ「ボイテキ！クライアント」が正式にリリースされました！対面商談での音声記録を簡単にし、営業担当者が商談に集中しながら確実な記録を実現するための専用アプリです。</p>
+         
+         <!-- iPhone用アプリ画面 -->
+         <div class="mb-8">
+           <h3 class="text-xl font-semibold text-gray-800 mb-4">iPhone版アプリ画面</h3>
+           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-iphone-01.png" alt="ボイテキ！クライアント iPhone ログイン画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">ログイン画面</p>
+             </div>
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-iphone-02.png" alt="ボイテキ！クライアント iPhone 録音の承諾を得る画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">録音の承諾を得る画面</p>
+             </div>
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-iphone-03.png" alt="ボイテキ！クライアント iPhone 録音画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">録音画面</p>
+             </div>
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-iphone-04.png" alt="ボイテキ！クライアント iPhone 録音停止画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">録音停止画面</p>
+             </div>
+           </div>
+         </div>
+         
+         <!-- iPad用アプリ画面 -->
+         <div class="mb-8">
+           <h3 class="text-xl font-semibold text-gray-800 mb-4">iPad版アプリ画面</h3>
+           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-ipad-01.png" alt="ボイテキ！クライアント iPad ログイン画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">ログイン画面</p>
+             </div>
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-ipad-02.png" alt="ボイテキ！クライアント iPad 録音の承諾を得る画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">録音の承諾を得る画面</p>
+             </div>
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-ipad-03.png" alt="ボイテキ！クライアント iPad 録音画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">録音画面</p>
+             </div>
+             <div class="text-center">
+               <img src="/voitex-client/voitex-client-ipad-04.png" alt="ボイテキ！クライアント iPad 録音停止画面" class="w-full max-w-xs mx-auto rounded-lg shadow-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity">
+               <p class="text-sm text-gray-600">録音停止画面</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">✨ 営業担当者におすすめの理由</h2>
+         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">商談に集中</h3>
+             </div>
+             <p class="text-gray-700">メモ取りに時間を取られず、お客様との対話に集中できます。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">確実な記録</h3>
+             </div>
+             <p class="text-gray-700">高品質な音声データで商談内容を漏れなく記録します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-purple-800">倫理的な設計</h3>
+             </div>
+             <p class="text-gray-700">録音前の承諾確認で信頼関係を維持します。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-orange-800">即座に保存</h3>
+             </div>
+             <p class="text-gray-700">商談後すぐにクラウドに保存、データ紛失リスクなし。</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-purple-800">即座に確認</h3>
+             </div>
+             <p class="text-gray-700">録音後すぐに再生して内容を確認、品質チェックも可能。</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔧 主な機能</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200">
+             <h3 class="text-lg font-semibold text-blue-800 mb-3">基本機能</h3>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 ワンタップで録音開始・停止
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 録音前の承諾確認機能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 高品質WAV形式での録音
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 ボイテキ！への自動アップロード
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 録音ファイルの一元管理
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <h3 class="text-lg font-semibold text-green-800 mb-3">再生・確認機能</h3>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 録音内容の即座再生機能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 再生速度の調整（0.5倍〜2倍速）
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 シークバーによる任意位置への移動
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 録音品質の事前確認
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 再生中の一時停止・再開
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">💼 活用シーン</h2>
+         <div class="grid md:grid-cols-2 gap-6">
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="text-3xl mb-3">🤝</div>
+             <h3 class="text-lg font-semibold text-green-800 mb-2">対面商談・営業活動</h3>
+             <p class="text-gray-700 text-sm">お客様との商談内容を確実に記録し、後で振り返りやフォローアップに活用</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200">
+             <div class="text-3xl mb-3">👥</div>
+             <h3 class="text-lg font-semibold text-blue-800 mb-2">顧客との打ち合わせ</h3>
+             <p class="text-gray-700 text-sm">要件確認や仕様検討の会議内容を記録し、プロジェクト管理に活用</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="text-3xl mb-3">🏢</div>
+             <h3 class="text-lg font-semibold text-purple-800 mb-2">社内会議・研修</h3>
+             <p class="text-gray-700 text-sm">社内会議や研修の内容を記録し、知識共有や振り返りに活用</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <div class="text-3xl mb-3">🎤</div>
+             <h3 class="text-lg font-semibold text-orange-800 mb-2">インタビュー・ヒアリング</h3>
+             <p class="text-gray-700 text-sm">顧客インタビューや市場調査のヒアリング内容を記録し、分析に活用</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📱 App Storeでのダウンロード</h2>
+         <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
+           <div class="flex items-start">
+             <div class="text-2xl mr-3">📱</div>
+             <div>
+               <h3 class="text-lg font-semibold text-green-800 mb-2">2025年9月25日よりApp Storeで配信開始</h3>
+               <p class="text-gray-700 mb-2">「ボイテキ！クライアント」は、Apple App Storeで無料ダウンロード可能です。</p>
+               <p class="text-gray-700 text-sm">※App Storeでの検索は「ボイテキ」でお探しください。</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🚀 今後の展望</h2>
+         <div class="bg-gradient-to-r from-green-600 to-green-700 p-8 rounded-lg text-white">
+           <h3 class="text-2xl font-bold mb-4">商談の質向上と効率化を実現</h3>
+           <p class="text-green-100 mb-4">ボイテキ！クライアントアプリは、営業担当者の皆様がより効果的な商談を行えるよう支援する新ツールです。</p>
+           <p class="text-green-100">商談の質向上と効率化を実現する新ツールにご期待ください。</p>
+         </div>
+       </div>
+       
+       <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-blue-100 mb-6">ボイテキ！クライアントアプリについてのご質問や、ボイテキ！の導入に関するお問い合わせは、お気軽にお声がけください。</p>
+         <div class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
     id: '5',
     title:
       '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',

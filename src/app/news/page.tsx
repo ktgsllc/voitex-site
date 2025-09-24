@@ -11,6 +11,15 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '7',
+    title: '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
+    date: '2025-09-25',
+    category: 'リリース',
+    excerpt:
+      'Appleの審査を通過し、iPhoneアプリ「ボイテキ！クライアント」が正式にリリースされました！対面商談での音声記録を簡単にし、営業活動の効率化を支援する専用アプリです。',
+    slug: 'voitex-iphone-app-voitexclient-official-release',
+  },
+  {
     id: '6',
     title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
     date: '2025-09-21',

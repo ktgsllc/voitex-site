@@ -12,6 +12,13 @@ export default function News() {
   // ハードコーディングされたニュースデータ（最新3件）
   const news: NewsItem[] = [
     {
+      id: '7',
+      title:
+        '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
+      publishedAt: '2025-09-25',
+      slug: 'voitex-iphone-app-voitexclient-official-release',
+    },
+    {
       id: '6',
       title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
       publishedAt: '2025-09-21',
@@ -23,13 +30,6 @@ export default function News() {
         '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',
       publishedAt: '2025-09-15',
       slug: 'voitex-iphone-app-voitexclient-release',
-    },
-    {
-      id: '4',
-      title:
-        'セキュリティ強化のお知らせ - WAF導入とファイルアップロード検証の改善',
-      publishedAt: '2025-09-08',
-      slug: 'security-enhancement-waf-file-upload',
     },
   ];
 
