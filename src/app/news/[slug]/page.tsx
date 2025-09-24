@@ -356,14 +356,6 @@ const newsData = [
                </li>
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                 再生速度の調整（0.5倍〜2倍速）
-               </li>
-               <li class="flex items-center">
-                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                 シークバーによる任意位置への移動
-               </li>
-               <li class="flex items-center">
-                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                  録音品質の事前確認
                </li>
                <li class="flex items-center">
@@ -577,14 +569,6 @@ const newsData = [
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                  録音内容の即座再生機能
-               </li>
-               <li class="flex items-center">
-                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                 再生速度の調整（0.5倍〜2倍速）
-               </li>
-               <li class="flex items-center">
-                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                 シークバーによる任意位置への移動
                </li>
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
