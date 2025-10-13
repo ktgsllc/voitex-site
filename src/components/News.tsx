@@ -12,6 +12,12 @@ export default function News() {
   // ハードコーディングされたニュースデータ（最新3件）
   const news: NewsItem[] = [
     {
+      id: '8',
+      title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
+      publishedAt: '2025-10-18',
+      slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
+    },
+    {
       id: '7',
       title:
         '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
@@ -23,13 +29,6 @@ export default function News() {
       title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
       publishedAt: '2025-09-21',
       slug: 'voitex-v1-3-0-prompt-specification',
-    },
-    {
-      id: '5',
-      title:
-        '営業商談の記録がもっと簡単に！ボイテキ！iPhoneアプリ「ボイテキ！クライアント」リリース予定',
-      publishedAt: '2025-09-15',
-      slug: 'voitex-iphone-app-voitexclient-release',
     },
   ];
 

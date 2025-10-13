@@ -11,6 +11,15 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '8',
+    title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
+    date: '2025-10-18',
+    category: 'アップデート',
+    excerpt:
+      'Voitex v1.4.0がリリースされました！役割別ダッシュボードの追加により、経営者・営業・マーケター・心理カウンセラー・コンプライアンス担当者それぞれに最適化された分析画面を提供します。また、UI/UXの大幅な改善により、より使いやすく直感的なインターフェースを実現しました。',
+    slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
+  },
+  {
     id: '7',
     title: '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
     date: '2025-09-25',

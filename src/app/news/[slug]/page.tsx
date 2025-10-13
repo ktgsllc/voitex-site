@@ -8,6 +8,281 @@ import NewsDetailClient from './NewsDetailClient';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '8',
+    title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
+    date: '2025-10-18',
+    category: 'アップデート',
+    excerpt:
+      'Voitex v1.4.0がリリースされました！役割別ダッシュボードの追加により、経営者・営業・マーケター・心理カウンセラー・コンプライアンス担当者それぞれに最適化された分析画面を提供します。また、UI/UXの大幅な改善により、より使いやすく直感的なインターフェースを実現しました。',
+    slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎉 Voitex v1.4.0 リリース概要</h2>
+         <p class="text-gray-700 leading-relaxed mb-6">Voitex v1.4.0がリリースされました！今回のアップデートでは、役割別ダッシュボードの追加とUI/UXの大幅な改善を実施し、各職種に特化した分析機能と統一されたユーザー体験を提供します。組織全体のコミュニケーション分析をより効果的に行えるようになりました。</p>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">✨ 主な新機能</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">1. 役割別ダッシュボード</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 <strong>経営者向けダッシュボード</strong> - 組織全体の健康度とハラスメント検出
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 <strong>営業マネージャー向けダッシュボード</strong> - 顧客分析と売上パフォーマンス指標
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 <strong>マーケター向けダッシュボード</strong> - 顧客セグメント分析とマーケティング効果測定
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 <strong>心理カウンセラー向けダッシュボード</strong> - 感情分析と緊急度管理
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 <strong>コンプライアンス担当者向けダッシュボード</strong> - リスク会話検出とNGワード分析
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                 <strong>共通ダッシュボード</strong> - 組織全体の状況を俯瞰表示
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">2. 感情ワード管理機能</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 カスタム感情ワードの登録・編集・削除が可能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 より精度の高い感情分析を実現
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                 組織に特化した感情指標の設定
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-lg border border-purple-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-purple-800">3. キーワード分析機能</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                 会話内容から重要なキーワードを自動抽出
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                 キーワードの出現頻度や重要度を可視化
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                 ワードクラウド表示で直感的に分析結果を確認
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-orange-800">4. 動画ファイル対応</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                 MP4、MOV、AVI形式の動画ファイルアップロード対応
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                 動画ファイルは自動的に音声ファイル（WAV）に変換
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                 より多様なファイル形式での音声解析が可能
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-lg border border-cyan-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-cyan-800">5. データダウンロード機能の拡張</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                 解析結果を複数の形式（CSV、Excel、JSON）でダウンロード可能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                 ローデータのダウンロード機能を追加
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
+                 より柔軟なデータ活用をサポート
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🎯 ビジネス価値</h2>
+         <div class="grid md:grid-cols-2 gap-6">
+           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200">
+             <div class="text-3xl mb-3">📊</div>
+             <h3 class="text-lg font-semibold text-blue-800 mb-2">役割特化分析</h3>
+             <p class="text-gray-700 text-sm">各職種に最適化された分析指標で業務効率を向上</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="text-3xl mb-3">🎨</div>
+             <h3 class="text-lg font-semibold text-green-800 mb-2">統一されたUI/UX</h3>
+             <p class="text-gray-700 text-sm">全ページのデザイン統一で直感的な操作を実現</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200">
+             <div class="text-3xl mb-3">⚡</div>
+             <h3 class="text-lg font-semibold text-purple-800 mb-2">効率化</h3>
+             <p class="text-gray-700 text-sm">期間指定フィルターで柔軟な分析期間設定</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <div class="text-3xl mb-3">🔍</div>
+             <h3 class="text-lg font-semibold text-orange-800 mb-2">精度向上</h3>
+             <p class="text-gray-700 text-sm">感情ワード管理でより正確な感情分析</p>
+           </div>
+           
+           <div class="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-lg border border-cyan-200">
+             <div class="text-3xl mb-3">📈</div>
+             <h3 class="text-lg font-semibold text-cyan-800 mb-2">データ活用</h3>
+             <p class="text-gray-700 text-sm">多形式ダウンロードで外部ツールとの連携強化</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔧 技術的改善</h2>
+         <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-lg border border-gray-200">
+           <ul class="space-y-3 text-gray-700">
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               全ページのUI/UXを統一（PageLayout、PageCardコンポーネント導入）
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               要約処理完了を待ってから解析完了ステータスに更新
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               ファイルアップロード時のuser_id設定を統一（メールアドレス形式）
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               ユーザー氏名表示機能（担当者をローマ字から日本語氏名で表示）
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
+               解析完了前のアクションボタン誤操作を防止
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📈 期待される効果</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border border-green-200">
+             <h3 class="text-lg font-semibold text-green-800 mb-3">業務効率の大幅向上</h3>
+             <p class="text-gray-700">役割別ダッシュボードで各職種の業務に特化した分析を実現</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
+             <h3 class="text-lg font-semibold text-blue-800 mb-3">ユーザビリティの向上</h3>
+             <p class="text-gray-700">統一されたUI/UXで直感的で使いやすいインターフェースを提供</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200">
+             <h3 class="text-lg font-semibold text-purple-800 mb-3">分析精度の向上</h3>
+             <p class="text-gray-700">感情ワード管理とキーワード分析でより詳細な洞察を獲得</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
+             <h3 class="text-lg font-semibold text-orange-800 mb-3">データ活用の促進</h3>
+             <p class="text-gray-700">多形式ダウンロード機能で外部ツールとの連携を強化</p>
+           </div>
+           
+           <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-lg border border-cyan-200">
+             <h3 class="text-lg font-semibold text-cyan-800 mb-3">組織全体の可視化</h3>
+             <p class="text-gray-700">共通ダッシュボードで組織全体のコミュニケーション状況を俯瞰</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📝 マーケティング用キーポイント</h2>
+         <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
+           <div class="grid md:grid-cols-2 gap-4">
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「役割別最適化」</h3>
+               <p class="text-gray-700 text-sm">経営者・営業・マーケター・心理・コンプライアンス各職種に特化</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「UI/UX統一」</h3>
+               <p class="text-gray-700 text-sm">全ページのデザイン統一で直感的な操作を実現</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「動画対応」</h3>
+               <p class="text-gray-700 text-sm">MP4/MOV/AVI形式の動画ファイルも自動音声変換で解析</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「データ活用強化」</h3>
+               <p class="text-gray-700 text-sm">CSV/Excel/JSON形式でのダウンロードで外部連携を促進</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「精度向上」</h3>
+               <p class="text-gray-700 text-sm">感情ワード管理とキーワード分析でより詳細な洞察</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📋 詳細情報</h2>
+         <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white">
+           <h3 class="text-2xl font-bold mb-4">システム内のリリースノートでご確認ください</h3>
+           <p class="text-blue-100 mb-4">詳細は、システム内のリリースノート（サイドバーの🎉アイコン）でご確認いただけます。</p>
+           <p class="text-blue-100">新機能の使い方や設定方法についても、そちらで詳しくご案内しております。</p>
+         </div>
+       </div>
+       
+       <div class="bg-gradient-to-r from-green-600 to-green-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-green-100 mb-6">Voitex v1.4.0の新機能についてのご質問や、役割別ダッシュボードの使い方に関するお問い合わせは、お気軽にお声がけください。</p>
+         <div class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
     id: '6',
     title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
     date: '2025-09-21',
