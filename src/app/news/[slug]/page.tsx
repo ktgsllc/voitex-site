@@ -10,15 +10,19 @@ const newsData = [
   {
     id: '8',
     title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
-    date: '2025-10-18',
+    date: '2025-10-14',
     category: 'アップデート',
     excerpt:
-      'Voitex v1.4.0がリリースされました！役割別ダッシュボードの追加により、経営者・営業・マーケター・心理カウンセラー・コンプライアンス担当者それぞれに最適化された分析画面を提供します。また、UI/UXの大幅な改善により、より使いやすく直感的なインターフェースを実現しました。',
+      'Voitex v1.4.0がリリースされました！役割別ダッシュボードの追加により、経営者・営業・マーケター・人事・労務・コンプライアンス担当者それぞれに最適化された分析画面を提供します。また、UI/UXの大幅な改善により、より使いやすく直感的なインターフェースを実現しました。',
     slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
     content: `
        <div class="mb-8">
          <h2 class="text-2xl font-bold text-gray-800 mb-4">🎉 Voitex v1.4.0 リリース概要</h2>
          <p class="text-gray-700 leading-relaxed mb-6">Voitex v1.4.0がリリースされました！今回のアップデートでは、役割別ダッシュボードの追加とUI/UXの大幅な改善を実施し、各職種に特化した分析機能と統一されたユーザー体験を提供します。組織全体のコミュニケーション分析をより効果的に行えるようになりました。</p>
+         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200 mb-6">
+           <p class="text-blue-800 font-semibold">📅 リリーススケジュール</p>
+           <p class="text-gray-700">2025年10月18日よりお客様環境へ順次適用いたします。</p>
+         </div>
        </div>
        
        <div class="mb-8">
@@ -44,7 +48,7 @@ const newsData = [
                </li>
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                 <strong>心理カウンセラー向けダッシュボード</strong> - 感情分析と緊急度管理
+                 <strong>人事・労務向けダッシュボード</strong> - 感情分析と緊急度管理
                </li>
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
@@ -128,7 +132,7 @@ const newsData = [
              <ul class="space-y-2 text-gray-700">
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
-                 解析結果を複数の形式（CSV、Excel、JSON）でダウンロード可能
+                 解析結果を複数の形式（CSV、Excel、PDF）でダウンロード可能
                </li>
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
@@ -137,6 +141,27 @@ const newsData = [
                <li class="flex items-center">
                  <span class="inline-block w-2 h-2 bg-cyan-500 rounded-full mr-3"></span>
                  より柔軟なデータ活用をサポート
+               </li>
+             </ul>
+           </div>
+           
+           <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-lg border border-pink-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-pink-800">6. 会話相手の手動入力機能</h3>
+             </div>
+             <ul class="space-y-2 text-gray-700">
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                 解析結果一覧で「会話相手」を手動入力可能
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                 アップロードしたユーザーと会話相手を紐づけ
+               </li>
+               <li class="flex items-center">
+                 <span class="inline-block w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                 データ分析が格段に容易になり、より詳細な分析が可能
                </li>
              </ul>
            </div>
@@ -175,36 +200,15 @@ const newsData = [
              <h3 class="text-lg font-semibold text-cyan-800 mb-2">データ活用</h3>
              <p class="text-gray-700 text-sm">多形式ダウンロードで外部ツールとの連携強化</p>
            </div>
+           
+           <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-lg border border-pink-200">
+             <div class="text-3xl mb-3">🔗</div>
+             <h3 class="text-lg font-semibold text-pink-800 mb-2">データ分析の容易化</h3>
+             <p class="text-gray-700 text-sm">会話相手の紐づけでより詳細な分析が可能</p>
+           </div>
          </div>
        </div>
        
-       <div class="mb-8">
-         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔧 技術的改善</h2>
-         <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-lg border border-gray-200">
-           <ul class="space-y-3 text-gray-700">
-             <li class="flex items-center">
-               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
-               全ページのUI/UXを統一（PageLayout、PageCardコンポーネント導入）
-             </li>
-             <li class="flex items-center">
-               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
-               要約処理完了を待ってから解析完了ステータスに更新
-             </li>
-             <li class="flex items-center">
-               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
-               ファイルアップロード時のuser_id設定を統一（メールアドレス形式）
-             </li>
-             <li class="flex items-center">
-               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
-               ユーザー氏名表示機能（担当者をローマ字から日本語氏名で表示）
-             </li>
-             <li class="flex items-center">
-               <span class="inline-block w-2 h-2 bg-gray-500 rounded-full mr-3"></span>
-               解析完了前のアクションボタン誤操作を防止
-             </li>
-           </ul>
-         </div>
-       </div>
        
        <div class="mb-8">
          <h2 class="text-2xl font-bold text-gray-800 mb-4">📈 期待される効果</h2>
@@ -233,6 +237,11 @@ const newsData = [
              <h3 class="text-lg font-semibold text-cyan-800 mb-3">組織全体の可視化</h3>
              <p class="text-gray-700">共通ダッシュボードで組織全体のコミュニケーション状況を俯瞰</p>
            </div>
+           
+           <div class="bg-gradient-to-r from-pink-50 to-rose-50 p-6 rounded-lg border border-pink-200">
+             <h3 class="text-lg font-semibold text-pink-800 mb-3">データ分析の容易化</h3>
+             <p class="text-gray-700">会話相手の紐づけ機能により、より詳細で意味のある分析が可能</p>
+           </div>
          </div>
        </div>
        
@@ -242,7 +251,7 @@ const newsData = [
            <div class="grid md:grid-cols-2 gap-4">
              <div>
                <h3 class="text-lg font-semibold text-yellow-800 mb-2">「役割別最適化」</h3>
-               <p class="text-gray-700 text-sm">経営者・営業・マーケター・心理・コンプライアンス各職種に特化</p>
+               <p class="text-gray-700 text-sm">経営者・営業・マーケター・人事・労務・コンプライアンス各職種に特化</p>
              </div>
              <div>
                <h3 class="text-lg font-semibold text-yellow-800 mb-2">「UI/UX統一」</h3>
@@ -254,11 +263,15 @@ const newsData = [
              </div>
              <div>
                <h3 class="text-lg font-semibold text-yellow-800 mb-2">「データ活用強化」</h3>
-               <p class="text-gray-700 text-sm">CSV/Excel/JSON形式でのダウンロードで外部連携を促進</p>
+               <p class="text-gray-700 text-sm">CSV/Excel/PDF形式でのダウンロードで外部連携を促進</p>
              </div>
              <div>
                <h3 class="text-lg font-semibold text-yellow-800 mb-2">「精度向上」</h3>
                <p class="text-gray-700 text-sm">感情ワード管理とキーワード分析でより詳細な洞察</p>
+             </div>
+             <div>
+               <h3 class="text-lg font-semibold text-yellow-800 mb-2">「データ分析容易化」</h3>
+               <p class="text-gray-700 text-sm">会話相手の紐づけでより詳細で意味のある分析が可能</p>
              </div>
            </div>
          </div>

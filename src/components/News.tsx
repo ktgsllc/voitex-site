@@ -14,7 +14,7 @@ export default function News() {
     {
       id: '8',
       title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
-      publishedAt: '2025-10-18',
+      publishedAt: '2025-10-14',
       slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
     },
     {
