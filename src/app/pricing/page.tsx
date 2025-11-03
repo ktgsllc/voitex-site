@@ -42,14 +42,14 @@ export default function Page() {
                   <div>
                     <h3 className="font-semibold text-gray-900">解析時間</h3>
                     <p className="text-sm text-gray-600">
-                      実際の解析時間に応じて
+                      音声解析時間 1時間あたり
                     </p>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-blue-600">
                       ¥1,500
                     </div>
-                    <div className="text-sm text-gray-500">税抜/時間</div>
+                    <div className="text-sm text-gray-500">税込/時間</div>
                   </div>
                 </div>
 
@@ -217,48 +217,114 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-3">
               <div className="rounded-lg bg-gray-50 p-6">
                 <h3 className="mb-4 text-xl font-semibold text-gray-900">
-                  例1: 1時間50分の解析
+                  小規模（月間100時間）
                 </h3>
                 <div className="space-y-2">
                   <p className="text-sm text-gray-600">
-                    実際の解析時間:{' '}
-                    <span className="font-medium">1時間50分</span>
+                    対象: 中小規模の営業チーム、小規模コールセンター
                   </p>
                   <p className="text-sm text-gray-600">
-                    請求時間: <span className="font-medium">1時間</span>
+                    営業部門が10名程度、またはコールセンターが20名程度の企業
                   </p>
                   <p className="text-lg font-bold text-blue-600">
-                    料金: ¥1,500（税抜）
+                    月額: ¥150,000（税込）
                   </p>
                 </div>
               </div>
               <div className="rounded-lg bg-gray-50 p-6">
                 <h3 className="mb-4 text-xl font-semibold text-gray-900">
-                  例2: 2時間30分の解析
+                  中規模（月間500時間）
                 </h3>
                 <div className="space-y-2">
                   <p className="text-sm text-gray-600">
-                    実際の解析時間:{' '}
-                    <span className="font-medium">2時間30分</span>
+                    対象: 中規模の営業組織、中規模コールセンター
                   </p>
                   <p className="text-sm text-gray-600">
-                    請求時間: <span className="font-medium">2時間</span>
+                    営業部門が30-50名程度、またはコールセンターが50-100名程度の企業
                   </p>
                   <p className="text-lg font-bold text-blue-600">
-                    料金: ¥3,000（税抜）
+                    月額: ¥750,000（税込）
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-lg bg-gray-50 p-6">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
+                  大規模（月間1,000時間）
+                </h3>
+                <div className="space-y-2">
+                  <p className="text-sm text-gray-600">
+                    対象: 大規模の営業組織、大規模コールセンター
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    営業部門が100名以上、またはコールセンターが100名以上の企業
+                  </p>
+                  <p className="text-lg font-bold text-blue-600">
+                    月額: ¥1,500,000（税込）
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="mt-6 rounded-lg bg-blue-50 p-4">
-              <p className="text-center text-sm text-blue-800">
-                ※
-                解析時間は分単位で切り上げではなく、実際の解析時間に応じて計算いたします
+              <p className="text-sm text-blue-800">
+                <strong>※ 計算対象:</strong>
+                <br />
+                解析を実施した音声の時間のみが課金対象です。録音時間や通話時間ではなく、実際に解析処理を行った時間に対して課金されます。
+                <br />
+                処理失敗分は課金対象外です。
+                <br />
+                <strong>※ 月額固定プラン:</strong>
+                ご利用時間が安定しているお客様には、月額固定プランもご用意しています。詳細はお問い合わせください。
               </p>
+            </div>
+          </div>
+
+          {/* 利用状況の可視化 */}
+          <div className="mb-12 rounded-2xl bg-white p-8 shadow-lg">
+            <div className="mb-6 text-center">
+              <h2 className="mb-2 text-2xl font-bold text-gray-900">
+                利用状況の可視化
+              </h2>
+              <p className="text-gray-600">
+                ダッシュボードでリアルタイムに利用時間を確認できます
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-lg bg-gray-50 p-4 text-center">
+                <h3 className="mb-2 text-sm font-medium text-gray-600">
+                  本日の利用時間
+                </h3>
+                <p className="text-lg font-semibold text-primary">
+                  リアルタイム表示
+                </p>
+              </div>
+              <div className="rounded-lg bg-gray-50 p-4 text-center">
+                <h3 className="mb-2 text-sm font-medium text-gray-600">
+                  今週の利用時間
+                </h3>
+                <p className="text-lg font-semibold text-primary">
+                  リアルタイム表示
+                </p>
+              </div>
+              <div className="rounded-lg bg-gray-50 p-4 text-center">
+                <h3 className="mb-2 text-sm font-medium text-gray-600">
+                  今月の利用時間
+                </h3>
+                <p className="text-lg font-semibold text-primary">
+                  リアルタイム表示
+                </p>
+              </div>
+              <div className="rounded-lg bg-gray-50 p-4 text-center">
+                <h3 className="mb-2 text-sm font-medium text-gray-600">
+                  本年（年初来）の利用時間
+                </h3>
+                <p className="text-lg font-semibold text-primary">
+                  リアルタイム表示
+                </p>
+              </div>
             </div>
           </div>
 

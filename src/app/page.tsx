@@ -13,8 +13,8 @@ import StructuredData from '@/components/StructuredData';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
-  'ボイテキ！｜音声解析AI SaaSで応対品質と営業セールス分析を見える化',
-  '音声解析AI SaaS「ボイテキ！」で応対品質と営業セールス分析を向上。感情解析結果の視覚化・AI改善アドバイス・NGワード検出・自動要約でコールセンターの品質管理と営業活動の分析を効率化。カスハラ対策にも活用可能。',
+  'ボイテキ！｜AI音声分析・感情解析システムで会話品質と組織の健全性を向上',
+  'ボイテキ！は音声ファイルをAIで分析し、会話品質と組織の健全性を向上させるクラウドサービス。役割別ダッシュボード、顧客心理5軸分析、組織の健全性スコアでデータドリブンなマネジメントを実現。営業・カスタマーサポート・コンプライアンス強化に対応。',
   '/'
 );
 

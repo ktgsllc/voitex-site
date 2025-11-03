@@ -71,34 +71,58 @@ export default function QuickSumPage() {
             </div>
 
             {/* 導入効果まとめ */}
-            <div className="mt-8 rounded-lg bg-gray-50 p-8">
-              <h2 className="mb-6 text-3xl font-bold text-primary">
+            <div className="mt-16 rounded-lg bg-gray-50 p-8">
+              <h2 className="mb-8 text-center text-3xl font-bold text-primary">
                 導入効果まとめ
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                <div className="rounded-lg bg-white p-6 shadow-sm">
-                  <div className="mb-2 text-2xl font-bold text-primary">
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                      <span className="text-3xl">⏱️</span>
+                    </div>
+                  </div>
+                  <div className="mb-2 text-center text-2xl font-bold text-primary">
                     平均1分 → 約10秒
                   </div>
-                  <p className="text-gray-600">ACW時間を大幅短縮</p>
+                  <p className="text-center text-gray-600">
+                    ACW時間を大幅短縮
+                  </p>
                 </div>
-                <div className="rounded-lg bg-white p-6 shadow-sm">
-                  <div className="mb-2 text-2xl font-bold text-primary">
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                      <span className="text-3xl">✨</span>
+                    </div>
+                  </div>
+                  <div className="mb-2 text-center text-2xl font-bold text-primary">
                     品質統一
                   </div>
-                  <p className="text-gray-600">要約品質のばらつき防止</p>
+                  <p className="text-center text-gray-600">
+                    要約品質のばらつき防止
+                  </p>
                 </div>
-                <div className="rounded-lg bg-white p-6 shadow-sm">
-                  <div className="mb-2 text-2xl font-bold text-primary">
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
+                      <span className="text-3xl">📉</span>
+                    </div>
+                  </div>
+                  <div className="mb-2 text-center text-2xl font-bold text-primary">
                     工数削減
                   </div>
-                  <p className="text-gray-600">CRM入力工数の削減</p>
+                  <p className="text-center text-gray-600">CRM入力工数の削減</p>
                 </div>
-                <div className="rounded-lg bg-white p-6 shadow-sm">
-                  <div className="mb-2 text-2xl font-bold text-primary">
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+                      <span className="text-3xl">😊</span>
+                    </div>
+                  </div>
+                  <div className="mb-2 text-center text-2xl font-bold text-primary">
                     負担軽減
                   </div>
-                  <p className="text-gray-600">
+                  <p className="text-center text-gray-600">
                     オペレーターの心理的負担を軽減
                   </p>
                 </div>
@@ -231,8 +255,238 @@ export default function QuickSumPage() {
               </div>
             </div>
 
+            {/* 管理・カスタマイズ機能 */}
+            <div className="mt-16 rounded-lg bg-white p-8 shadow-sm">
+              <h2 className="mb-8 text-center text-3xl font-bold text-primary">
+                柔軟な管理機能で組織に最適化
+              </h2>
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="rounded-lg bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm">
+                  <div className="mb-4 flex items-center">
+                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                      <svg
+                        className="h-6 w-6 text-blue-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      プロンプト管理
+                    </h3>
+                  </div>
+                  <p className="mb-3 text-gray-600">
+                    プロンプトを最大50件まで作成・管理可能。タイトルは255文字、本文は5万文字まで対応し、組織の要約ルールを細かくカスタマイズできます。
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    スーパーバイザーが事前にプロンプトを設定することで、オペレーターごとのばらつきを防止し、統一された要約品質を維持します。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-gradient-to-br from-green-50 to-white p-6 shadow-sm">
+                  <div className="mb-4 flex items-center">
+                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
+                      <svg
+                        className="h-6 w-6 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      要約履歴管理
+                    </h3>
+                  </div>
+                  <p className="text-gray-600">
+                    ダッシュボードで日次・累計の要約実行数をリアルタイムで確認できます。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 技術的優位性 */}
+            <div className="mt-16 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 p-8 shadow-sm">
+              <h2 className="mb-8 text-center text-3xl font-bold text-primary">
+                最先端のAI技術を採用
+              </h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
+                      <svg
+                        className="h-8 w-8 text-purple-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-center text-xl font-semibold text-gray-800">
+                    Gemini 2.0 Flash モデル
+                  </h3>
+                  <p className="text-center text-gray-600">
+                    Googleの最新AIモデル「Gemini 2.0 Flash」を採用。高精度な要約生成と高速処理を両立します。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                      <svg
+                        className="h-8 w-8 text-blue-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-center text-xl font-semibold text-gray-800">
+                    リアルタイム統計
+                  </h3>
+                  <p className="text-center text-gray-600">
+                    トークン使用量をリアルタイムで追跡。3ヶ月、6ヶ月、1年の期間で使用量の推移をグラフで可視化し、コスト管理をサポートします。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                      <svg
+                        className="h-8 w-8 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-center text-xl font-semibold text-gray-800">
+                    処理実績
+                  </h3>
+                  <p className="text-center text-gray-600">
+                    1日あたり約10,000〜20,000件の処理に対応。最大37万文字の長文要約にも実績があります。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* セキュリティとアクセス管理 */}
+            <div className="mt-16 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 p-8 shadow-sm">
+              <h2 className="mb-8 text-center text-3xl font-bold text-primary">
+                セキュリティとアクセス管理
+              </h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                      <svg
+                        className="h-8 w-8 text-blue-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-center text-xl font-semibold text-gray-800">
+                    IPアドレス制限機能
+                  </h3>
+                  <p className="text-center text-gray-600">
+                    管理者が許可するIPアドレスのみアクセス可能。オフィスや在宅勤務環境に応じて柔軟に設定できます。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                      <svg
+                        className="h-8 w-8 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-center text-xl font-semibold text-gray-800">
+                    AWS Cognito認証
+                  </h3>
+                  <p className="text-center text-gray-600">
+                    エンタープライズレベルの認証システムを採用。安全なユーザー管理とセッション管理を実現します。
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
+                      <svg
+                        className="h-8 w-8 text-purple-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-center text-xl font-semibold text-gray-800">
+                    WAF保護
+                  </h3>
+                  <p className="text-center text-gray-600">
+                    ModSecurityによるWebアプリケーションファイアウォール保護で、不正アクセスからシステムを守ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* 使い方フロー */}
-            <div className="mt-8 rounded-lg bg-white p-8 shadow-sm">
+            <div className="mt-16 rounded-lg bg-white p-8 shadow-sm">
               <h2 className="mb-6 text-3xl font-bold text-primary">
                 使い方フロー
               </h2>
@@ -282,8 +536,65 @@ export default function QuickSumPage() {
               </div>
             </div>
 
+            {/* 数値・実績の強調 */}
+            <div className="mt-16 rounded-xl bg-gradient-to-br from-primary via-blue-600 to-indigo-700 p-12 text-white shadow-2xl">
+              <h2 className="mb-10 text-center text-3xl font-bold">
+                圧倒的な処理能力と実績
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                  <div className="mb-3 text-4xl font-extrabold text-yellow-300">
+                    37万文字
+                  </div>
+                  <p className="text-sm font-medium text-blue-100">
+                    最大要約実績
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                  <div className="mb-3 text-4xl font-extrabold text-yellow-300">
+                    10K〜20K件
+                  </div>
+                  <p className="text-sm font-medium text-blue-100">
+                    1日あたりの処理能力
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                  <div className="mb-3 text-2xl font-extrabold text-yellow-300">
+                    0.5〜2秒
+                  </div>
+                  <p className="mb-1 text-xs text-blue-100">
+                    平均レスポンス
+                  </p>
+                  <p className="text-xs text-blue-200">
+                    （最大3分）
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                  <div className="mb-3 text-4xl font-extrabold text-yellow-300">
+                    90件
+                  </div>
+                  <p className="text-sm font-medium text-blue-100">
+                    並列処理対応
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                  <div className="mb-3 text-4xl font-extrabold text-yellow-300">
+                    100人
+                  </div>
+                  <p className="text-sm font-medium text-blue-100">
+                    同時接続対応
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <p className="text-lg text-blue-100">
+                  これらの実績データは、QuickSumの信頼性と処理能力を示しています
+                </p>
+              </div>
+            </div>
+
             {/* FAQ */}
-            <div className="mt-8 rounded-lg bg-gray-50 p-8">
+            <div className="mt-16 rounded-lg bg-gray-50 p-8">
               <h2 className="mb-6 text-3xl font-bold text-primary">
                 FAQ – よくある質問
               </h2>
@@ -365,23 +676,23 @@ export default function QuickSumPage() {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="mt-8 rounded-lg bg-primary/5 p-8 text-center">
-              <h2 className="mb-4 text-2xl font-semibold text-primary">
+            {/* 最終CTA */}
+            <div className="mt-16 rounded-xl bg-gradient-to-r from-primary to-blue-600 p-12 text-center text-white shadow-lg">
+              <h2 className="mb-4 text-3xl font-bold">
                 QuickSumで業務効率を向上させませんか？
               </h2>
-              <p className="mb-6 text-gray-600">
+              <p className="mb-8 text-lg opacity-90">
                 ACW時間の大幅削減で、オペレーターが応対に集中できる環境を実現します。
               </p>
               <a
                 href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
+                className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary transition-colors hover:bg-gray-100 shadow-lg"
               >
                 無料トライアルを始める
                 <svg
-                  className="ml-2 h-4 w-4"
+                  className="ml-2 h-5 w-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -390,7 +701,7 @@ export default function QuickSumPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
                   />
                 </svg>
               </a>

@@ -112,13 +112,77 @@ export default function CompanyPage() {
 
               <div className="mb-8 rounded-lg bg-white p-8 shadow-sm">
                 <h2 className="mb-4 text-2xl font-semibold text-gray-800">
-                  ミッション
+                  企業の歴史とビジョン
                 </h2>
                 <p className="mb-6 text-gray-600">
-                  音声データから価値ある情報を抽出し、ビジネスの効率化と意思決定の質向上に貢献することを目指しています。
+                  ボイテキ！は、会話の見えない化という課題を解決し、データドリブンなマネジメントと組織の健全性向上を実現することを目指しています。
                   最新のAI技術を活用し、誰でも簡単に使える音声解析ツールを提供します。
                   両社の専門性を活かした共同事業により、より高品質なサービスをお客様にお届けします。
                 </p>
+              </div>
+
+              <div className="mb-8 rounded-lg bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-2xl font-semibold text-gray-800">
+                  実績や認定歴
+                </h2>
+                <p className="mb-6 text-gray-600">
+                  様々な業界・業種でトライアルを実施しており、以下の業種でご利用いただいています：
+                </p>
+                <ul className="list-disc space-y-2 pl-6 text-gray-600">
+                  <li>証券会社</li>
+                  <li>生命保険会社</li>
+                  <li>損害保険会社</li>
+                  <li>弁護士事務所</li>
+                  <li>税理士事務所</li>
+                  <li>通信販売会社</li>
+                  <li>不動産会社</li>
+                  <li>建築業</li>
+                  <li>コールセンター事業社</li>
+                </ul>
+              </div>
+
+              <div className="mb-8 rounded-lg bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-2xl font-semibold text-gray-800">
+                  技術スタック
+                </h2>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span>
+                      <strong className="text-gray-800">音声認識:</strong> AmiVoice（メイン）+ Amazon Transcribe（オプション）
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span>
+                      <strong className="text-gray-800">AI分析:</strong> ChatGPT（GPT-4）+ Amazon Bedrock Claude 3
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span>
+                      <strong className="text-gray-800">インフラ:</strong> AWS
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2 text-primary">•</span>
+                    <span>
+                      <strong className="text-gray-800">セキュリティ:</strong> WAF + AWS Cognito + JWT認証
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-8 rounded-lg bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-2xl font-semibold text-gray-800">
+                  セキュリティ・法令遵守
+                </h2>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• 個人情報保護法に準拠</li>
+                  <li>• 労働安全衛生法等に準拠</li>
+                  <li>• 多層的なセキュリティ対策を実装</li>
+                  <li>• データは暗号化されて保存</li>
+                </ul>
               </div>
 
               <div className="mb-8 rounded-lg bg-white p-8 shadow-sm">

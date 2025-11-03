@@ -92,9 +92,34 @@ export default function Page() {
                     <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
                       ✓
                     </div>
+                    <span className="font-medium">建築業</span>
+                  </div>
+                </div>
+                <div className="rounded-lg bg-white p-4 shadow-sm">
+                  <div className="mb-2 flex items-center">
+                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
+                      ✓
+                    </div>
                     <span className="font-medium">コールセンター事業社</span>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-6 rounded-lg bg-green-50 p-6">
+                <h3 className="mb-4 text-xl font-semibold text-green-800">
+                  トライアルでの期待される効果
+                </h3>
+                <p className="mb-4 text-green-700">
+                  現在実施中のトライアルでは、以下のような効果が期待されています：
+                </p>
+                <ul className="space-y-2 text-sm text-green-700">
+                  <li>• 会話の品質が数値で見えるようになり、指導のポイントが明確になることが期待できます</li>
+                  <li>• 顧客の感情が分かるようになり、クレームの予兆を早期に察知できる可能性があります</li>
+                  <li>• NGワード検出により、コンプライアンス違反を未然に防ぐことが期待できます</li>
+                </ul>
+                <p className="mt-4 text-xs text-green-600">
+                  ※ 本格導入後、実際の効果については随時更新いたします。
+                </p>
               </div>
 
               <p className="mb-6 text-sm text-gray-500">

@@ -31,7 +31,7 @@ export default function SisterServices() {
                 QuickSum
               </h3>
               <p className="mb-4 text-gray-600">
-                長文のドキュメントを瞬時に要約し、重要なポイントを抽出するAI要約サービス。
+                コールセンターのACW（アフターコールワーク）を削減し、通話内容を即座に要約してCRMへコピーペーストできるAI要約ツール。
               </p>
               <a
                 href="/quicksum"

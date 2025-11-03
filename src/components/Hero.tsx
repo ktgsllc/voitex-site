@@ -9,15 +9,13 @@ export default function Hero() {
             声の中に、<span className="text-primary">答えがある。</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-gray-600">
-            音声データをAIで分析・要約・可視化し、
+            音声ファイルをAIで分析し、会話品質と組織の健全性を向上させる
             <br className="hidden sm:inline" />
-            応対品質と<strong>営業セールス分析</strong>を見える化する
-            <strong>音声解析AI SaaSツール</strong>{' '}
-            <strong>「ボイテキ！」</strong>。<br />
-            感情やNGワードの
-            <span className="font-semibold text-primary">自動検出</span>と
-            <strong className="text-primary">視覚化された感情解析結果</strong>
-            で、 コールセンターから営業活動まで幅広く活用できます。
+            <strong>クラウドサービス</strong> <strong>「ボイテキ！」</strong>。<br />
+            役割別ダッシュボードと
+            <span className="font-semibold text-primary">顧客心理5軸分析</span>により、
+            <strong className="text-primary">データドリブンなマネジメント</strong>
+            と<strong className="text-primary">組織の健全性向上</strong>を実現します。
           </p>
           <div className="mt-6 text-center">
             <p className="text-lg font-medium text-gray-700">

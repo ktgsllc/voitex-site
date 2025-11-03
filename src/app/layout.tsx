@@ -113,8 +113,8 @@ export default function RootLayout({
                 'カスハラ対策',
               ],
               screenshot: 'https://www.voitex.site/hero-image.webp',
-              softwareVersion: '3.12.0',
-              releaseNotes: 'SMS自動送信機能を追加',
+              softwareVersion: '1.4.0',
+              releaseNotes: '役割別ダッシュボードとUI/UX大幅改善、感情解析結果の視覚化、AI改善アドバイスと再生成機能を追加',
             }),
           }}
         />

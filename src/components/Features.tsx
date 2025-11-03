@@ -11,7 +11,14 @@ import {
   RefreshCw,
 } from 'lucide-react';
 
-const features = [
+type Feature = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  isNew?: boolean;
+};
+
+const features: Feature[] = [
   {
     icon: <Mic className="h-10 w-10 text-primary" />,
     title: '音声の自動文字起こし',
@@ -44,21 +51,37 @@ const features = [
   },
   {
     icon: <BarChart3 className="h-10 w-10 text-primary" />,
-    title: '感情解析結果の視覚化（NEW!）',
+    title: '役割別ダッシュボード',
     description:
-      '感情解析結果をカード形式で直感的に表示。差の数値を色分けして強調し、パッと見て分かるUIで営業・カスタマーサポートの効率化を実現。',
-  },
-  {
-    icon: <RefreshCw className="h-10 w-10 text-primary" />,
-    title: 'AI改善アドバイスと再生成機能（NEW!）',
-    description:
-      '感情解析結果と改善アドバイスを分離表示。必要に応じて再生成機能で結果を調整でき、より実用的な分析結果を提供します。',
+      '経営者、営業マネージャー、マーケター、カスタマーサクセス、コンプライアンス担当者、心理カウンセラー向けに最適化された7つの役割別ダッシュボードを提供。',
+    isNew: true,
   },
   {
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
     title: 'セキュアなクラウド基盤とAPI連携',
     description:
       '音声データは暗号化保管。各種CRMやチャットツールとの連携APIで、既存ワークフローに自然に組み込み可能。',
+  },
+  {
+    icon: <Share2 className="h-10 w-10 text-primary" />,
+    title: 'キーワード分析機能',
+    description:
+      '会話内容から重要なキーワードを自動抽出。出現頻度や重要度を可視化し、ワードクラウド表示で直感的に分析結果を確認できます。',
+    isNew: true,
+  },
+  {
+    icon: <BarChart3 className="h-10 w-10 text-primary" />,
+    title: '動画ファイル対応',
+    description:
+      'MP4、MOV、AVI形式の動画ファイルアップロードに対応。動画は自動的に音声ファイル（WAV）に変換され、より多様なファイル形式での解析が可能。',
+    isNew: true,
+  },
+  {
+    icon: <RefreshCw className="h-10 w-10 text-primary" />,
+    title: 'データダウンロード機能拡張',
+    description:
+      '解析結果を複数の形式（CSV、Excel、PDF）でダウンロード可能。ローデータのダウンロード機能も追加し、より柔軟なデータ活用をサポート。',
+    isNew: true,
   },
 ];
 
@@ -75,8 +98,20 @@ export default function Features() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="rounded-lg border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className={`relative rounded-lg border p-6 shadow-sm transition-all hover:shadow-md ${
+                  feature.isNew
+                    ? 'border-green-300 bg-gradient-to-br from-green-50 to-white'
+                    : 'border-gray-100 bg-white'
+                }`}
               >
+                {feature.isNew && (
+                  <div className="absolute -top-3 -right-3">
+                    <span className="inline-flex items-center rounded-full bg-gradient-to-r from-green-500 to-green-600 px-3 py-1 text-xs font-bold text-white shadow-lg">
+                      NEW!
+                      <span className="ml-1 text-[10px]">v1.4.0</span>
+                    </span>
+                  </div>
+                )}
                 <div className="mb-4">{feature.icon}</div>
                 <h3 className="mb-3 text-xl font-semibold text-gray-800">
                   {feature.title}

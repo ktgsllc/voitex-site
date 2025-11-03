@@ -34,27 +34,59 @@ export default function Intro() {
           <div className="mb-12 rounded-lg border border-green-200 bg-gradient-to-r from-green-50 to-blue-50 p-8">
             <div className="mb-4 text-center">
               <span className="inline-block rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-800">
-                🎉 2025年9月 大型アップデート
+                🎉 2025年10月 バージョン1.4.0 大型アップデート
               </span>
             </div>
             <h3 className="mb-4 text-2xl font-bold text-primary">
-              会話評価機能を大幅刷新！
+              役割別ダッシュボードとUI/UX大幅改善！
             </h3>
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-lg bg-white p-6 shadow-sm">
                 <h4 className="mb-3 text-lg font-semibold text-green-700">
-                  📊 感情解析結果の視覚化
+                  👥 役割別ダッシュボード
                 </h4>
                 <p className="text-gray-600">
-                  感情解析結果をカード形式で直感的に表示。差の数値を色分けして強調し、パッと見て分かるUIで営業・カスタマーサポートの効率化を実現。
+                  経営者・営業・マーケター・人事・労務・コンプライアンス担当者それぞれに最適化された分析画面を提供。各職種に特化した指標で業務効率を向上。
                 </p>
               </div>
               <div className="rounded-lg bg-white p-6 shadow-sm">
                 <h4 className="mb-3 text-lg font-semibold text-blue-700">
-                  🔄 AI改善アドバイスと再生成機能
+                  🎨 UI/UX統一
                 </h4>
                 <p className="text-gray-600">
-                  感情解析結果と改善アドバイスを分離表示。必要に応じて再生成機能で結果を調整でき、より実用的な分析結果を提供します。
+                  全ページのデザイン統一により、より使いやすく直感的なインターフェースを実現。統一されたユーザー体験を提供します。
+                </p>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h4 className="mb-3 text-lg font-semibold text-purple-700">
+                  🔍 キーワード分析機能
+                </h4>
+                <p className="text-gray-600">
+                  会話内容から重要なキーワードを自動抽出。出現頻度や重要度を可視化し、ワードクラウド表示で直感的に分析結果を確認できます。
+                </p>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h4 className="mb-3 text-lg font-semibold text-orange-700">
+                  🎬 動画ファイル対応
+                </h4>
+                <p className="text-gray-600">
+                  MP4、MOV、AVI形式の動画ファイルアップロードに対応。動画は自動的に音声ファイル（WAV）に変換され、より多様なファイル形式での解析が可能。
+                </p>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h4 className="mb-3 text-lg font-semibold text-cyan-700">
+                  📥 データダウンロード機能拡張
+                </h4>
+                <p className="text-gray-600">
+                  解析結果を複数の形式（CSV、Excel、PDF）でダウンロード可能。ローデータのダウンロード機能も追加し、より柔軟なデータ活用をサポート。
+                </p>
+              </div>
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h4 className="mb-3 text-lg font-semibold text-pink-700">
+                  ✏️ 会話相手の手動入力
+                </h4>
+                <p className="text-gray-600">
+                  解析結果一覧で「会話相手」を手動入力可能。アップロードしたユーザーと会話相手を紐づけ、より詳細な分析が可能になります。
                 </p>
               </div>
             </div>
