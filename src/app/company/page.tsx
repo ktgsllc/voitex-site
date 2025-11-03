@@ -149,13 +149,15 @@ export default function CompanyPage() {
                   <li className="flex items-start">
                     <span className="mr-2 text-primary">•</span>
                     <span>
-                      <strong className="text-gray-800">音声認識:</strong> AmiVoice（メイン）+ Amazon Transcribe（オプション）
+                      <strong className="text-gray-800">音声認識:</strong>{' '}
+                      AmiVoice（メイン）+ Amazon Transcribe（オプション）
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2 text-primary">•</span>
                     <span>
-                      <strong className="text-gray-800">AI分析:</strong> ChatGPT（GPT-4）+ Amazon Bedrock Claude 3
+                      <strong className="text-gray-800">AI分析:</strong>{' '}
+                      ChatGPT（GPT-4）+ Amazon Bedrock Claude 3
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -167,7 +169,8 @@ export default function CompanyPage() {
                   <li className="flex items-start">
                     <span className="mr-2 text-primary">•</span>
                     <span>
-                      <strong className="text-gray-800">セキュリティ:</strong> WAF + AWS Cognito + JWT認証
+                      <strong className="text-gray-800">セキュリティ:</strong>{' '}
+                      WAF + AWS Cognito + JWT認証
                     </span>
                   </li>
                 </ul>

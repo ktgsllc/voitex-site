@@ -85,9 +85,7 @@ export default function QuickSumPage() {
                   <div className="mb-2 text-center text-2xl font-bold text-primary">
                     平均1分 → 約10秒
                   </div>
-                  <p className="text-center text-gray-600">
-                    ACW時間を大幅短縮
-                  </p>
+                  <p className="text-center text-gray-600">ACW時間を大幅短縮</p>
                 </div>
                 <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                   <div className="mb-4 flex justify-center">
@@ -345,7 +343,8 @@ export default function QuickSumPage() {
                     Gemini 2.0 Flash モデル
                   </h3>
                   <p className="text-center text-gray-600">
-                    Googleの最新AIモデル「Gemini 2.0 Flash」を採用。高精度な要約生成と高速処理を両立します。
+                    Googleの最新AIモデル「Gemini 2.0
+                    Flash」を採用。高精度な要約生成と高速処理を両立します。
                   </p>
                 </div>
                 <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
@@ -542,7 +541,7 @@ export default function QuickSumPage() {
                 圧倒的な処理能力と実績
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                <div className="rounded-lg bg-white/10 p-6 text-center backdrop-blur-sm transition-all hover:bg-white/20">
                   <div className="mb-3 text-4xl font-extrabold text-yellow-300">
                     37万文字
                   </div>
@@ -550,7 +549,7 @@ export default function QuickSumPage() {
                     最大要約実績
                   </p>
                 </div>
-                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                <div className="rounded-lg bg-white/10 p-6 text-center backdrop-blur-sm transition-all hover:bg-white/20">
                   <div className="mb-3 text-4xl font-extrabold text-yellow-300">
                     10K〜20K件
                   </div>
@@ -558,18 +557,14 @@ export default function QuickSumPage() {
                     1日あたりの処理能力
                   </p>
                 </div>
-                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                <div className="rounded-lg bg-white/10 p-6 text-center backdrop-blur-sm transition-all hover:bg-white/20">
                   <div className="mb-3 text-2xl font-extrabold text-yellow-300">
                     0.5〜2秒
                   </div>
-                  <p className="mb-1 text-xs text-blue-100">
-                    平均レスポンス
-                  </p>
-                  <p className="text-xs text-blue-200">
-                    （最大3分）
-                  </p>
+                  <p className="mb-1 text-xs text-blue-100">平均レスポンス</p>
+                  <p className="text-xs text-blue-200">（最大3分）</p>
                 </div>
-                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                <div className="rounded-lg bg-white/10 p-6 text-center backdrop-blur-sm transition-all hover:bg-white/20">
                   <div className="mb-3 text-4xl font-extrabold text-yellow-300">
                     90件
                   </div>
@@ -577,7 +572,7 @@ export default function QuickSumPage() {
                     並列処理対応
                   </p>
                 </div>
-                <div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 text-center transition-all hover:bg-white/20">
+                <div className="rounded-lg bg-white/10 p-6 text-center backdrop-blur-sm transition-all hover:bg-white/20">
                   <div className="mb-3 text-4xl font-extrabold text-yellow-300">
                     100人
                   </div>
@@ -688,7 +683,7 @@ export default function QuickSumPage() {
                 href="https://forms.gle/jCp4fEqMV5fGaoWu6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary transition-colors hover:bg-gray-100 shadow-lg"
+                className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg transition-colors hover:bg-gray-100"
               >
                 無料トライアルを始める
                 <svg

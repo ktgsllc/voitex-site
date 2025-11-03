@@ -11,11 +11,16 @@ export default function Hero() {
           <p className="mt-6 text-lg leading-relaxed text-gray-600">
             音声ファイルをAIで分析し、会話品質と組織の健全性を向上させる
             <br className="hidden sm:inline" />
-            <strong>クラウドサービス</strong> <strong>「ボイテキ！」</strong>。<br />
+            <strong>クラウドサービス</strong> <strong>「ボイテキ！」</strong>。
+            <br />
             役割別ダッシュボードと
-            <span className="font-semibold text-primary">顧客心理5軸分析</span>により、
-            <strong className="text-primary">データドリブンなマネジメント</strong>
-            と<strong className="text-primary">組織の健全性向上</strong>を実現します。
+            <span className="font-semibold text-primary">顧客心理5軸分析</span>
+            により、
+            <strong className="text-primary">
+              データドリブンなマネジメント
+            </strong>
+            と<strong className="text-primary">組織の健全性向上</strong>
+            を実現します。
           </p>
           <div className="mt-6 text-center">
             <p className="text-lg font-medium text-gray-700">

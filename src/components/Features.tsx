@@ -105,7 +105,7 @@ export default function Features() {
                 }`}
               >
                 {feature.isNew && (
-                  <div className="absolute -top-3 -right-3">
+                  <div className="absolute -right-3 -top-3">
                     <span className="inline-flex items-center rounded-full bg-gradient-to-r from-green-500 to-green-600 px-3 py-1 text-xs font-bold text-white shadow-lg">
                       NEW!
                       <span className="ml-1 text-[10px]">v1.4.0</span>
