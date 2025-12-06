@@ -8,6 +8,119 @@ import NewsDetailClient from './NewsDetailClient';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '9',
+    title:
+      '🔒 React Server Componentsの脆弱性（CVE-2025-55182）への対応について',
+    date: '2025-12-06',
+    category: 'セキュリティ',
+    excerpt:
+      'React Server Componentsの脆弱性（CVE-2025-55182）について、ボイテキ！は対応済みです。QuickSumは本脆弱性の対象外となります。お客様のサービス利用に影響はございません。',
+    slug: 'react-server-components-cve-2025-55182-security-update',
+    content: `
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🔒 脆弱性対応の概要</h2>
+         <p class="text-gray-700 leading-relaxed mb-6">React Server Componentsの脆弱性（CVE-2025-55182）について、当社が提供するサービスの対応状況をお知らせいたします。お客様のサービス利用に影響はございませんので、ご安心ください。</p>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📋 脆弱性情報</h2>
+         <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-lg border border-red-200 mb-6">
+           <div class="flex items-start">
+             <div class="text-2xl mr-3">⚠️</div>
+             <div>
+               <h3 class="text-lg font-semibold text-red-800 mb-2">CVE-2025-55182</h3>
+               <p class="text-gray-700 mb-2"><strong>影響範囲：</strong>React Server Componentsを使用しているアプリケーション</p>
+               <p class="text-gray-700"><strong>深刻度：</strong>中程度</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">✅ サービス別対応状況</h2>
+         <div class="space-y-6">
+           <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-green-800">ボイテキ！</h3>
+             </div>
+             <div class="ml-6">
+               <p class="text-gray-700 mb-2"><strong>対応状況：</strong><span class="text-green-600 font-semibold">対応済み</span></p>
+               <p class="text-gray-700">React Server Componentsの脆弱性（CVE-2025-55182）について、必要な修正を適用し、対応を完了いたしました。お客様のサービス利用に影響はございません。</p>
+             </div>
+           </div>
+           
+           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg border border-blue-200">
+             <div class="flex items-center mb-3">
+               <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+               <h3 class="text-lg font-semibold text-blue-800">QuickSum</h3>
+             </div>
+             <div class="ml-6">
+               <p class="text-gray-700 mb-2"><strong>対応状況：</strong><span class="text-blue-600 font-semibold">対象外</span></p>
+               <p class="text-gray-700">QuickSumは本脆弱性の影響を受けない技術スタックを使用しているため、対応は不要です。お客様のサービス利用に影響はございません。</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">🛡️ セキュリティへの取り組み</h2>
+         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+           <p class="text-gray-700 leading-relaxed mb-4">当社では、お客様のデータとプライバシーを最優先に保護するため、継続的なセキュリティ監視と迅速な対応を実施しております。</p>
+           <ul class="space-y-2 text-gray-700">
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+               セキュリティ情報の継続的な監視
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+               脆弱性検出時の迅速な対応
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+               定期的なセキュリティアップデートの実施
+             </li>
+             <li class="flex items-center">
+               <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+               お客様への適切な情報提供
+             </li>
+           </ul>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">👥 お客様への影響</h2>
+         <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+           <div class="flex items-start">
+             <div class="text-2xl mr-3">✅</div>
+             <div>
+               <h3 class="text-lg font-semibold text-green-800 mb-2">影響なし</h3>
+               <p class="text-gray-700 mb-2">本脆弱性への対応は完了しており、お客様のサービス利用に影響はございません。</p>
+               <p class="text-gray-700">特別な対応や設定変更は不要です。引き続き、安心してサービスをご利用いただけます。</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <div class="mb-8">
+         <h2 class="text-2xl font-bold text-gray-800 mb-4">📢 今後のセキュリティ対応について</h2>
+         <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-lg text-white">
+           <h3 class="text-2xl font-bold mb-4">継続的なセキュリティ強化</h3>
+           <p class="text-blue-100 mb-4">当社では、最新のセキュリティ情報を継続的に監視し、必要に応じて迅速に対応いたします。</p>
+           <p class="text-blue-100">お客様のデータとプライバシーを最優先に保護し、安全で信頼性の高いサービスを提供してまいります。</p>
+         </div>
+       </div>
+       
+       <div class="bg-gradient-to-r from-green-600 to-green-700 p-8 rounded-lg text-white text-center">
+         <h3 class="text-2xl font-bold mb-4">お問い合わせはこちら</h3>
+         <p class="text-green-100 mb-6">本脆弱性への対応についてご不明な点がございましたら、お気軽にお問い合わせください。</p>
+         <div class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+           お問い合わせフォーム
+         </div>
+       </div>
+     `,
+  },
+  {
     id: '8',
     title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
     date: '2025-10-14',

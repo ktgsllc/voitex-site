@@ -11,6 +11,16 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '9',
+    title:
+      '🔒 React Server Componentsの脆弱性（CVE-2025-55182）への対応について',
+    date: '2025-12-06',
+    category: 'セキュリティ',
+    excerpt:
+      'React Server Componentsの脆弱性（CVE-2025-55182）について、ボイテキ！は対応済みです。QuickSumは本脆弱性の対象外となります。お客様のサービス利用に影響はございません。',
+    slug: 'react-server-components-cve-2025-55182-security-update',
+  },
+  {
     id: '8',
     title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
     date: '2025-10-14',
