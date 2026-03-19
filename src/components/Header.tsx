@@ -4,20 +4,40 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
-const navItems = [
-  { label: 'ホーム', href: '/', icon: '🏠' },
-  { label: 'ボイテキとは？', href: '/what-is-voitex', icon: 'ℹ️' },
+const cloudItems = [
   { label: '機能一覧', href: '/features', icon: '⚡' },
   { label: '料金', href: '/pricing', icon: '💰' },
   { label: '導入事例', href: '/cases', icon: '💼' },
   { label: 'FAQ', href: '/faq', icon: '❓' },
-  { label: 'お知らせ', href: '/news', icon: '📢' },
   {
     label: 'マニュアル',
     href: 'https://manual.voitex.site/',
     external: true,
     icon: '📖',
   },
+];
+
+const onPremItems = [
+  { label: '機能一覧', href: '/products/voitex2', icon: '⚡' },
+  { label: '料金', href: '/products/compare', icon: '💰' },
+  { label: '導入事例', href: '/cases', icon: '💼' },
+  { label: 'FAQ', href: '/faq', icon: '❓' },
+  {
+    label: 'マニュアル',
+    href: 'https://manual.voitex.site/',
+    external: true,
+    icon: '📖',
+  },
+];
+
+const sisterServices = [
+  { label: 'QuickSum', href: '/quicksum', icon: '📝' },
+  { label: 'ボイテキレック！', href: '/voitex-rec', icon: '🎙️' },
+  { label: 'ボイテキコンバーター！', href: '/voitex-converter', icon: '🔄' },
+];
+
+const utilityItems = [
+  { label: 'お知らせ', href: '/news', icon: '📢' },
   {
     label: 'ブログ',
     href: 'https://manual.voitex.site/blog/',
@@ -32,16 +52,20 @@ const navItems = [
   },
 ];
 
-const sisterServices = [
-  { label: 'QuickSum', href: '/quicksum', icon: '📝' },
-  { label: 'ボイテキレック！', href: '/voitex-rec', icon: '🎙️' },
-  { label: 'ボイテキコンバーター！', href: '/voitex-converter', icon: '🔄' },
-];
-
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [cloudOpen, setCloudOpen] = useState(false);
+  const [onPremOpen, setOnPremOpen] = useState(false);
   const [sisterServicesOpen, setSisterServicesOpen] = useState(false);
   const pathname = usePathname();
+  const isActiveNav = (href: string) => pathname === href;
+  const cloudActive = cloudItems.some(
+    (item) => !item.external && pathname === item.href
+  );
+  const onPremActive = onPremItems.some(
+    (item) => !item.external && pathname === item.href
+  );
+  const sisterActive = sisterServices.some((item) => pathname === item.href);
 
   // モバイルメニューの開閉時にbodyのスクロールを制御
   useEffect(() => {
@@ -72,38 +96,129 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center space-x-6 lg:flex">
-          {navItems.slice(0, 4).map(({ label, href, external }) =>
-            external ? (
-              <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-sm text-gray-600 transition-colors hover:text-primary"
-              >
-                {label}
-              </a>
-            ) : (
-              <Link
-                key={href}
-                href={href}
-                className={`flex items-center text-sm transition-colors ${
-                  pathname === href
-                    ? 'font-medium text-primary'
-                    : 'text-gray-600 hover:text-primary'
-                }`}
-              >
-                {label}
-              </Link>
-            )
-          )}
+          <Link
+            href="/"
+            className={`flex items-center text-sm transition-colors ${
+              isActiveNav('/')
+                ? 'font-medium text-primary'
+                : 'text-gray-600 hover:text-primary'
+            }`}
+          >
+            ホーム
+          </Link>
+
+          {/* Cloud Dropdown */}
+          <div className="relative flex items-center">
+            <button
+              onClick={() => {
+                setCloudOpen(!cloudOpen);
+                setOnPremOpen(false);
+                setSisterServicesOpen(false);
+              }}
+              className={`flex h-full items-center text-sm transition-colors ${
+                cloudActive
+                  ? 'font-medium text-primary'
+                  : 'text-gray-600 hover:text-primary'
+              }`}
+            >
+              ボイテキクラウド
+              <span className="ml-1 text-xs">▼</span>
+            </button>
+
+            {cloudOpen && (
+              <div className="absolute left-0 top-full z-10 mt-1 min-w-52 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
+                {cloudItems.map(({ label, href, external }) =>
+                  external ? (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-50 hover:text-primary"
+                      onClick={() => setCloudOpen(false)}
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={`block px-4 py-2 text-sm transition-colors ${
+                        pathname === href
+                          ? 'bg-gray-50 font-medium text-primary'
+                          : 'text-gray-600 hover:bg-gray-50 hover:text-primary'
+                      }`}
+                      onClick={() => setCloudOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  )
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* On-Prem Dropdown */}
+          <div className="relative flex items-center">
+            <button
+              onClick={() => {
+                setOnPremOpen(!onPremOpen);
+                setCloudOpen(false);
+                setSisterServicesOpen(false);
+              }}
+              className={`flex h-full items-center text-sm transition-colors ${
+                onPremActive
+                  ? 'font-medium text-primary'
+                  : 'text-gray-600 hover:text-primary'
+              }`}
+            >
+              ボイテキオンプレ
+              <span className="ml-1 text-xs">▼</span>
+            </button>
+
+            {onPremOpen && (
+              <div className="absolute left-0 top-full z-10 mt-1 min-w-52 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
+                {onPremItems.map(({ label, href, external }) =>
+                  external ? (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-50 hover:text-primary"
+                      onClick={() => setOnPremOpen(false)}
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={`block px-4 py-2 text-sm transition-colors ${
+                        pathname === href
+                          ? 'bg-gray-50 font-medium text-primary'
+                          : 'text-gray-600 hover:bg-gray-50 hover:text-primary'
+                      }`}
+                      onClick={() => setOnPremOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  )
+                )}
+              </div>
+            )}
+          </div>
 
           {/* Sister Services Dropdown */}
           <div className="relative flex items-center">
             <button
-              onClick={() => setSisterServicesOpen(!sisterServicesOpen)}
+              onClick={() => {
+                setSisterServicesOpen(!sisterServicesOpen);
+                setCloudOpen(false);
+                setOnPremOpen(false);
+              }}
               className={`flex h-full items-center text-sm transition-colors ${
-                sisterServices.some((service) => pathname === service.href)
+                sisterActive
                   ? 'font-medium text-primary'
                   : 'text-gray-600 hover:text-primary'
               }`}
@@ -134,7 +249,7 @@ export default function Header() {
 
           {/* Secondary nav items */}
           <div className="ml-6 flex items-center space-x-4 border-l border-gray-200 pl-6">
-            {navItems.slice(4).map(({ label, href, external }) =>
+            {utilityItems.map(({ label, href, external }) =>
               external ? (
                 <a
                   key={href}
@@ -150,7 +265,7 @@ export default function Header() {
                   key={href}
                   href={href}
                   className={`flex items-center text-sm transition-colors ${
-                    pathname === href
+                    isActiveNav(href)
                       ? 'font-medium text-primary'
                       : 'text-gray-500 hover:text-primary'
                   }`}
@@ -194,7 +309,73 @@ export default function Header() {
                 メインメニュー
               </div>
               <div className="space-y-1">
-                {navItems.slice(0, 4).map(({ label, href, external, icon }) =>
+                <Link
+                  href="/"
+                  className={`flex items-center space-x-3 rounded-lg px-3 py-3 transition-colors ${
+                    isActiveNav('/')
+                      ? 'bg-primary/5 font-medium text-primary'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
+                  }`}
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="text-lg">🏠</span>
+                  <span className="font-medium">ホーム</span>
+                  {isActiveNav('/') && (
+                    <span className="ml-auto text-primary">●</span>
+                  )}
+                </Link>
+              </div>
+            </div>
+
+            {/* Cloud menu */}
+            <div className="mb-6">
+              <div className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                ボイテキクラウド
+              </div>
+              <div className="space-y-1">
+                {cloudItems.map(({ label, href, external, icon }) =>
+                  external ? (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 rounded-lg px-3 py-3 text-gray-700 transition-colors hover:bg-gray-50 hover:text-primary"
+                      onClick={() => setOpen(false)}
+                    >
+                      <span className="text-lg">{icon}</span>
+                      <span className="font-medium">{label}</span>
+                      <span className="ml-auto text-xs text-gray-400">↗</span>
+                    </a>
+                  ) : (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={`flex items-center space-x-3 rounded-lg px-3 py-3 transition-colors ${
+                        pathname === href
+                          ? 'bg-primary/5 font-medium text-primary'
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
+                      }`}
+                      onClick={() => setOpen(false)}
+                    >
+                      <span className="text-lg">{icon}</span>
+                      <span className="font-medium">{label}</span>
+                      {pathname === href && (
+                        <span className="ml-auto text-primary">●</span>
+                      )}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* On-prem menu */}
+            <div className="mb-6">
+              <div className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                ボイテキオンプレ
+              </div>
+              <div className="space-y-1">
+                {onPremItems.map(({ label, href, external, icon }) =>
                   external ? (
                     <a
                       key={href}
@@ -263,7 +444,7 @@ export default function Header() {
                 その他
               </div>
               <div className="space-y-1">
-                {navItems.slice(4).map(({ label, href, external, icon }) =>
+                {utilityItems.map(({ label, href, external, icon }) =>
                   external ? (
                     <a
                       key={href}

@@ -23,6 +23,11 @@ const breadcrumbMap: Record<string, string> = {
   'voitex-rec': 'ボイテキ！レコーダー',
   'voitex-converter': 'ボイテキコンバーター！',
   agreement: '利用規約',
+  products: '製品一覧',
+  voitex2: 'ボイテキオンプレ！',
+  cloud: 'ボイテキクラウド！',
+  onprem: 'ボイテキオンプレ！',
+  compare: 'クラウド/オンプレ比較',
 };
 
 export default function Breadcrumbs() {

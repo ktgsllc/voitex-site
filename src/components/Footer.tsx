@@ -11,6 +11,30 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-bold text-gray-800">サービス・製品</h3>
             <nav className="space-y-2">
+              <Link
+                href="/products/voitex2"
+                className="block hover:text-blue-600"
+              >
+                ボイテキオンプレ！
+              </Link>
+              <Link
+                href="/products/voitex2/cloud"
+                className="block hover:text-blue-600"
+              >
+                ボイテキクラウド！
+              </Link>
+              <Link
+                href="/products/voitex2/onprem"
+                className="block hover:text-blue-600"
+              >
+                ボイテキオンプレ！
+              </Link>
+              <Link
+                href="/products/compare"
+                className="block hover:text-blue-600"
+              >
+                クラウド/オンプレ比較
+              </Link>
               <Link href="/features" className="block hover:text-blue-600">
                 機能一覧
               </Link>

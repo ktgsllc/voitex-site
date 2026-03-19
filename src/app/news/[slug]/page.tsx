@@ -8,6 +8,64 @@ import NewsDetailClient from './NewsDetailClient';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '10',
+    title: '📢 2026年4月「ボイテキオンプレ！」リリース予定のお知らせ',
+    date: '2026-03-19',
+    category: 'リリース',
+    excerpt:
+      'オンプレミス環境向け新製品「ボイテキオンプレ！」を2026年4月にリリース予定です。通話音声の要点・感情・リスク兆候の可視化を、閉域運用や統制要件に対応した形で提供します。',
+    slug: 'voitex-onprem-release-scheduled-2026-04',
+    content: `
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">🚀 リリース予定のお知らせ</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          このたび当社は、オンプレミス環境向け新製品
+          <strong>「ボイテキオンプレ！」</strong>を
+          <strong>2026年4月</strong>にリリース予定であることをお知らせいたします。
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          通話音声の要点・感情・リスク兆候の可視化を、閉域運用や厳格な統制要件に対応した形で提供し、
+          より多様な企業環境での活用を支援します。
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">✨ 主な提供予定機能</h2>
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+          <ul class="space-y-3 text-gray-700">
+            <li>・音声の文字起こし（話者分離対応）</li>
+            <li>・感情分析とイベント抽出（怒りスパイク等）</li>
+            <li>・NGワード/要注意発話の検出</li>
+            <li>・要約生成（標準/業務レンズ別）</li>
+            <li>・ダッシュボード可視化、レポート出力</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">🏢 想定する導入先</h2>
+        <div class="bg-gradient-to-r from-slate-50 to-gray-50 p-6 rounded-lg border border-slate-200">
+          <p class="text-gray-700 leading-relaxed mb-3">
+            データ統制や閉域ネットワーク要件が厳しい企業・組織での利用を想定しています。
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li>・コールセンター/コンタクトセンター</li>
+            <li>・営業組織の商談分析・教育用途</li>
+            <li>・コンプライアンス監査/リスク管理部門</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-primary to-blue-700 p-8 rounded-lg text-white">
+        <h3 class="text-2xl font-bold mb-3">詳細情報は順次公開予定です</h3>
+        <p class="text-blue-100 leading-relaxed">
+          正式リリース日、提供プラン、導入に関する詳細は本サイトにて順次ご案内いたします。
+          ご相談をご希望のお客様は、お問い合わせフォームよりご連絡ください。
+        </p>
+      </div>
+    `,
+  },
+  {
     id: '9',
     title:
       '🔒 React Server Componentsの脆弱性（CVE-2025-55182）への対応について',

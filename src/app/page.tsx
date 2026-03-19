@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Hero from '@/components/Hero';
+import ProductBranch from '@/components/ProductBranch';
 import News from '@/components/News';
 import Cta from '@/components/Cta';
 import Intro, { PromptNgWordsImportance } from '@/components/Intro';
@@ -26,37 +27,40 @@ export default function Home() {
       {/* 1. Hero - 印象的なグラデーション */}
       <Hero />
 
-      {/* 2. News - 最新のお知らせ */}
+      {/* 2. Cloud/On-Prem branch */}
+      <ProductBranch />
+
+      {/* 3. News - 最新のお知らせ */}
       <News />
 
-      {/* 3. 最初のCTA - 注目を集める */}
+      {/* 4. 最初のCTA - 注目を集める */}
       <Cta />
 
-      {/* 4. Intro - 価値提案（白背景で読みやすく） */}
+      {/* 5. Intro - 価値提案（白背景で読みやすく） */}
       <Intro />
 
-      {/* 5. プロンプトとNGワードの重要性 */}
+      {/* 6. プロンプトとNGワードの重要性 */}
       <PromptNgWordsImportance />
 
-      {/* 6. Features - 機能紹介（グレー背景で区切り） */}
+      {/* 7. Features - 機能紹介（グレー背景で区切り） */}
       <Features />
 
-      {/* 7. Usage - 利用シーン（白背景で読みやすく） */}
+      {/* 8. Usage - 利用シーン（白背景で読みやすく） */}
       <Usage />
 
-      {/* 8. SisterServices - 姉妹サービス（グレー背景で区切り） */}
+      {/* 9. SisterServices - 姉妹サービス（グレー背景で区切り） */}
       <SisterServices />
 
-      {/* 9. Testimonials - お客様の声（白背景で信頼性） */}
+      {/* 10. Testimonials - お客様の声（白背景で信頼性） */}
       <Testimonials />
 
-      {/* 10. FaqSnippet - FAQ（グレー背景で区切り） */}
+      {/* 11. FaqSnippet - FAQ（グレー背景で区切り） */}
       <FaqSnippet />
 
-      {/* 11. Steps - 導入ステップ（白背景で読みやすく） */}
+      {/* 12. Steps - 導入ステップ（白背景で読みやすく） */}
       <Steps />
 
-      {/* 12. 最後のCTA - 行動喚起（グレー背景で注目） */}
+      {/* 13. 最後のCTA - 行動喚起（グレー背景で注目） */}
       <Cta />
     </>
   );

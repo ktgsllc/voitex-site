@@ -11,6 +11,16 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '10',
+    title: '📢 2026年4月「ボイテキオンプレ！」リリース予定のお知らせ',
+    date: '2026-03-19',
+    category: 'リリース',
+    pinned: true,
+    excerpt:
+      'オンプレミス環境向け新製品「ボイテキオンプレ！」を2026年4月にリリース予定です。通話音声の要点・感情・リスク兆候の可視化を、閉域運用や統制要件に対応した形で提供します。',
+    slug: 'voitex-onprem-release-scheduled-2026-04',
+  },
+  {
     id: '9',
     title:
       '🔒 React Server Componentsの脆弱性（CVE-2025-55182）への対応について',
@@ -99,7 +109,18 @@ const newsData = [
   },
 ];
 
+const categoryStyle: Record<string, string> = {
+  リリース: 'bg-emerald-100 text-emerald-800',
+  アップデート: 'bg-blue-100 text-blue-800',
+  セキュリティ: 'bg-amber-100 text-amber-800',
+};
+
 export default function NewsPage() {
+  const sortedNewsData = [...newsData].sort((a, b) => {
+    if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
+    return b.date.localeCompare(a.date);
+  });
+
   return (
     <main className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
@@ -110,13 +131,20 @@ export default function NewsPage() {
           </p>
 
           <div className="space-y-8">
-            {newsData.map((news) => (
+            {sortedNewsData.map((news) => (
               <article key={news.id} className="border-b border-gray-200 pb-8">
-                <div className="mb-4 flex items-center gap-4">
-                  <span className="rounded-full bg-primary px-3 py-1 text-sm font-medium text-white">
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                  <span
+                    className={`rounded-full px-3 py-1 text-sm font-medium ${categoryStyle[news.category] || 'bg-primary text-white'}`}
+                  >
                     {news.category}
                   </span>
                   <time className="text-sm text-gray-500">{news.date}</time>
+                  {news.pinned && (
+                    <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700">
+                      新着固定
+                    </span>
+                  )}
                 </div>
                 <h2 className="mb-3 text-xl font-semibold text-gray-900">
                   <Link

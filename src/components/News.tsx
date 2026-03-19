@@ -5,16 +5,33 @@ type NewsItem = {
   id: string;
   title: string;
   publishedAt: string;
+  category: 'リリース' | 'アップデート' | 'セキュリティ';
+  pinned?: boolean;
   slug: string;
 };
 
+const categoryStyle: Record<NewsItem['category'], string> = {
+  リリース: 'bg-emerald-100 text-emerald-800',
+  アップデート: 'bg-blue-100 text-blue-800',
+  セキュリティ: 'bg-amber-100 text-amber-800',
+};
+
 export default function News() {
-  // ハードコーディングされたニュースデータ（最新3件）
+  // ハードコーディングされたニュースデータ（トップ表示用）
   const news: NewsItem[] = [
+    {
+      id: '10',
+      title: '📢 2026年4月「ボイテキオンプレ！」リリース予定のお知らせ',
+      publishedAt: '2026-03-19',
+      category: 'リリース',
+      pinned: true,
+      slug: 'voitex-onprem-release-scheduled-2026-04',
+    },
     {
       id: '8',
       title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
       publishedAt: '2025-10-14',
+      category: 'アップデート',
       slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
     },
     {
@@ -22,15 +39,16 @@ export default function News() {
       title:
         '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
       publishedAt: '2025-09-25',
+      category: 'リリース',
       slug: 'voitex-iphone-app-voitexclient-official-release',
     },
-    {
-      id: '6',
-      title: '🚀 Voitex v1.3.0 リリース - プロンプト指定機能の追加',
-      publishedAt: '2025-09-21',
-      slug: 'voitex-v1-3-0-prompt-specification',
-    },
   ];
+  const topNews = [...news]
+    .sort((a, b) => {
+      if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
+      return b.publishedAt.localeCompare(a.publishedAt);
+    })
+    .slice(0, 3);
 
   return (
     <section className="bg-gray-50 px-4 py-12">
@@ -39,13 +57,25 @@ export default function News() {
           お知らせ
         </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {news.map((item) => (
+          {topNews.map((item) => (
             <Link key={item.id} href={`/news/${item.slug}`}>
               <div className="group h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">
-                    {item.publishedAt.slice(0, 10)}
-                  </span>
+                <div className="mb-4 flex items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span
+                      className={`rounded-full px-3 py-1 text-xs font-medium ${categoryStyle[item.category]}`}
+                    >
+                      {item.category}
+                    </span>
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+                      {item.publishedAt.slice(0, 10)}
+                    </span>
+                    {item.pinned && (
+                      <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700">
+                        新着固定
+                      </span>
+                    )}
+                  </div>
                   <div className="text-blue-500 opacity-0 transition-opacity group-hover:opacity-100">
                     <svg
                       className="h-5 w-5"
