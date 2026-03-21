@@ -1,347 +1,184 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { generateMetadata } from '@/libs/seo';
 import {
   AlertTriangle,
-  BarChart3,
-  Briefcase,
-  Building2,
-  CircleCheckBig,
-  FileText,
+  CheckCircle2,
   HeartPulse,
-  Headset,
-  Megaphone,
-  MessageSquareQuote,
-  Scale,
+  LockKeyhole,
   SearchCheck,
-  ShieldAlert,
-  Sparkles,
-  Target,
-  Users,
-  Wrench,
+  ShieldCheck,
 } from 'lucide-react';
+import { generateMetadata } from '@/libs/seo';
+
+const CONTACT_URL = 'https://forms.gle/jCp4fEqMV5fGaoWu6';
 
 export const metadata: Metadata = generateMetadata(
-  'ボイテキオンプレ！｜通話音声の要点・感情・リスクを可視化',
-  'ボイテキオンプレ！は通話音声を文字起こし、感情分析、イベント抽出、要約生成まで自動実行し、7レンズで会話の改善ポイントを可視化します。',
+  'ボイテキオンプレ！｜健康経営を前へ進める対話分析基盤',
+  'ボイテキオンプレ！は、通話・面談・応対データからストレス兆候やリスクを可視化し、離職予防・現場改善・組織の健全性向上を支援するオンプレミス対話分析基盤です。',
   '/products/voitex2'
 );
 
-const challenges = [
-  '通話の振り返りに時間がかかる',
-  '問題のある会話を見つけられない',
-  '指導や評価が属人化している',
-  'クレームやリスクを事後にしか把握できない',
-  '会話データが活用されていない',
-];
-
-const valueCards = [
-  {
-    icon: MessageSquareQuote,
-    iconClassName: 'bg-blue-100 text-blue-600',
-    title: '会話の見える化',
-    points: ['文字起こし（話者分離）', '発話ごとの整理'],
-    result: '会話をテキストとして把握',
-  },
-  {
-    icon: HeartPulse,
-    iconClassName: 'bg-rose-100 text-rose-600',
-    title: '感情の可視化',
-    points: [
-      '怒り・緊張・喜びなどを分析',
-      '時系列で変化を表示',
-      '感情イベント（怒りスパイク）検知',
-    ],
-    result: '問題の兆候を見逃さない',
-  },
-  {
-    icon: ShieldAlert,
-    iconClassName: 'bg-amber-100 text-amber-700',
-    title: 'リスクの検知',
-    points: ['NGワード検出', '要注意発話の抽出', '高リスク通話の識別'],
-    result: 'トラブルを未然に防ぐ',
-  },
-  {
-    icon: FileText,
-    iconClassName: 'bg-emerald-100 text-emerald-700',
-    title: '要点の整理',
-    points: ['自動要約', 'レンズ別要約'],
-    result: '長時間通話も一瞬で理解',
-  },
-];
-
-const lenses = [
-  '経営レンズ',
-  '営業レンズ',
-  'カスタマーサポートレンズ',
-  '人事レンズ',
-  '法務・コンプライアンスレンズ',
-  'マーケティングレンズ',
-  'DXレンズ',
+const pains = [
+  '現場の疲弊やストレスを把握できず、対策が後手になる',
+  'クレームやハラスメントの兆候を見逃し、問題が顕在化してから対応している',
+  '応対品質改善を進めたいが、定性的な振り返りにとどまっている',
+  '個人情報・機密情報の観点で、音声データのクラウド活用に不安がある',
 ];
 
 const features = [
-  '音声・動画ファイルの自動解析',
-  '話者分離付き文字起こし',
-  '感情の時系列分析',
-  'イベント検知（怒り・ストレスなど）',
-  'NGワード・リスク検知',
-  '要約生成（標準・レンズ別）',
-  'ダッシュボード可視化',
-  'HTMLレポート出力',
-  'CSVエクスポート',
-  'NAS連携による自動取り込み',
-  '再解析・再試行機能',
-];
-
-const dashboardItems = [
-  '高リスク通話の一覧化',
-  '感情の推移確認',
-  '応対品質の評価',
-  'KPI（怒り率・ストレス指数など）の可視化',
+  {
+    title: '感情解析で見えない負荷を可視化',
+    body: '通話・面談を発話単位で分析し、怒り・緊張・不安などの変化を時系列で表示。要注意発話を自動抽出し、確認すべき箇所を即座に把握できます。',
+    image: '/features/main_features_1.png',
+  },
+  {
+    title: '7つの業務レンズで部門別に最適化',
+    body: '経営・営業・品質CS・人事・法務コンプラ・マーケ・DXの観点で分析。同じ対話データを部門別に読み解き、意思決定に必要な示唆を届けます。',
+    image: '/features/main_features_2.png',
+  },
+  {
+    title: 'リスクの早期検知',
+    body: 'クレーム化兆候、不適切発言疑い、ハラスメント兆候を可視化。問題の深刻化前に介入し、事故コストを抑制します。',
+    image: '/features/main_features_3.png',
+  },
+  {
+    title: '安心のオンプレミス運用',
+    body: '社内環境でデータを保持し、ロール連動アクセス制御と監査ログで統制を強化。機密性の高い音声データも、安全に運用できます。',
+  },
+  {
+    title: '柔軟な入力導線',
+    body: 'GUIアップロード・NAS・S3/MinIO連携に対応。既存運用に合わせて段階的に導入できます。',
+    image: '/features/main_features_5.png',
+  },
 ];
 
 const effects = [
-  { icon: Sparkles, title: '振り返り時間の大幅削減' },
-  { icon: BarChart3, title: '応対品質の向上' },
-  { icon: AlertTriangle, title: 'リスクの早期検知' },
-  { icon: Users, title: '教育・指導の効率化' },
-  { icon: SearchCheck, title: 'データに基づく改善' },
+  '離職予防: 高ストレス兆候の早期把握により、ケアと配置改善が迅速に',
+  '応対品質向上: 要注意発話の具体的な振り返りで改善スピードを向上',
+  'リスク低減: クレーム・コンプライアンス事故の未然防止を強化',
+  '意思決定の高度化: 部門横断で同じデータを参照し、施策の精度を改善',
+  '健康経営の実装: 状態把握 -> 介入 -> 検証のサイクルを継続可能に',
 ];
 
-const useCases = [
-  {
-    icon: Headset,
-    title: 'コールセンター',
-    points: ['要注意通話の抽出', '応対品質の改善'],
-  },
-  { icon: Briefcase, title: '営業', points: ['商談の振り返り', '成約率向上'] },
-  {
-    icon: Scale,
-    title: 'コンプライアンス',
-    points: ['不適切発言検知', 'リスク監査'],
-  },
-  {
-    icon: Users,
-    title: '人事・組織開発',
-    points: ['ストレス傾向の把握', '心理的安全性の可視化'],
-  },
-  {
-    icon: Megaphone,
-    title: 'マーケティング',
-    points: ['VOC分析', '顧客ニーズ抽出'],
-  },
+const pdca = [
+  '日々の通話・面談データを自動取り込み',
+  'ストレス・感情変化・リスク兆候を可視化',
+  '管理者が優先度の高いケースへ早期介入',
+  '改善施策を継続し、組織コンディションを定点観測',
 ];
 
-const strengths = [
-  '音声 -> 文字 -> 感情 -> リスク -> 要約を一気通貫で実行',
-  '7レンズで意思決定に直結する業務視点分析',
-  '再解析・監査ログ・重複防止など実運用を意識した設計',
-  'オンプレミス環境でも運用できる拡張性',
+const governance = [
+  'ロールベースの閲覧制御',
+  'パス規約連動のアクセススコープ付与',
+  'ルール未一致データの隔離（quarantine）運用',
+  '監査ログによる操作履歴の可視化',
 ];
 
 export default function Voitex2Page() {
-  const lensIcons = [
-    Building2,
-    Briefcase,
-    Users,
-    Users,
-    Scale,
-    Megaphone,
-    Wrench,
-  ];
-
   return (
     <main className="bg-gray-50 py-12">
       <div className="mx-auto max-w-6xl px-4">
-        <section className="rounded-2xl bg-gradient-to-r from-primary to-blue-600 p-10 text-white shadow-lg">
-          <p className="mb-2 text-sm font-semibold">
-            通話を見える化し、改善につなげるAI
+        <section className="overflow-hidden rounded-2xl bg-gradient-to-r from-slate-800 to-primary p-8 text-white shadow-lg md:p-10">
+          <p className="mb-2 text-sm font-semibold">ボイテキオンプレ！</p>
+          <h1 className="mb-3 text-3xl font-bold leading-tight md:text-5xl">
+            声のデータで、健康経営を前へ。
+          </h1>
+          <p className="max-w-4xl text-base opacity-95 md:text-lg">
+            通話・面談・応対に潜む見えない負荷を可視化し、離職予防・現場改善・組織の健全性向上を支援する、
+            オンプレミス対話分析基盤。
           </p>
-          <h1 className="mb-3 text-4xl font-bold">ボイテキオンプレ！</h1>
-          <p className="mb-5 text-xl font-semibold">
-            会話を分析するだけで終わらない。改善まで導くAI。
-          </p>
-          <p className="max-w-4xl text-lg opacity-95">
-            通話音声をAIで解析し、会話の要点・感情の変化・リスク兆候を可視化する通話分析プラットフォームです。
-            <br />
-            音声データをアップロードするだけで、文字起こし・感情分析・イベント抽出・要約生成を自動で実行します。
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/products/voitex2/cloud"
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-white px-5 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
             >
-              ボイテキクラウド！を見る
-            </Link>
-            <Link
-              href="/products/voitex2/onprem"
+              健康経営に向けた活用相談をする
+            </a>
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
-              オンプレ詳細を見る
-            </Link>
-            <Link
-              href="/products/compare"
-              className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              比較ページへ
-            </Link>
+              導入デモを申し込む
+            </a>
+          </div>
+          <div className="mt-8">
+            <Image
+              src="/features/hero.png"
+              alt="ボイテキオンプレ！ヒーローイメージ"
+              width={1024}
+              height={731}
+              className="w-full rounded-xl border border-white/20 object-cover"
+            />
           </div>
         </section>
 
         <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
           <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-            <Target className="h-6 w-6 text-primary" />
-            解決する課題
+            <AlertTriangle className="h-6 w-6 text-amber-600" />
+            こんなお悩みはありませんか？
           </h2>
-          <ul className="grid gap-3 md:grid-cols-2">
-            {challenges.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-2 rounded-lg bg-gray-50 p-4 text-gray-700"
-              >
+          <ul className="space-y-3 text-gray-700">
+            {pains.map((item) => (
+              <li key={item} className="flex items-start gap-2">
                 <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-600" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-6 rounded-lg border-l-4 border-primary bg-blue-50 p-4 font-medium text-primary">
-            聞けば分かる、でも聞く時間がない。ボイテキオンプレ！はこのギャップを埋めます。
+          <p className="mt-6 rounded-lg border-l-4 border-primary bg-blue-50 p-4 font-semibold text-primary">
+            ボイテキオンプレ！は、こうした課題を感覚ではなく対話データで解決します。
           </p>
         </section>
 
         <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
-          <h2 className="mb-6 flex items-center gap-2 text-2xl font-bold text-gray-900">
-            <Sparkles className="h-6 w-6 text-primary" />
-            ボイテキオンプレ！の価値
+          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
+            <HeartPulse className="h-6 w-6 text-primary" />
+            健康経営を、実行可能な仕組みに変える
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {valueCards.map((card) => (
-              <article key={card.title} className="rounded-lg bg-gray-50 p-5">
-                <div className="mb-3 flex items-center gap-3">
-                  <div
-                    className={`flex h-9 w-9 items-center justify-center rounded-lg ${card.iconClassName}`}
-                  >
-                    <card.icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-primary">
-                    {card.title}
-                  </h3>
-                </div>
-                <ul className="mb-3 space-y-1 text-gray-700">
-                  {card.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2">
-                      <CircleCheckBig className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm font-semibold text-primary">
-                  {card.result}
-                </p>
-              </article>
-            ))}
+          <p className="text-gray-700">
+            ボイテキオンプレ！は、音声を文字起こし・感情解析し、対話の中にあるストレス兆候や感情変化を可視化。
+            現場の心理的負荷と応対品質を同時に捉え、経営層・管理職・現場が同じデータで改善アクションを取れる状態をつくります。
+          </p>
+          <div className="mt-6">
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              自社データで可視化を体験する
+            </a>
           </div>
         </section>
 
         <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
-          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-            <SearchCheck className="h-6 w-6 text-primary" />
-            最大の特徴: 7つの業務レンズ
-          </h2>
-          <p className="mb-5 text-gray-700">
-            同じ会話を7つの視点から分析し、部門ごとの意思決定に直結する示唆を得られます。
-          </p>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {lenses.map((item, idx) => {
-              const Icon = lensIcons[idx];
-              return (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 rounded-lg bg-gray-50 p-3 text-gray-700"
-                >
-                  <Icon className="h-4 w-4 flex-shrink-0 text-primary" />
-                  <span>{item}</span>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-
-        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
-          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-            <Wrench className="h-6 w-6 text-primary" />
-            主な機能
-          </h2>
-          <ul className="grid gap-3 md:grid-cols-2">
-            {features.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-2 rounded-lg bg-gray-50 p-3 text-gray-700"
+          <h2 className="mb-6 text-2xl font-bold text-gray-900">主要機能</h2>
+          <div className="space-y-4">
+            {features.map((feature, idx) => (
+              <article
+                key={feature.title}
+                className="rounded-lg bg-gray-50 p-5"
               >
-                <CircleCheckBig className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-xl bg-white p-8 shadow-sm">
-            <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-              <BarChart3 className="h-6 w-6 text-primary" />
-              ダッシュボードでできること
-            </h2>
-            <ul className="space-y-2 text-gray-700">
-              {dashboardItems.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <CircleCheckBig className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-sm font-semibold text-primary">
-              どの通話に問題があるかを、現場で即座に判断できます。
-            </p>
-          </div>
-          <div className="rounded-xl bg-white p-8 shadow-sm">
-            <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-              <Sparkles className="h-6 w-6 text-primary" />
-              導入効果
-            </h2>
-            <ul className="space-y-3 text-gray-700">
-              {effects.map((item) => (
-                <li key={item.title} className="flex items-start gap-3">
-                  <div className="rounded-lg bg-primary/10 p-1.5">
-                    <item.icon className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>{item.title}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
-          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-            <Briefcase className="h-6 w-6 text-primary" />
-            想定ユースケース
-          </h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {useCases.map((item) => (
-              <article key={item.title} className="rounded-lg bg-gray-50 p-5">
-                <h3 className="mb-2 flex items-center gap-2 font-semibold text-primary">
-                  <item.icon className="h-4 w-4" />
-                  {item.title}
+                <h3 className="mb-2 text-lg font-semibold text-primary">
+                  {idx + 1}. {feature.title}
                 </h3>
-                <ul className="space-y-1 text-sm text-gray-700">
-                  {item.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2">
-                      <CircleCheckBig className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-primary" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-700">{feature.body}</p>
+                {feature.image && (
+                  <div className="mt-4">
+                    <Image
+                      src={feature.image}
+                      alt={`${feature.title}の画面イメージ`}
+                      width={1600}
+                      height={900}
+                      className="w-full rounded-lg border border-gray-200 object-cover"
+                    />
+                  </div>
+                )}
               </article>
             ))}
           </div>
@@ -349,98 +186,137 @@ export default function Voitex2Page() {
 
         <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold text-gray-900">
-            他製品との違い
+            期待できる変化
           </h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-lg border border-gray-200 p-4">
-              <h3 className="mb-2 font-semibold text-gray-800">
-                録音・文字起こしツール
-              </h3>
-              <p className="text-sm text-gray-600">テキスト化中心</p>
-            </div>
-            <div className="rounded-lg border border-gray-200 p-4">
-              <h3 className="mb-2 font-semibold text-gray-800">
-                一般的なAI分析
-              </h3>
-              <p className="text-sm text-gray-600">可視化で止まりやすい</p>
-            </div>
-            <div className="rounded-lg border border-primary bg-blue-50 p-4">
-              <h3 className="mb-2 font-semibold text-primary">
-                ボイテキオンプレ！
-              </h3>
-              <p className="text-sm text-primary">
-                感情分析・リスク検知・要約・多視点分析で、改善アクションにつなげます。
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
-          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
-            <Sparkles className="h-6 w-6 text-primary" />
-            強み
-          </h2>
-          <ul className="space-y-2 text-gray-700">
-            {strengths.map((item) => (
+          <ul className="space-y-3 text-gray-700">
+            {effects.map((item) => (
               <li key={item} className="flex items-start gap-2">
-                <CircleCheckBig className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </section>
 
-        <section className="mt-8 rounded-xl bg-gradient-to-r from-indigo-600 to-primary p-8 text-white shadow-sm">
-          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold">
-            <SearchCheck className="h-6 w-6" />
-            さらにできること: FUJI RAG連携
+        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
+          <h2 className="mb-4 text-2xl font-bold text-gray-900">
+            現場で回る、健康経営のPDCA
           </h2>
-          <p className="max-w-4xl">
-            FUJIRAG（FUJI
-            RAG）と連携することで、通話内容にもとづいて関連資料を検索し、解決策の提示までつなげられます。
-            分析で終わらず、改善アクションの実行まで支援します。
-          </p>
-          <div className="mt-5 rounded-lg bg-white/10 p-4 font-mono text-sm">
-            <p>
-              音声データ → ボイテキオンプレ！（文字起こし/感情/要約/リスク） →
-              ダッシュボード
-            </p>
-            <p className="mt-2">（拡張）通話分析 → FUJI RAG → ナレッジ検索</p>
-          </div>
-        </section>
-
-        <section className="mt-8 rounded-xl border border-amber-200 bg-amber-50 p-8">
-          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-amber-900">
-            <AlertTriangle className="h-6 w-6" />
-            制約・注意点
-          </h2>
-          <ul className="space-y-2 text-amber-900">
-            <li className="flex items-start gap-2">
-              <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0" />
-              <span>リアルタイム解析ではなく、バッチ処理です。</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0" />
-              <span>
-                音声品質やノイズ状況により精度が変動する場合があります。
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0" />
-              <span>要約品質は設定や入力品質に依存します。</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0" />
-              <span>最終判断は人による確認を前提としています。</span>
-            </li>
+          <ul className="space-y-3 text-gray-700">
+            {pdca.map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
-        <section className="mt-8 rounded-xl bg-white p-8 text-center shadow-sm">
-          <h2 className="mb-3 text-2xl font-bold text-primary">まとめ</h2>
-          <p className="mx-auto max-w-4xl text-lg text-gray-700">
-            ボイテキオンプレ！は、通話をデータとして理解し、改善につなげるAIです。
+        <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
+            <ShieldCheck className="h-6 w-6 text-slate-700" />
+            企業導入に必要な統制を標準装備
+          </h2>
+          <ul className="space-y-3 text-gray-700">
+            {governance.map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <LockKeyhole className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-700" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
+          <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-gray-900">
+            <SearchCheck className="h-6 w-6 text-primary" />
+            音声分析を、社内ナレッジ活用までつなぐ
+          </h2>
+          <p className="text-gray-700">
+            ボイテキオンプレ！の分析結果は、FUJIRAG連携により社内のナレッジ検索・活用フローへ接続できます。
+            現場の対話から得られた気づきを、組織全体で再利用可能にします。
           </p>
+          <div className="mt-5 rounded-lg border border-gray-200 bg-gray-50 p-4">
+            <Image
+              src="/features/fujiragu_and_voitex-4.svg"
+              alt="FUJIRAGとボイテキオンプレ！の連携イメージ"
+              width={1200}
+              height={360}
+              className="mx-auto h-auto w-full max-w-4xl object-contain"
+            />
+          </div>
+          <div className="mt-5 rounded-lg bg-blue-50 p-5">
+            <h3 className="mb-3 font-semibold text-primary">訴求ポイント</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>音声分析結果をFUJIRAG側の活用基盤へ連携</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>
+                  部門・役割に応じたアクセス制御を維持したまま運用可能
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>分析して終わりではなく、教育・改善・意思決定に循環</span>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-6">
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              FUJIRAG連携デモを相談する
+            </a>
+          </div>
+        </section>
+
+        <section className="mt-8 rounded-xl bg-gradient-to-r from-primary to-blue-700 p-8 text-white shadow-sm">
+          <h2 className="mb-3 text-2xl font-bold">
+            健康経営を、現場で機能する仕組みに。
+          </h2>
+          <p className="max-w-4xl text-blue-100">
+            ボイテキオンプレ！は、対話データを起点に人と組織のコンディションを改善し、企業の持続的な成長を支える基盤です。
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-white px-5 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
+            >
+              健康経営に向けた活用相談をする
+            </a>
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              導入デモを申し込む
+            </a>
+            <a
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              まずは自社データで検証する
+            </a>
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/products/compare"
+              className="text-sm text-blue-100 underline underline-offset-4 hover:text-white"
+            >
+              ボイテキクラウド！との比較を見る
+            </Link>
+          </div>
         </section>
       </div>
     </main>
