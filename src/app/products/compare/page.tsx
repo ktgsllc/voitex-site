@@ -32,7 +32,7 @@ const rows = [
   {
     item: '認証連携',
     cloud: '標準認証連携',
-    onprem: 'FUJIRAG認証/SSOを含む連携設計に対応',
+    onprem: 'FUJI RAG連携前提で認証/SSOを統合設計',
   },
   {
     item: '費用モデル',
@@ -53,6 +53,7 @@ const cloudFit = [
 ];
 
 const onPremFit = [
+  'FUJI RAG連携を前提に社内ナレッジ活用までつなげたい',
   '閉域ネットワークや厳格なデータ統制が必要',
   '社内規程に合わせた運用設計を行いたい',
   '認証連携や監査要件を個別に詰めたい',
@@ -161,7 +162,8 @@ export default function ComparePage() {
               オンプレ導入を検討する
             </h3>
             <p className="mb-4 text-sm text-gray-600">
-              閉域要件・統制要件を前提に、構成を個別設計したい場合におすすめです。
+              FUJI
+              RAG連携前提で、閉域要件・統制要件を前提に構成を個別設計したい場合におすすめです。
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -177,6 +179,14 @@ export default function ComparePage() {
                 className="rounded-lg border border-slate-700 px-4 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-50"
               >
                 要件ヒアリングを依頼
+              </a>
+              <a
+                href="https://fujirag.voitex.biz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-slate-700 px-4 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-50"
+              >
+                FUJI RAGを見る
               </a>
             </div>
           </div>

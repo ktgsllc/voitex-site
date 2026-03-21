@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキオンプレ！｜閉域・統制重視',
-  'ボイテキオンプレ！は閉域運用やデータ統制を重視する企業向けです。外部認証連携や運用監査を含む実務導入に対応します。',
+  'ボイテキオンプレ！はFUJI RAG連携前提のオンプレミス提供です。閉域運用やデータ統制を重視する企業向けに、認証連携や運用監査を含む実務導入に対応します。',
   '/products/voitex2/onprem'
 );
 
@@ -32,10 +32,19 @@ export default function Voitex2OnPremPage() {
           <p className="mb-2 text-sm font-semibold">ボイテキ！製品ファミリー</p>
           <h1 className="mb-4 text-4xl font-bold">ボイテキオンプレ！</h1>
           <p className="text-lg opacity-95">
-            データ統制、閉域運用、認証連携の要件に応える提供形態です。
+            FUJI
+            RAG連携前提で、データ統制・閉域運用・認証連携の要件に応える提供形態です。
             <br />
             実運用を見据えた監査・再解析・連携設計に対応します。
           </p>
+          <a
+            href="https://fujirag.voitex.biz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex rounded-lg border border-white px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            FUJI RAG製品サイトを見る
+          </a>
         </section>
 
         <section className="mt-8 rounded-xl bg-gray-50 p-8">

@@ -15,7 +15,7 @@ const CONTACT_URL = 'https://forms.gle/jCp4fEqMV5fGaoWu6';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキオンプレ！｜健康経営を前へ進める対話分析基盤',
-  'ボイテキオンプレ！は、通話・面談・応対データからストレス兆候やリスクを可視化し、離職予防・現場改善・組織の健全性向上を支援するオンプレミス対話分析基盤です。',
+  'ボイテキオンプレ！はFUJI RAG連携前提のオンプレミス対話分析基盤です。通話・面談・応対データからストレス兆候やリスクを可視化し、離職予防・現場改善・組織の健全性向上を支援します。',
   '/products/voitex2'
 );
 
@@ -86,7 +86,11 @@ export default function Voitex2Page() {
           </h1>
           <p className="max-w-4xl text-base opacity-95 md:text-lg">
             通話・面談・応対に潜む見えない負荷を可視化し、離職予防・現場改善・組織の健全性向上を支援する、
-            オンプレミス対話分析基盤。
+            FUJI RAG連携前提のオンプレミス対話分析基盤。
+          </p>
+          <p className="mt-3 text-sm text-blue-100">
+            FUJI
+            RAG連携を前提に、分析結果を社内ナレッジ活用へ循環させる構成を標準としています。
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -265,14 +269,24 @@ export default function Voitex2Page() {
             </ul>
           </div>
           <div className="mt-6">
-            <a
-              href={CONTACT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
-            >
-              FUJIRAG連携デモを相談する
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={CONTACT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
+              >
+                FUJIRAG連携デモを相談する
+              </a>
+              <a
+                href="https://fujirag.voitex.biz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-lg border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/5"
+              >
+                FUJI RAGの製品情報を見る
+              </a>
+            </div>
           </div>
         </section>
 
