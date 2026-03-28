@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキとは？｜開発ストーリーと理念',
-  '音声解析AIサービス「ボイテキ！」の開発ストーリーと企業理念。KTGS.llcと株式会社ノウデルの共同事業として、カスハラ対策と応対品質向上を支援。',
+  'ボイテキ！製品ファミリー（ボイテキクラウド！・ボイテキオンプレ！）の開発ストーリーと企業理念。KTGS.llcと株式会社ノウデルの共同事業として運営しています。',
   '/company'
 );
 
@@ -23,7 +23,7 @@ export default function CompanyPage() {
                   共同事業について
                 </h2>
                 <p className="mb-6 text-gray-600">
-                  ボイテキ！は、ケーティージーエス合同会社と株式会社ノウデルの共同事業として運営しているサービスです。
+                  ボイテキ！は「ボイテキクラウド！」と「ボイテキオンプレ！」の2製品を持つ製品ファミリーです。ケーティージーエス合同会社と株式会社ノウデルの共同事業として運営しています。
                   役割分離により、販売はケーティージーエス合同会社が担当し、製造は株式会社ノウデルが行っております。
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function CompanyPage() {
                   企業の歴史とビジョン
                 </h2>
                 <p className="mb-6 text-gray-600">
-                  ボイテキ！は、会話の見えない化という課題を解決し、データドリブンなマネジメントと組織の健全性向上を実現することを目指しています。
+                  ボイテキ！製品ファミリーは、会話の見えない化という課題を解決し、データドリブンなマネジメントと組織の健全性向上を実現することを目指しています。
                   最新のAI技術を活用し、誰でも簡単に使える音声解析ツールを提供します。
                   両社の専門性を活かした共同事業により、より高品質なサービスをお客様にお届けします。
                 </p>
@@ -195,10 +195,19 @@ export default function CompanyPage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="mb-2 text-xl font-semibold text-gray-800">
-                      ボイテキ！
+                      ボイテキクラウド！
                     </h3>
                     <p className="text-gray-600">
-                      音声ファイルを自動で文字起こし・要約するAIサービス
+                      クラウドで音声ファイルを文字起こし・要約・分析するAIサービス
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-xl font-semibold text-gray-800">
+                      ボイテキオンプレ！
+                    </h3>
+                    <p className="text-gray-600">
+                      FUJI
+                      RAG連携前提で、社内統制とナレッジ活用を重視したオンプレミス向け基盤
                     </p>
                   </div>
                   <div>
@@ -214,7 +223,7 @@ export default function CompanyPage() {
                       ボイテキレック！
                     </h3>
                     <p className="text-gray-600">
-                      ひかり電話の通話録音サービス（ボイテキ！連携対応）
+                      ひかり電話の通話録音サービス（ボイテキクラウド！連携対応）
                     </p>
                   </div>
                 </div>
@@ -229,7 +238,7 @@ export default function CompanyPage() {
                   販売に関するお問い合わせはケーティージーエス合同会社が、技術的なお問い合わせは株式会社ノウデルが対応いたします。
                 </p>
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
                 >
                   お問い合わせ

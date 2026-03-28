@@ -9,9 +9,12 @@ export default function Hero() {
             声の中に、<span className="text-primary">答えがある。</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-gray-600">
-            音声ファイルをAIで分析し、会話品質と組織の健全性を向上させる
+            ボイテキ！製品ファミリーは、音声ファイルをAIで分析し、
+            会話品質と組織の健全性を向上させます。
             <br className="hidden sm:inline" />
-            <strong>クラウドサービス</strong> <strong>「ボイテキ！」</strong>。
+            導入スピード重視の
+            <strong>「ボイテキクラウド！」</strong>と、 統制要件に強い
+            <strong>「ボイテキオンプレ！」</strong>を 提供しています。
             <br />
             役割別ダッシュボードと
             <span className="font-semibold text-primary">顧客心理5軸分析</span>
@@ -32,22 +35,28 @@ export default function Hero() {
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+              href="/features"
               className="rounded-lg bg-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
             >
-              デモを申し込む
+              クラウドを見る
             </a>
             <a
-              href="/features"
+              href="/products/voitex2"
               className="rounded-lg border border-primary px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary/10"
             >
-              機能を見る
+              オンプレを見る
+            </a>
+            <a
+              href="/products/compare"
+              className="rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-100"
+            >
+              比較して判断する
             </a>
           </div>
           <div className="mt-12">
             <Image
               src="/hero-image.webp" // ← 差し替え予定の画像
-              alt="ボイテキ！UIイメージ"
+              alt="ボイテキクラウド！UIイメージ"
               width={800}
               height={400}
               className="mx-auto w-full max-w-4xl rounded shadow-lg"

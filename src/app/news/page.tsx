@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
-  'お知らせ｜ボイテキ！',
-  'ボイテキ！の最新情報をお届け。音声解析AIの新機能、導入事例、カスハラ対策に関する情報など、サービスに関する最新ニュースを掲載。',
+  'お知らせ｜ボイテキクラウド！・ボイテキオンプレ！',
+  'ボイテキ！製品ファミリー（ボイテキクラウド！・ボイテキオンプレ！）の最新情報をお届けします。新機能、リリース、セキュリティ対応などのニュースを掲載しています。',
   '/news'
 );
 
@@ -127,7 +127,7 @@ export default function NewsPage() {
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-8 text-4xl font-bold text-primary">お知らせ</h1>
           <p className="mb-12 text-lg text-gray-600">
-            ボイテキ！の最新情報をお届けします。
+            ボイテキクラウド！・ボイテキオンプレ！を含む、ボイテキ！製品ファミリーの最新情報をお届けします。
           </p>
 
           <div className="space-y-8">

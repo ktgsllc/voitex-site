@@ -59,13 +59,13 @@ export default function VoitexRecPage() {
             {/* CTAボタン */}
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 className="transform rounded-xl bg-primary px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
               >
                 無料相談・資料請求
               </a>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 className="transform rounded-xl border-2 border-primary px-8 py-4 text-lg font-semibold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:text-white"
               >
                 詳細を見る
@@ -106,7 +106,7 @@ export default function VoitexRecPage() {
                   先行予約・早期導入特典をご希望の方は、お気軽にお問い合わせください
                 </p>
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="inline-block transform rounded-xl bg-white px-8 py-4 text-lg font-semibold text-orange-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-50"
                 >
                   先行予約はこちら
@@ -789,13 +789,13 @@ export default function VoitexRecPage() {
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="transform rounded-xl bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-50"
                 >
                   お問い合わせ
                 </a>
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="transform rounded-xl border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary"
                 >
                   詳細資料請求

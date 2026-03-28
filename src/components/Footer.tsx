@@ -27,7 +27,7 @@ export default function Footer() {
                 href="/products/voitex2/onprem"
                 className="block hover:text-blue-600"
               >
-                ボイテキオンプレ！
+                オンプレ詳細
               </Link>
               <Link
                 href="/products/compare"
@@ -86,16 +86,11 @@ export default function Footer() {
               サポート・お問い合わせ
             </h3>
             <nav className="space-y-2">
-              <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-blue-600"
-              >
+              <Link href="/contact" className="block hover:text-blue-600">
                 お問い合わせフォーム
-              </a>
+              </Link>
               <Link href="/security" className="block hover:text-blue-600">
-                セキュリティ情報
+                セキュリティ方針
               </Link>
               <Link href="/agreement" className="block hover:text-blue-600">
                 利用規約

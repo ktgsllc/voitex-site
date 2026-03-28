@@ -46,8 +46,7 @@ const utilityItems = [
   },
   {
     label: 'お問い合わせ',
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSdsOxJVvVHtMUDbPUiS58s_vDJcGGhQLGIE9HLjiqxlQxfbgg/viewform',
-    external: true,
+    href: '/contact',
     icon: '📧',
   },
 ];

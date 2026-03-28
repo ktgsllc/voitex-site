@@ -9,7 +9,7 @@ export default function Intro() {
             AIの力で、コミュニケーションの質を守る
           </p>
           <h2 className="mb-6 text-3xl font-bold text-primary">
-            ボイテキ！がなぜ必要か
+            なぜ、今ボイテキ！製品ファミリーなのか
           </h2>
 
           <p className="mb-8 text-lg text-gray-600">
@@ -27,70 +27,13 @@ export default function Intro() {
             信頼される組織をつくる。
             <br />
             <strong>ボイテキ！</strong>はそのための
-            <strong>音声解析AI SaaSツール</strong>です。
+            <strong>
+              製品ファミリー（ボイテキクラウド！/ボイテキオンプレ！）
+            </strong>
+            です。
+            <br />
+            導入スピードを優先するか、統制・閉域運用を優先するかという選定軸で、最適な導入方針を判断できます。
           </p>
-
-          {/* 新機能のアピール */}
-          <div className="mb-12 rounded-lg border border-green-200 bg-gradient-to-r from-green-50 to-blue-50 p-8">
-            <div className="mb-4 text-center">
-              <span className="inline-block rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-800">
-                🎉 2025年10月 バージョン1.4.0 大型アップデート
-              </span>
-            </div>
-            <h3 className="mb-4 text-2xl font-bold text-primary">
-              役割別ダッシュボードとUI/UX大幅改善！
-            </h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h4 className="mb-3 text-lg font-semibold text-green-700">
-                  👥 役割別ダッシュボード
-                </h4>
-                <p className="text-gray-600">
-                  経営者・営業・マーケター・人事・労務・コンプライアンス担当者それぞれに最適化された分析画面を提供。各職種に特化した指標で業務効率を向上。
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h4 className="mb-3 text-lg font-semibold text-blue-700">
-                  🎨 UI/UX統一
-                </h4>
-                <p className="text-gray-600">
-                  全ページのデザイン統一により、より使いやすく直感的なインターフェースを実現。統一されたユーザー体験を提供します。
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h4 className="mb-3 text-lg font-semibold text-purple-700">
-                  🔍 キーワード分析機能
-                </h4>
-                <p className="text-gray-600">
-                  会話内容から重要なキーワードを自動抽出。出現頻度や重要度を可視化し、ワードクラウド表示で直感的に分析結果を確認できます。
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h4 className="mb-3 text-lg font-semibold text-orange-700">
-                  🎬 動画ファイル対応
-                </h4>
-                <p className="text-gray-600">
-                  MP4、MOV、AVI形式の動画ファイルアップロードに対応。動画は自動的に音声ファイル（WAV）に変換され、より多様なファイル形式での解析が可能。
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h4 className="mb-3 text-lg font-semibold text-cyan-700">
-                  📥 データダウンロード機能拡張
-                </h4>
-                <p className="text-gray-600">
-                  解析結果を複数の形式（CSV、Excel、PDF）でダウンロード可能。ローデータのダウンロード機能も追加し、より柔軟なデータ活用をサポート。
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <h4 className="mb-3 text-lg font-semibold text-pink-700">
-                  ✏️ 会話相手の手動入力
-                </h4>
-                <p className="text-gray-600">
-                  解析結果一覧で「会話相手」を手動入力可能。アップロードしたユーザーと会話相手を紐づけ、より詳細な分析が可能になります。
-                </p>
-              </div>
-            </div>
-          </div>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {/* ブロック1 */}
@@ -213,90 +156,6 @@ export default function Intro() {
                 ※
                 初回設定サポート、定期的な見直し、効果測定のご相談なども承っております
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// 新しいコンポーネント：プロンプトとNGワードの重要性
-export function PromptNgWordsImportance() {
-  return (
-    <section className="bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-6xl text-center">
-          <h2 className="mb-6 text-3xl font-bold text-primary">
-            ボイテキ！の効果を最大化する2つのポイント
-          </h2>
-          <p className="mb-8 text-lg text-gray-600">
-            ボイテキ！の音声解析AIを最大限活用するために、
-            <br />
-            <span className="font-semibold text-primary">
-              プロンプトとNGワードの設定が肝
-            </span>
-            です。
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-lg bg-white p-8 shadow-lg">
-              <div className="mb-4 text-4xl">🎯</div>
-              <h3 className="mb-4 text-2xl font-bold text-primary">
-                プロンプトが肝！
-              </h3>
-              <p className="mb-4 text-gray-600">
-                適切なプロンプト設定により、AIがお客様の業務に最適化された分析を実行。
-                営業分析、カスハラ対策、研修効果測定など、目的に応じた精度の高い結果を得られます。
-              </p>
-              <div className="rounded-lg bg-blue-50 p-4">
-                <p className="text-sm text-blue-800">
-                  <strong>例：</strong>
-                  「この営業電話の効果を分析し、顧客の反応と営業担当者のスキルを評価してください」
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-lg bg-white p-8 shadow-lg">
-              <div className="mb-4 text-4xl">🚫</div>
-              <h3 className="mb-4 text-2xl font-bold text-primary">
-                NGワードが肝！
-              </h3>
-              <p className="mb-4 text-gray-600">
-                業界や業務に特化したNGワード設定で、リスクを確実にキャッチ。
-                営業で避けるべき表現、ハラスメント発言、不適切な対応などを自動検出します。
-              </p>
-              <div className="rounded-lg bg-red-50 p-4">
-                <p className="text-sm text-red-800">
-                  <strong>例：</strong>
-                  「絶対に」「必ず」「バカ」「無能」など、業務に応じたNGワードを設定
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 rounded-lg bg-gradient-to-r from-primary to-blue-600 p-6 text-white">
-            <h3 className="mb-3 text-xl font-bold">
-              プロンプト職人による専門サポート
-            </h3>
-            <p className="mb-4 text-blue-100">
-              お客様の業務に最適なプロンプトとNGワードの設定を、
-              <br />
-              プロンプト職人を含む専門スタッフがサポートいたします。
-            </p>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row">
-              <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-2 font-semibold text-primary transition-colors hover:bg-gray-100"
-              >
-                設定サポートを相談する
-              </a>
-              <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
-                className="inline-flex items-center justify-center rounded-lg border-2 border-white px-6 py-2 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
-              >
-                詳細を聞く
-              </a>
             </div>
           </div>
         </div>

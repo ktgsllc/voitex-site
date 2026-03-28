@@ -1644,13 +1644,14 @@ export async function generateMetadata({
 
   if (!news) {
     return {
-      title: 'お知らせが見つかりません | ボイテキ！',
+      title:
+        'お知らせが見つかりません | ボイテキクラウド！・ボイテキオンプレ！',
       description: 'お探しのお知らせが見つかりませんでした。',
     };
   }
 
   return generateSeoMetadata(
-    `${news.title} | ボイテキ！`,
+    `${news.title} | ボイテキクラウド！・ボイテキオンプレ！`,
     news.excerpt,
     `/news/${news.slug}`
   );

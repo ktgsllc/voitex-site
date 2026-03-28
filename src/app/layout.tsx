@@ -6,9 +6,9 @@ import CookieConsent from '@/components/CookieConsent';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'ボイテキ！｜音声解析・感情分析AIサービス公式サイト',
+  title: 'ボイテキ！｜ボイテキクラウド！・ボイテキオンプレ！公式サイト',
   description:
-    '通話・対話の音声データをAIで自動分析・要約・可視化。感情検出、NGワード警告、応対スコアリングでコールセンターの品質向上をサポートするクラウドサービス「ボイテキ！」',
+    'ボイテキ！は「ボイテキクラウド！」と「ボイテキオンプレ！」の2製品を展開。通話・対話の音声データをAIで分析・要約・可視化し、会話品質向上と健康経営の実行を支援します。',
   metadataBase: new URL('https://www.voitex.site'),
   keywords:
     '音声解析,AI,感情分析,コールセンター,音声認識,要約,NGワード,応対品質,ボイテキ,QuickSum,VoitexRec',
@@ -81,9 +81,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'SoftwareApplication',
-              name: 'ボイテキ！',
+              name: 'ボイテキ！製品ファミリー',
               description:
-                '音声データをAIで分析・要約・可視化し、応対品質を見える化するクラウドサービス',
+                'ボイテキクラウド！とボイテキオンプレ！で、音声データの分析・要約・可視化を実現する製品ファミリー',
               url: 'https://www.voitex.site',
               applicationCategory: 'BusinessApplication',
               operatingSystem: 'Web',
@@ -172,7 +172,8 @@ export default function RootLayout({
               '@type': 'WebSite',
               name: 'ボイテキ！',
               url: 'https://www.voitex.site',
-              description: 'モバイル対応の音声解析AIサービス',
+              description:
+                'ボイテキクラウド！とボイテキオンプレ！を提供する音声解析AI製品ファミリー',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: 'https://www.voitex.site/search?q={search_term_string}',

@@ -27,7 +27,7 @@ export default function QuickSumPage() {
                 へのコピーペーストだけで後処理完了。面倒な入力作業をなくして、応対に集中できる環境を。
               </p>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-primary-dark"
@@ -680,7 +680,7 @@ export default function QuickSumPage() {
                 ACW時間の大幅削減で、オペレーターが応対に集中できる環境を実現します。
               </p>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg transition-colors hover:bg-gray-100"

@@ -13,7 +13,7 @@ export default function PartnerPage() {
                 パートナーシップについて
               </h2>
               <p className="mb-6 text-gray-600">
-                ボイテキ！は、様々な企業様とのパートナーシップを通じて、より多くのお客様に価値あるサービスを提供したいと考えています。
+                ボイテキ！製品ファミリー（ボイテキクラウド！・ボイテキオンプレ！）は、様々な企業様とのパートナーシップを通じて、より多くのお客様に価値あるサービスを提供したいと考えています。
                 私たちのAI技術と、パートナー様の専門性を組み合わせることで、新しい価値を創造できます。
               </p>
             </div>
@@ -28,7 +28,7 @@ export default function PartnerPage() {
                     販売代理店
                   </h3>
                   <p className="mb-4 text-gray-600">
-                    ボイテキ！の販売代理店として、お客様への導入支援やサポートを行っていただきます。
+                    ボイテキクラウド！・ボイテキオンプレ！の販売代理店として、お客様への導入支援やサポートを行っていただきます。
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li>• 営業支援</li>
@@ -42,7 +42,7 @@ export default function PartnerPage() {
                     技術連携
                   </h3>
                   <p className="mb-4 text-gray-600">
-                    既存のシステムやサービスにボイテキ！の機能を組み込む技術連携パートナーシップです。
+                    既存のシステムやサービスにボイテキクラウド！またはボイテキオンプレ！の機能を組み込む技術連携パートナーシップです。
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li>• API連携</li>
@@ -66,7 +66,9 @@ export default function PartnerPage() {
                     <strong className="text-gray-800">
                       新しい収益源の創出
                     </strong>
-                    <p>ボイテキ！の販売による新しい収益チャネルの構築</p>
+                    <p>
+                      ボイテキクラウド！・ボイテキオンプレ！の販売による新しい収益チャネルの構築
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -99,7 +101,7 @@ export default function PartnerPage() {
                 お客様のニーズに合わせた最適な提案をさせていただきます。
               </p>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
               >
                 お問い合わせ

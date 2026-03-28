@@ -173,20 +173,12 @@ export default function ComparePage() {
                 オンプレ詳細を見る
               </Link>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-slate-700 px-4 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-50"
-              >
-                要件ヒアリングを依頼
-              </a>
-              <a
                 href="https://fujirag.voitex.biz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border border-slate-700 px-4 py-2 font-semibold text-slate-700 transition-colors hover:bg-slate-50"
               >
-                FUJI RAGを見る
+                FUJI RAGで要件相談する
               </a>
             </div>
           </div>

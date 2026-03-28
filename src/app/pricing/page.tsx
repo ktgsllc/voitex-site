@@ -3,8 +3,8 @@ import StructuredData from '@/components/StructuredData';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
-  '料金・導入について｜ボイテキ！従量課金制プラン',
-  'ボイテキ！の料金プランをご紹介。従量課金制で必要な分だけお支払い。音声解析AIの感情分析・NGワード検出・自動要約機能をリーズナブルな価格で。',
+  '料金・導入について｜ボイテキクラウド！',
+  'ボイテキ！製品ファミリーのうち、ボイテキクラウド！の料金ページです。従量課金制で必要な分だけ利用でき、オンプレ導入は比較ページから確認できます。',
   '/pricing'
 );
 
@@ -20,6 +20,8 @@ export default function Page() {
               料金・導入について
             </h1>
             <p className="mx-auto max-w-2xl text-xl text-gray-600">
+              本ページはボイテキクラウド！の料金です。
+              <br />
               従量課金制で、使った分だけお支払いいただきます。
               <br />
               月額契約不要、トライアル利用も可能です。
@@ -365,7 +367,7 @@ export default function Page() {
                 料金の詳細やトライアルについて、専門スタッフがご説明いたします
               </p>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 className="inline-flex items-center rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 transition-colors hover:bg-gray-100"
               >
                 お問い合わせ

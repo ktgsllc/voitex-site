@@ -5,9 +5,11 @@ export default function ProductBranch() {
     <section className="bg-white py-14">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-primary">導入形態で選ぶ</h2>
+          <h2 className="text-3xl font-bold text-primary">
+            経営課題に合わせて選ぶ
+          </h2>
           <p className="mt-3 text-gray-600">
-            ボイテキ！製品ファミリーは、クラウド運用とオンプレ運用の両方に対応しています。
+            ボイテキ！製品ファミリーは、導入スピード・統制要件・投資回収の観点で最適な選択ができます。
           </p>
         </div>
 
@@ -18,8 +20,13 @@ export default function ProductBranch() {
               ボイテキクラウド！
             </h3>
             <p className="mt-3 text-gray-700">
-              短期間で導入しやすく、運用負荷を抑えたい企業向け。現行の機能一覧・料金・導入事例をすぐ確認できます。
+              まずは短期間で成果を出したい企業向け。初期負担を抑えて立ち上げ、現場改善を高速に回せます。
             </p>
+            <ul className="mt-4 space-y-2 text-sm text-gray-700">
+              <li>・短期導入で早く効果検証できる</li>
+              <li>・運用負荷を抑えて継続しやすい</li>
+              <li>・従量課金で投資対効果を管理しやすい</li>
+            </ul>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 href="/features"
@@ -42,8 +49,14 @@ export default function ProductBranch() {
               ボイテキオンプレ！
             </h3>
             <p className="mt-3 text-gray-700">
-              データ統制、閉域運用、認証連携など厳格な要件に対応。機能概要・比較・導入相談に進めます。
+              強い統制要件や閉域運用が必要な企業向け。FUJI
+              RAG連携前提で、分析結果を社内ナレッジ活用までつなげます。
             </p>
+            <ul className="mt-4 space-y-2 text-sm text-gray-700">
+              <li>・閉域/統制要件に対応しやすい</li>
+              <li>・社内運用ルールに合わせて設計しやすい</li>
+              <li>・分析からナレッジ活用まで内製基盤化できる</li>
+            </ul>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 href="/products/voitex2"
@@ -59,6 +72,46 @@ export default function ProductBranch() {
               </Link>
             </div>
           </article>
+        </div>
+
+        <div className="mt-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+          <h3 className="text-xl font-bold text-gray-900">
+            経営者が押さえる判断軸
+          </h3>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            <div className="rounded-lg bg-white p-4">
+              <p className="text-sm font-semibold text-gray-900">
+                立ち上がり速度
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                まず成果を早く出すならクラウドが有利。
+              </p>
+            </div>
+            <div className="rounded-lg bg-white p-4">
+              <p className="text-sm font-semibold text-gray-900">
+                統制とデータ管理
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                厳格な管理要件があるならオンプレが有利。
+              </p>
+            </div>
+            <div className="rounded-lg bg-white p-4">
+              <p className="text-sm font-semibold text-gray-900">
+                投資回収シナリオ
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                初期負担を抑えるか、基盤内製化を優先するかで選択。
+              </p>
+            </div>
+          </div>
+          <div className="mt-5">
+            <Link
+              href="/products/compare"
+              className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              クラウド/オンプレ比較を見る
+            </Link>
+          </div>
         </div>
       </div>
     </section>

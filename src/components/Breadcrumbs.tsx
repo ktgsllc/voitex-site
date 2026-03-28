@@ -28,6 +28,7 @@ const breadcrumbMap: Record<string, string> = {
   cloud: 'ボイテキクラウド！',
   onprem: 'ボイテキオンプレ！',
   compare: 'クラウド/オンプレ比較',
+  thanks: '送信完了',
 };
 
 export default function Breadcrumbs() {

@@ -125,7 +125,7 @@ export default function Steps() {
               導入から運用まで、専門スタッフがサポートいたします。
             </p>
             <a
-              href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+              href="/contact"
               className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
             >
               導入について詳しく聞く

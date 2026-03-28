@@ -395,7 +395,7 @@ export default function FaqPage() {
       <main className="p-8">
         <h1 className="mb-6 text-3xl font-bold text-primary">よくあるご質問</h1>
         <p className="mb-8 text-gray-500">
-          ボイテキ！についてよくいただくご質問と回答をまとめています。
+          ボイテキ！製品ファミリー（ボイテキクラウド！・ボイテキオンプレ！）について、よくいただくご質問と回答をまとめています。
         </p>
 
         {/* 検索フィールド */}

@@ -3,8 +3,8 @@ import StructuredData from '@/components/StructuredData';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
-  'ボイテキとは？｜音声解析AI SaaSツールの詳細解説',
-  'ボイテキとは音声解析AI SaaSツール。コールセンターの応対品質向上とカスハラ対策、営業セールス分析を支援。NGワード検出・感情分析・自動要約機能で品質管理と営業活動の分析を効率化。',
+  'ボイテキとは？｜ボイテキクラウド！・ボイテキオンプレ！のご紹介',
+  'ボイテキ！は「ボイテキクラウド！」と「ボイテキオンプレ！」の2製品で構成される音声分析製品ファミリーです。本ページでは主にボイテキクラウド！の機能と活用方法を紹介します。',
   '/what-is-voitex'
 );
 
@@ -21,22 +21,23 @@ export default function WhatIsVoitexPage() {
                 ボイテキとは？
               </h1>
               <p className="text-xl text-gray-600">
-                音声解析AI SaaSツール「ボイテキ！」の詳細解説
+                ボイテキ！製品ファミリー（クラウド/オンプレ）のご紹介
               </p>
             </div>
 
             {/* ボイテキの定義 */}
             <div className="mb-12 rounded-lg bg-blue-50 p-8">
               <h2 className="mb-6 text-3xl font-bold text-primary">
-                ボイテキとは、音声解析AI SaaSツールです
+                ボイテキとは、2製品で構成される音声分析プラットフォームです
               </h2>
               <p className="mb-6 text-lg text-gray-700">
                 <strong>ボイテキ！</strong>
-                は、音声データをAIで自動分析・要約・可視化する
-                <strong>音声解析AI SaaSツール</strong>
-                です。コールセンターの応対品質向上とカスハラ対策を支援する
-                <strong>音声解析AIサービス</strong>
-                として、企業のコミュニケーション品質管理を効率化します。
+                は、クラウド型の
+                <strong>ボイテキクラウド！</strong>
+                と、オンプレ型の
+                <strong>ボイテキオンプレ！</strong>
+                で構成される製品ファミリーです。導入形態に応じて、会話品質向上・
+                リスク管理・ナレッジ活用を支援します。
               </p>
               <p className="text-lg text-gray-700">
                 ボイテキという名前は「Voice（音声）」と「Text（テキスト）」を組み合わせた造語で、
@@ -47,7 +48,7 @@ export default function WhatIsVoitexPage() {
             {/* ボイテキの特徴 */}
             <div className="mb-12">
               <h2 className="mb-8 text-3xl font-bold text-primary">
-                ボイテキ！の3つの特徴
+                ボイテキクラウド！の3つの特徴
               </h2>
               <div className="grid gap-8 md:grid-cols-3">
                 <div className="rounded-lg bg-gray-50 p-6">
@@ -85,7 +86,7 @@ export default function WhatIsVoitexPage() {
             {/* ボイテキの機能詳細 */}
             <div className="mb-12">
               <h2 className="mb-8 text-3xl font-bold text-primary">
-                ボイテキ！の主要機能
+                ボイテキクラウド！の主要機能
               </h2>
               <div className="space-y-6">
                 <div className="rounded-lg border border-gray-200 p-6">
@@ -358,7 +359,7 @@ export default function WhatIsVoitexPage() {
             {/* ボイテキの活用シーン */}
             <div className="mb-12">
               <h2 className="mb-8 text-3xl font-bold text-primary">
-                ボイテキ！の活用シーン
+                ボイテキクラウド！の活用シーン
               </h2>
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="rounded-lg bg-gray-50 p-6">
@@ -494,7 +495,7 @@ export default function WhatIsVoitexPage() {
             {/* ボイテキの技術的特徴 */}
             <div className="mb-12">
               <h2 className="mb-8 text-3xl font-bold text-primary">
-                ボイテキ！の技術的特徴
+                ボイテキクラウド！の技術的特徴
               </h2>
               <div className="rounded-lg bg-gray-50 p-8">
                 <p className="mb-6 text-lg text-gray-700">
@@ -525,16 +526,16 @@ export default function WhatIsVoitexPage() {
             {/* CTA */}
             <div className="rounded-lg bg-gradient-to-r from-primary to-blue-600 p-8 text-center text-white">
               <h2 className="mb-4 text-2xl font-bold">
-                ボイテキ！を導入しませんか？
+                ボイテキクラウド！を導入しませんか？
               </h2>
               <p className="mb-6 text-lg opacity-90">
-                音声解析AI SaaSツール「ボイテキ！」で、
+                音声解析AI SaaSツール「ボイテキクラウド！」で、
                 <br />
                 応対品質の向上とカスハラ対策を実現しましょう。
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
@@ -555,7 +556,7 @@ export default function WhatIsVoitexPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
                 >
                   お問い合わせ

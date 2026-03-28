@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { generateMetadata } from '@/libs/seo';
 
-const CONTACT_URL = 'https://forms.gle/jCp4fEqMV5fGaoWu6';
+const FUJIRAG_URL = 'https://fujirag.voitex.biz/';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキオンプレ！｜健康経営を前へ進める対話分析基盤',
@@ -51,6 +51,11 @@ const features = [
     body: 'GUIアップロード・NAS・S3/MinIO連携に対応。既存運用に合わせて段階的に導入できます。',
     image: '/features/main_features_5.png',
   },
+  {
+    title: '会話相手相性（配置・育成支援）',
+    body: '感情指標と会話行動（発話量・質問率）を組み合わせ、相手ごとの相性と会話タイプを可視化。配置・育成判断の精度向上を支援します。',
+    image: '/features/main_features_6.png',
+  },
 ];
 
 const effects = [
@@ -75,6 +80,27 @@ const governance = [
   '監査ログによる操作履歴の可視化',
 ];
 
+const compatibilityPoints = [
+  {
+    title: '相性ランキングを自動算出',
+    body: '会話ごとの感情推移・イベント・会話バランスを統合し、相手ごとの相性をスコア化。',
+  },
+  {
+    title: '16会話タイプで特徴を直感化',
+    body: '安定/駆動、協調/先導など4軸で会話傾向を分類し、コミュニケーション特性を把握。',
+  },
+  {
+    title: '根拠付きで納得できる判断へ',
+    body: 'スコアだけでなく算出根拠と信頼度を表示。アサイン・育成・1on1設計に活用可能。',
+  },
+];
+
+const compatibilityEffects = [
+  'ミスマッチな組み合わせの早期回避',
+  'OJT/面談の組み合わせ最適化',
+  'チーム内コミュニケーション負荷の低減',
+];
+
 export default function Voitex2Page() {
   return (
     <main className="bg-gray-50 py-12">
@@ -94,20 +120,20 @@ export default function Voitex2Page() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href={CONTACT_URL}
+              href={FUJIRAG_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg bg-white px-5 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
             >
-              健康経営に向けた活用相談をする
+              FUJI RAGで活用相談をする
             </a>
             <a
-              href={CONTACT_URL}
+              href={FUJIRAG_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
-              導入デモを申し込む
+              FUJI RAGで導入デモを申し込む
             </a>
           </div>
           <div className="mt-8">
@@ -150,12 +176,12 @@ export default function Voitex2Page() {
           </p>
           <div className="mt-6">
             <a
-              href={CONTACT_URL}
+              href={FUJIRAG_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
             >
-              自社データで可視化を体験する
+              FUJI RAG経由で可視化を体験する
             </a>
           </div>
         </section>
@@ -200,6 +226,58 @@ export default function Voitex2Page() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
+          <h2 className="mb-3 text-2xl font-bold text-gray-900">
+            会話相手相性で、配置・育成の精度を高める
+          </h2>
+          <p className="text-gray-700">
+            過去の対話データから誰と組むと成果が出やすいかを可視化。感情傾向だけでなく、
+            発話量・質問率などの会話行動も組み合わせて、実務に使える相性指標を提示します。
+          </p>
+          <div className="mt-4">
+            <Image
+              src="/features/main_features_6.png"
+              alt="会話相手相性機能の画面イメージ"
+              width={1600}
+              height={900}
+              className="w-full rounded-lg border border-gray-200 object-cover"
+            />
+          </div>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            {compatibilityPoints.map((point) => (
+              <article key={point.title} className="rounded-lg bg-blue-50 p-4">
+                <h3 className="mb-2 font-semibold text-primary">
+                  {point.title}
+                </h3>
+                <p className="text-sm text-gray-700">{point.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-5 rounded-lg bg-gray-50 p-5">
+            <h3 className="mb-3 text-lg font-semibold text-gray-900">
+              期待効果
+            </h3>
+            <ul className="space-y-2 text-gray-700">
+              {compatibilityEffects.map((effect) => (
+                <li key={effect} className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600" />
+                  <span>{effect}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-6">
+            <a
+              href={FUJIRAG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
+            >
+              FUJI RAG経由で会話相手相性を検証する
+            </a>
+          </div>
         </section>
 
         <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
@@ -271,15 +349,15 @@ export default function Voitex2Page() {
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               <a
-                href={CONTACT_URL}
+                href={FUJIRAG_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex rounded-lg bg-primary px-5 py-3 font-semibold text-white transition-colors hover:bg-primary-dark"
               >
-                FUJIRAG連携デモを相談する
+                FUJI RAGで連携デモを相談する
               </a>
               <a
-                href="https://fujirag.voitex.biz/"
+                href={FUJIRAG_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex rounded-lg border border-primary px-5 py-3 font-semibold text-primary transition-colors hover:bg-primary/5"
@@ -299,28 +377,28 @@ export default function Voitex2Page() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href={CONTACT_URL}
+              href={FUJIRAG_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg bg-white px-5 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
             >
-              健康経営に向けた活用相談をする
+              FUJI RAGで活用相談をする
             </a>
             <a
-              href={CONTACT_URL}
+              href={FUJIRAG_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
-              導入デモを申し込む
+              FUJI RAGで導入デモを申し込む
             </a>
             <a
-              href={CONTACT_URL}
+              href={FUJIRAG_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10"
             >
-              まずは自社データで検証する
+              まずはFUJI RAGで検証する
             </a>
           </div>
           <div className="mt-6">

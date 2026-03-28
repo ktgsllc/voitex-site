@@ -197,7 +197,7 @@ export default function SecurityPage() {
                 セキュリティに関するご質問や、セキュリティインシデントの報告など、お気軽にお問い合わせください。
               </p>
               <a
-                href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                href="/contact"
                 className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary-dark"
               >
                 お問い合わせ

@@ -91,8 +91,12 @@ export default function Features() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
-            ボイテキ！の主な機能
+            ボイテキクラウド！の主な機能
           </h2>
+          <p className="-mt-8 mb-10 text-center text-sm text-gray-600">
+            ※ ボイテキオンプレ！の機能は、統制要件とFUJI
+            RAG連携を前提に別構成で提供しています。
+          </p>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (

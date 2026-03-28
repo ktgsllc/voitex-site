@@ -187,7 +187,7 @@ export default function Features() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="mb-4 text-3xl font-bold text-primary">
-                ボイテキ！の機能一覧
+                ボイテキクラウド！の機能一覧
               </h2>
               <p className="text-lg text-gray-600">
                 音声の可視化・分析・改善提案までを1つのサービスで完結。柔軟で強力なツール群をご紹介します。
@@ -247,7 +247,7 @@ export default function Features() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h3 className="mb-4 text-2xl font-bold">
-                ボイテキ！を導入しませんか？
+                ボイテキクラウド！を導入しませんか？
               </h3>
               <p className="mb-6 text-lg opacity-90">
                 音声分析の可能性を体験してください。
@@ -256,7 +256,7 @@ export default function Features() {
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
                 >
                   デモを申し込む
@@ -275,7 +275,7 @@ export default function Features() {
                   </svg>
                 </a>
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
                 >
                   お問い合わせ

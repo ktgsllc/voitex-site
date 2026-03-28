@@ -185,7 +185,7 @@ export default function VoitexConverterPage() {
                   詳細マニュアル
                 </a>
                 <a
-                  href="https://forms.gle/jCp4fEqMV5fGaoWu6"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-lg bg-gray-600 px-6 py-3 font-medium text-white transition-colors hover:bg-gray-700"

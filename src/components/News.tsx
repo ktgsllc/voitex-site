@@ -28,19 +28,20 @@ export default function News() {
       slug: 'voitex-onprem-release-scheduled-2026-04',
     },
     {
-      id: '8',
-      title: '🚀 Voitex v1.4.0 リリース - 役割別ダッシュボードとUI/UX大幅改善',
-      publishedAt: '2025-10-14',
-      category: 'アップデート',
-      slug: 'voitex-v1-4-0-role-based-dashboard-ui-ux-improvement',
-    },
-    {
       id: '7',
       title:
         '🎉 ボイテキ！iPhoneアプリ「ボイテキ！クライアント」正式リリース！',
       publishedAt: '2025-09-25',
       category: 'リリース',
       slug: 'voitex-iphone-app-voitexclient-official-release',
+    },
+    {
+      id: '9',
+      title:
+        '🔒 React Server Componentsの脆弱性（CVE-2025-55182）への対応について',
+      publishedAt: '2025-12-06',
+      category: 'セキュリティ',
+      slug: 'react-server-components-cve-2025-55182-security-update',
     },
   ];
   const topNews = [...news]
