@@ -249,7 +249,7 @@ export default function Page() {
 
             <div
               className="g-recaptcha"
-              data-sitekey="6Lc_RIUrAAAAAC0bz_j9Y6rugIhFHjIfR0F9cdRk"
+              data-sitekey="6Lccip0sAAAAAGsS9gqyGyx8KnJJbwJKKWRHxlup"
             ></div>
 
             <label className="block text-xs leading-6 text-slate-500">

@@ -226,7 +226,7 @@ export default function VoitexRoomRecPage() {
 
               <div
                 className="g-recaptcha"
-                data-sitekey="6Lc_RIUrAAAAAC0bz_j9Y6rugIhFHjIfR0F9cdRk"
+                data-sitekey="6Lccip0sAAAAAJM6_hLvZb-dPyNqGHoqczjQEHUF"
               ></div>
 
               <label className="block text-xs leading-6 text-slate-200/80">
