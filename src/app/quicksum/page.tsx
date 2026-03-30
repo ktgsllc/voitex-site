@@ -14,7 +14,7 @@ export default function QuickSumPage() {
       <StructuredData type="softwareApplication" />
       <main className="bg-slate-50 py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <section className="rounded-2xl bg-gradient-to-br from-[var(--brand-core)] to-[var(--product-quicksum)] px-8 py-12 text-white">
+          <section className="rounded-2xl bg-gradient-to-br from-[var(--brand-core)] to-[#0f4a57] px-8 py-12 text-white">
             <div className="mb-4 flex flex-wrap gap-2 text-xs">
               {[
                 '📝 テキスト要約AI',
@@ -31,7 +31,7 @@ export default function QuickSumPage() {
               通話後の記録、
               <br />
               もう
-              <span className="text-[var(--product-quicksum-soft-accent)]">
+              <span className="text-[#7dd3d8]">
                 迷わない。
               </span>
             </h1>
@@ -74,7 +74,7 @@ export default function QuickSumPage() {
                   <span className="text-slate-200/80">（会話ログ続く...）</span>
                 </p>
               </div>
-              <div className="self-center text-center text-2xl text-[var(--product-quicksum-soft-accent)]">
+              <div className="self-center text-center text-2xl text-[#7dd3d8]">
                 ⚡
               </div>
               <div className="rounded-xl border border-white/20 bg-white/10 p-4 text-sm text-slate-100">
@@ -289,7 +289,13 @@ export default function QuickSumPage() {
                 href="/contact?source=quicksum"
                 className="rounded-lg border border-white/50 px-6 py-3 font-semibold text-white"
               >
-                📞 デモを見る・相談する
+                🎥 デモを見る
+              </a>
+              <a
+                href="/contact?source=quicksum"
+                className="rounded-lg border border-white/50 px-6 py-3 font-semibold text-white"
+              >
+                📞 導入相談をする（無料）
               </a>
             </div>
             <div className="mt-5 flex flex-wrap justify-center gap-2 text-xs">

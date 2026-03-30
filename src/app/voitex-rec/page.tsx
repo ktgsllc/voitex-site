@@ -79,7 +79,7 @@ export default function VoitexRecPage() {
   return (
     <main className="bg-slate-50 py-16">
       <div className="mx-auto max-w-6xl px-6">
-        <section className="rounded-2xl bg-gradient-to-br from-[var(--brand-core)] to-[var(--product-rec)] px-8 py-12 text-white">
+        <section className="rounded-2xl bg-gradient-to-br from-[var(--brand-cta-bg)] to-[var(--brand-core)] px-8 py-12 text-white">
           <p className="text-sm tracking-[0.2em] text-[var(--brand-accent-light)]">
             ボイテキレック！
           </p>
@@ -121,19 +121,19 @@ export default function VoitexRecPage() {
           </div>
         </section>
 
-        <section className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-800">
+        <section className="mt-6 rounded-2xl border border-slate-700 bg-slate-900 p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
             リリース予定
           </p>
-          <h2 className="mt-2 text-xl font-bold text-amber-900">
-            今秋にリリース予定！
+          <h2 className="mt-2 text-xl font-bold text-white">
+            2026年10月リリース予定
           </h2>
-          <p className="mt-2 text-sm text-amber-800">
+          <p className="mt-2 text-sm text-slate-300">
             先行予約・早期導入特典をご希望の方は、お気軽にお問い合わせください。
           </p>
           <a
             href="/contact?source=rec"
-            className="mt-3 inline-block rounded-lg bg-amber-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-200"
+            className="mt-3 inline-block rounded-lg border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20"
           >
             先行予約はこちら
           </a>

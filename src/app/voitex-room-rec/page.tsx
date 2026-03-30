@@ -41,7 +41,7 @@ export default function VoitexRoomRecPage() {
         新サービス「ボイテキルームレック！」（2026年初夏発売予定）
       </div>
       <div className="mx-auto max-w-6xl px-6">
-        <section className="rounded-2xl bg-gradient-to-br from-[var(--brand-core)] to-[var(--product-roomrec)] px-8 py-12 text-white">
+        <section className="rounded-2xl bg-gradient-to-br from-[var(--brand-cta-bg)] to-[var(--brand-core)] px-8 py-12 text-white">
           <p className="inline-block rounded-full bg-[var(--product-roomrec-badge)] px-3 py-1 text-xs font-semibold text-white">
             NEW 2026年初夏発売予定
           </p>
@@ -79,18 +79,19 @@ export default function VoitexRoomRecPage() {
           </h2>
           <div className="mt-5 grid gap-3 md:grid-cols-3">
             {[
-              '営業・商談',
-              '会議・ミーティング',
-              '面談・ヒアリング',
-              'カスハラ対策',
-              '医療・福祉の場面',
-              '法律・士業の相談',
-            ].map((item) => (
+              ['🤝', '営業・商談'],
+              ['👥', '会議・ミーティング'],
+              ['🗣️', '面談・ヒアリング'],
+              ['🛡️', 'カスハラ対策'],
+              ['🏥', '医療・福祉の場面'],
+              ['⚖️', '法律・士業の相談'],
+            ].map(([icon, item]) => (
               <div
                 key={item}
-                className="rounded-lg bg-slate-100 px-4 py-3 text-sm text-slate-700"
+                className="rounded-lg bg-slate-100 px-4 py-4 text-sm text-slate-700"
               >
-                {item}
+                <p className="text-3xl">{icon}</p>
+                <p className="mt-2">{item}</p>
               </div>
             ))}
           </div>
@@ -100,20 +101,20 @@ export default function VoitexRoomRecPage() {
           <h2 className="text-2xl font-bold text-slate-900">
             使い方はスマホ1台。3タップで録音開始
           </h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            {['アプリを起動', '録音開始・終了', '自動アップロード'].map(
-              (step, i) => (
-                <div
-                  key={step}
-                  className="rounded-lg bg-slate-100 p-4 text-sm text-slate-700"
-                >
-                  <p className="mb-2 font-semibold text-slate-900">
-                    STEP {i + 1}
-                  </p>
-                  <p>{step}</p>
-                </div>
-              )
-            )}
+          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            {[
+              ['STEP 1', 'アプリを起動'],
+              ['STEP 2', '録音開始・終了'],
+              ['STEP 3', '自動アップロード'],
+            ].map((step) => (
+              <div
+                key={step[0]}
+                className="rounded-lg bg-slate-100 p-4 text-sm text-slate-700"
+              >
+                <p className="mb-2 font-semibold text-slate-900">{step[0]}</p>
+                <p>{step[1]}</p>
+              </div>
+            ))}
           </div>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             {[

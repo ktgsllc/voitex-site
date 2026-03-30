@@ -3,12 +3,17 @@ import type { Metadata } from 'next';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
-  'ボイテキオンプレ！— 声のデータで、健康経営を前へ。| ボイテキ！',
-  '通話・面談・応対に潜む見えない負荷を可視化。FUJI RAG連携前提で、離職予防・現場改善・組織の健全性向上を支援するオンプレミス対話分析基盤。',
+  'ボイテキオンプレ！— 閉域で、完結する。| ボイテキ！',
+  '機密性の高い音声データを外部に出さず、閉域環境で録音・解析・活用まで完結。FUJI RAG連携前提で、統制要件と現場改善の両立を支援するオンプレミス対話分析基盤。',
   '/products/voitex2/onprem'
 );
 
 const issues = [
+  [
+    '🔒',
+    '機密性の高い音声を外部に出せない',
+    '個人情報・機密情報の観点でクラウド利用が難しい業界要件に対応したい。',
+  ],
   [
     '😓',
     '現場の疲弊やストレスを把握できない',
@@ -23,11 +28,6 @@ const issues = [
     '📉',
     '応対品質改善が定性的に止まる',
     '振り返りが感覚ベースで、部門横断で再現可能な改善アクションに落ちにくい。',
-  ],
-  [
-    '🔒',
-    '機密性の高い音声を外部に出せない',
-    '個人情報・機密情報の観点でクラウド利用が難しい業界要件に対応したい。',
   ],
   [
     '🧩',
@@ -118,16 +118,14 @@ export default function Voitex2OnPremPage() {
             ))}
           </div>
           <h1 className="text-4xl font-bold md:text-5xl">
-            声のデータで、
+            閉域で、
             <br />
-            <span className="text-[var(--brand-accent-light)]">
-              健康経営を前へ。
-            </span>
+            <span className="text-[var(--brand-accent-light)]">完結する。</span>
           </h1>
           <p className="mt-4 text-slate-100">
-            通話・面談・応対に潜む見えない負荷を可視化し、
+            機密性の高い音声データを外部に送信せず、録音・解析・活用までを閉域環境で完結。
             <br />
-            離職予防・現場改善・組織の健全性向上を支援するオンプレミス対話分析基盤。
+            統制要件を満たしながら、離職予防・現場改善・組織の健全性向上を支援するオンプレミス対話分析基盤。
             <br />
             FUJI RAG連携前提で、分析結果を社内ナレッジ活用まで接続します。
           </p>

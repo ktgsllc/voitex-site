@@ -155,7 +155,7 @@ export default function Voitex2CloudPage() {
           </div>
         </section>
 
-        <section className="mt-4 rounded-xl bg-slate-900 p-4 text-sm text-slate-200">
+        <section className="mt-4 rounded-xl bg-gradient-to-r from-slate-950 to-[var(--brand-core)] p-4 text-sm text-slate-200">
           <div className="flex flex-wrap gap-3">
             <span className="text-xs tracking-[0.2em] text-slate-400">
               導入企業例
@@ -188,7 +188,7 @@ export default function Voitex2CloudPage() {
                 key={item[1]}
                 className="rounded-lg bg-slate-100 p-4 text-sm text-slate-700"
               >
-                <p className="text-lg">{item[0]}</p>
+                <p className="text-2xl">{item[0]}</p>
                 <p className="mt-1 font-semibold text-slate-900">{item[1]}</p>
                 <p className="mt-1">{item[2]}</p>
               </article>
@@ -213,7 +213,7 @@ export default function Voitex2CloudPage() {
                 key={item[1]}
                 className="rounded-lg bg-[var(--product-cloud-soft-bg)] p-4 text-sm text-slate-700"
               >
-                <p className="text-lg">{item[0]}</p>
+                <p className="text-2xl">{item[0]}</p>
                 <p className="mt-1 font-semibold text-slate-900">{item[1]}</p>
                 <p className="mt-1">{item[2]}</p>
               </article>
@@ -265,9 +265,7 @@ export default function Voitex2CloudPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
             料金
           </p>
-          <h2 className="mt-2 text-2xl font-bold text-slate-900">
-            料金・導入について
-          </h2>
+          <h2 className="mt-2 text-2xl font-bold text-slate-900">料金プラン</h2>
           <p className="mt-2 text-sm text-slate-600">
             本ページはボイテキクラウド！の料金です。
             <br />
