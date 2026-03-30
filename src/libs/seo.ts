@@ -150,8 +150,8 @@ export const structuredData = {
       '@type': 'PostalAddress',
       addressLocality: '東京都中野区',
       addressRegion: '東京都',
-      postalCode: '164-0003',
-      streetAddress: '東中野5-10-5 フォーカルビル4B',
+      postalCode: '164-0001',
+      streetAddress: '中野4-6-10-102',
     },
     contactPoint: {
       '@type': 'ContactPoint',

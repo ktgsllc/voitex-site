@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 const links = [
   { label: '製品一覧', href: '/#products' },
   { label: '課題から選ぶ', href: '/#issues' },
@@ -20,6 +20,13 @@ const productLinks = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLDetailsElement | null>(null);
+
+  const closeMobileMenu = () => {
+    if (mobileMenuRef.current) {
+      mobileMenuRef.current.open = false;
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -96,9 +103,15 @@ export default function Header() {
           </Link>
         </nav>
 
-        <details className="relative lg:hidden">
-          <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-700">
-            メニュー
+        <details ref={mobileMenuRef} className="group relative lg:hidden">
+          <summary
+            className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md border border-slate-300 text-slate-700"
+            aria-label="メニューを開く"
+          >
+            <span className="text-lg leading-none group-open:hidden">☰</span>
+            <span className="hidden text-lg leading-none group-open:inline">
+              ✕
+            </span>
           </summary>
           <div className="absolute right-0 mt-2 w-56 rounded-lg border border-slate-200 bg-white p-3 shadow-xl">
             <div className="flex flex-col gap-2">
@@ -106,6 +119,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
+                  onClick={closeMobileMenu}
                   className="rounded px-2 py-2 text-sm text-slate-700 hover:bg-slate-100"
                 >
                   {link.label}
@@ -113,6 +127,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
+                onClick={closeMobileMenu}
                 className="mt-1 rounded bg-[var(--brand-accent)] px-3 py-2 text-center text-sm font-semibold text-white"
               >
                 お問い合わせ
@@ -122,6 +137,7 @@ export default function Header() {
                   <Link
                     key={product.label}
                     href={product.href}
+                    onClick={closeMobileMenu}
                     className="block rounded px-2 py-2 text-sm text-slate-700 hover:bg-slate-100"
                   >
                     {product.label}

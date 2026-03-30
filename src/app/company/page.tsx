@@ -39,9 +39,7 @@ export default function CompanyPage() {
               </h2>
               <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-600">
                 <li>会社名: ケーティージーエス合同会社</li>
-                <li>
-                  住所: 〒164-0003 東京都中野区東中野5-10-5 フォーカルビル4B
-                </li>
+                <li>住所: 〒164-0001 東京都中野区中野4-6-10-102</li>
                 <li>代表者: 片ケ瀬敏夫</li>
                 <li>設立: 2022年5月</li>
                 <li>業務内容:</li>
