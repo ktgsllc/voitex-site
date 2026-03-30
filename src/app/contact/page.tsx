@@ -35,6 +35,7 @@ export default function Page() {
           setInterval(timestamp, 500);
 
           (function resolveWebSource() {
+            var defaultSource = "ボイテキ！サイト";
             var map = {
               top: "ボイテキ！サイト",
               fujirag: "FUJIRAG",
@@ -52,8 +53,10 @@ export default function Page() {
             var hiddenField = document.getElementById("web_source_detail");
             var selectWrap = document.getElementById("web_source_selector_wrap");
             var select = document.getElementById("web_source_selector");
+            var form = document.querySelector('form[action*="servlet.WebToLead"]');
 
             if (!hiddenField) return;
+            hiddenField.value = defaultSource;
 
             if (source) {
               hiddenField.value = source;
@@ -67,6 +70,13 @@ export default function Page() {
                   hiddenField.value = value;
                 });
               }
+            }
+
+            if (form) {
+              form.addEventListener("submit", function () {
+                var value = (hiddenField.value || "").trim();
+                if (!value) hiddenField.value = defaultSource;
+              });
             }
           })();
         `}
@@ -92,7 +102,7 @@ export default function Page() {
             <input
               type="hidden"
               name="captcha_settings"
-              value='{"keyname":"voitex_LandingPage","fallback":"true","orgId":"00DgC000001jUaN","ts":""}'
+              value='{"keyname":"voitexsite","fallback":"true","orgId":"00DgC000001jUaN","ts":""}'
             />
             <input type="hidden" name="oid" value="00DgC000001jUaN" />
             <input
@@ -119,6 +129,7 @@ export default function Page() {
                 id="company"
                 name="company"
                 type="text"
+                required
                 className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
             </div>

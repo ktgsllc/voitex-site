@@ -155,7 +155,7 @@ export default function VoitexRoomRecPage() {
               <input
                 type="hidden"
                 name="captcha_settings"
-                value='{"keyname":"voitex_LandingPage","fallback":"true","orgId":"00DgC000001jUaN","ts":""}'
+                value='{"keyname":"voitexsite","fallback":"true","orgId":"00DgC000001jUaN","ts":""}'
               />
               <input type="hidden" name="oid" value="00DgC000001jUaN" />
               <input
