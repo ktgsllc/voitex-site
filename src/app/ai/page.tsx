@@ -92,13 +92,13 @@ export default function AiOverviewPage() {
           </h2>
           <p className="mt-2 text-sm leading-7 text-amber-900">
             ボイテキ！は「録音・証跡保全」「リスク兆候の可視化」「要約・報告効率化」を一体で整備し、
-            経営として説明可能な運用体制の構築を支援します。
+            経営として説明可能な運用体制の構築を支援します。詳細はお問い合わせからご相談ください。
           </p>
           <Link
-            href="/lp/health-management"
+            href="/contact"
             className="mt-3 inline-block text-sm font-semibold text-amber-900 underline underline-offset-2"
           >
-            健康経営・義務化対策LPを見る →
+            体制整備について相談する →
           </Link>
         </section>
 
