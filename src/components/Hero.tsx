@@ -52,6 +52,12 @@ export default function Hero() {
             >
               比較して判断する
             </a>
+            <a
+              href="/lp/health-management"
+              className="rounded-lg border border-amber-300 bg-amber-50 px-6 py-3 font-semibold text-amber-800 transition-colors hover:bg-amber-100"
+            >
+              健康経営・義務化対策LPを見る
+            </a>
           </div>
           <div className="mt-12">
             <Image

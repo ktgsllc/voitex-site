@@ -115,6 +115,12 @@ const categoryStyle: Record<string, string> = {
   セキュリティ: 'bg-amber-100 text-amber-800',
 };
 
+const categoryLabelMap: Record<string, string> = {
+  リリース: '製品リリース',
+  アップデート: '機能改善',
+  セキュリティ: 'セキュリティ情報',
+};
+
 export default function NewsPage() {
   const sortedNewsData = [...newsData].sort((a, b) => {
     if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
@@ -125,10 +131,38 @@ export default function NewsPage() {
     <main className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12">
         <div className="mx-auto max-w-4xl">
+          <nav className="mb-6" aria-label="パンくず">
+            <ol className="flex items-center space-x-2 text-sm text-gray-500">
+              <li>
+                <Link href="/" className="hover:text-primary">
+                  ホーム
+                </Link>
+              </li>
+              <li>/</li>
+              <li className="text-gray-900">お知らせ</li>
+            </ol>
+          </nav>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+            最新情報
+          </p>
           <h1 className="mb-8 text-4xl font-bold text-primary">お知らせ</h1>
           <p className="mb-12 text-lg text-gray-600">
             ボイテキクラウド！・ボイテキオンプレ！を含む、ボイテキ！製品ファミリーの最新情報をお届けします。
           </p>
+          <div className="mb-10 rounded-lg border border-amber-200 bg-amber-50 p-5">
+            <p className="text-sm font-semibold text-amber-800">
+              健康経営・カスハラ義務化対応を検討中の方へ
+            </p>
+            <p className="mt-1 text-sm text-amber-900">
+              経営者向けの専用LPで、導入判断のポイントを整理しています。
+            </p>
+            <Link
+              href="/lp/health-management"
+              className="mt-3 inline-flex rounded-lg bg-amber-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-amber-200"
+            >
+              健康経営・義務化対策LPを見る
+            </Link>
+          </div>
 
           <div className="space-y-8">
             {sortedNewsData.map((news) => (
@@ -137,12 +171,12 @@ export default function NewsPage() {
                   <span
                     className={`rounded-full px-3 py-1 text-sm font-medium ${categoryStyle[news.category] || 'bg-primary text-white'}`}
                   >
-                    {news.category}
+                    {categoryLabelMap[news.category] || news.category}
                   </span>
                   <time className="text-sm text-gray-500">{news.date}</time>
                   {news.pinned && (
                     <span className="rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-700">
-                      新着固定
+                      注目
                     </span>
                   )}
                 </div>

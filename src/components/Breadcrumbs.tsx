@@ -29,6 +29,8 @@ const breadcrumbMap: Record<string, string> = {
   onprem: 'ボイテキオンプレ！',
   compare: 'クラウド/オンプレ比較',
   thanks: '送信完了',
+  lp: 'LP',
+  'health-management': '健康経営・義務化対策LP',
 };
 
 export default function Breadcrumbs() {

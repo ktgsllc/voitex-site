@@ -1633,6 +1633,12 @@ const newsData = [
   },
 ];
 
+const categoryLabelMap: Record<string, string> = {
+  リリース: '製品リリース',
+  アップデート: '機能改善',
+  セキュリティ: 'セキュリティ情報',
+};
+
 // 動的メタデータ生成
 export async function generateMetadata({
   params,
@@ -1674,7 +1680,7 @@ export default async function NewsDetailPage({
       <div className="container mx-auto px-4 py-12">
         <div className="mx-auto max-w-4xl">
           {/* パンくずリスト */}
-          <nav className="mb-8">
+          <nav className="mb-8" aria-label="パンくず">
             <ol className="flex items-center space-x-2 text-sm text-gray-500">
               <li>
                 <Link href="/" className="hover:text-primary">
@@ -1688,7 +1694,7 @@ export default async function NewsDetailPage({
                 </Link>
               </li>
               <li>/</li>
-              <li className="text-gray-900">{news.title}</li>
+              <li className="text-gray-900">記事詳細</li>
             </ol>
           </nav>
 
@@ -1696,7 +1702,7 @@ export default async function NewsDetailPage({
           <header className="mb-8">
             <div className="mb-4 flex items-center gap-4">
               <Tag variant="primary" size="sm">
-                {news.category}
+                {categoryLabelMap[news.category] || news.category}
               </Tag>
               <time className="text-sm text-gray-500">{news.date}</time>
             </div>

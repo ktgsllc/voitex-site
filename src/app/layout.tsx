@@ -1,7 +1,6 @@
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import CookieConsent from '@/components/CookieConsent';
 import Script from 'next/script';
 
@@ -50,6 +49,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          title="LLMs Reference"
+          href="/llms.txt"
+        />
         {/* Google Analytics - クッキー同意対応 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-68QTZ1MSD0"
@@ -186,13 +191,31 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Organization構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'ボイテキ！',
+              url: 'https://www.voitex.site',
+              logo: 'https://www.voitex.site/logo.png',
+              description:
+                '音声データの録音・解析・要約を支援するボイテキ！製品ファミリー',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'sales',
+                url: 'https://www.voitex.site/contact',
+              },
+              sameAs: ['https://ktgs.llc/', 'https://www.knowdel.jp/'],
+            }),
+          }}
+        />
       </head>
       <body>
         <Header />
-        <div className="mx-auto max-w-5xl px-4">
-          <Breadcrumbs /> {/* ←全ページ共通で表示 */}
-          {children}
-        </div>
+        {children}
         <Footer />
         <CookieConsent />
       </body>

@@ -3,164 +3,110 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t bg-gray-50 py-12 text-sm text-gray-600">
-      <div className="mx-auto max-w-7xl px-4">
-        {/* メインフッターコンテンツ */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* サービス・製品 */}
-          <div>
-            <h3 className="mb-4 font-bold text-gray-800">サービス・製品</h3>
-            <nav className="space-y-2">
-              <Link
-                href="/products/voitex2"
-                className="block hover:text-blue-600"
-              >
-                ボイテキオンプレ！
-              </Link>
-              <Link
-                href="/products/voitex2/cloud"
-                className="block hover:text-blue-600"
-              >
-                ボイテキクラウド！
-              </Link>
-              <Link
-                href="/products/voitex2/onprem"
-                className="block hover:text-blue-600"
-              >
-                オンプレ詳細
-              </Link>
-              <Link
-                href="/products/compare"
-                className="block hover:text-blue-600"
-              >
-                クラウド/オンプレ比較
-              </Link>
-              <Link href="/features" className="block hover:text-blue-600">
-                機能一覧
-              </Link>
-              <Link href="/pricing" className="block hover:text-blue-600">
-                料金プラン
-              </Link>
-              <Link href="/quicksum" className="block hover:text-blue-600">
-                QuickSum
-              </Link>
-              <Link href="/voitex-rec" className="block hover:text-blue-600">
-                ボイテキレック！
-              </Link>
-              <Link
-                href="/voitex-converter"
-                className="block hover:text-blue-600"
-              >
-                ボイテキコンバーター！
-              </Link>
-            </nav>
-          </div>
-
-          {/* 導入・活用 */}
-          <div>
-            <h3 className="mb-4 font-bold text-gray-800">導入・活用</h3>
-            <nav className="space-y-2">
-              <Link href="/cases" className="block hover:text-blue-600">
-                導入事例
-              </Link>
-              <Link href="/faq" className="block hover:text-blue-600">
-                よくある質問
-              </Link>
-              <a
-                href="https://manual.voitex.site/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-blue-600"
-              >
-                操作マニュアル
-              </a>
-              <Link href="/partner" className="block hover:text-blue-600">
-                パートナー募集
-              </Link>
-            </nav>
-          </div>
-
-          {/* サポート・お問い合わせ */}
-          <div>
-            <h3 className="mb-4 font-bold text-gray-800">
-              サポート・お問い合わせ
-            </h3>
-            <nav className="space-y-2">
-              <Link href="/contact" className="block hover:text-blue-600">
-                お問い合わせフォーム
-              </Link>
-              <Link href="/security" className="block hover:text-blue-600">
-                セキュリティ方針
-              </Link>
-              <Link href="/agreement" className="block hover:text-blue-600">
-                利用規約
-              </Link>
-            </nav>
-          </div>
-
-          {/* 会社・情報 */}
-          <div>
-            <h3 className="mb-4 font-bold text-gray-800">会社・情報</h3>
-            <nav className="space-y-2">
-              <Link href="/company" className="block hover:text-blue-600">
-                会社概要
-              </Link>
-              <Link href="/news" className="block hover:text-blue-600">
-                お知らせ
-              </Link>
-              <a
-                href="https://manual.voitex.site/blog/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-blue-600"
-              >
-                ブログ
-              </a>
-              <a
-                href="https://twitter.com/ktgsllc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-blue-600"
-              >
-                X（旧Twitter）
-              </a>
-              <a
-                href="https://www.facebook.com/ktgsllc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:text-blue-600"
-              >
-                Facebook
-              </a>
-            </nav>
+    <footer className="bg-slate-950 px-6 py-14 text-sm text-slate-300">
+      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
+        <div>
+          <Image
+            src="/logo.png"
+            alt="ボイテキ！"
+            width={169}
+            height={34}
+            className="h-8 w-auto"
+          />
+          <p className="mt-4 leading-7 text-slate-400">
+            音声データをAIで解析し、カスタマーハラスメントから社員を守り、
+            <br />
+            営業品質・応対品質を向上させる音声DXの総合ブランド。
+          </p>
+          <p className="mt-3 text-xs text-slate-500">
+            共同事業の運営体制は
+            <Link
+              href="/company"
+              className="ml-1 text-slate-300 underline underline-offset-2 hover:text-white"
+            >
+              運営会社情報を見る
+            </Link>
+          </p>
+        </div>
+        <div>
+          <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-slate-400">
+            製品
+          </p>
+          <div className="space-y-2">
+            <Link
+              href="/products/voitex2/cloud"
+              className="block hover:text-white"
+            >
+              ボイテキクラウド！
+            </Link>
+            <Link
+              href="/products/voitex2/onprem"
+              className="block hover:text-white"
+            >
+              ボイテキオンプレ！
+            </Link>
+            <Link href="/voitex-rec" className="block hover:text-white">
+              ボイテキレック！
+            </Link>
+            <Link href="/voitex-room-rec" className="block hover:text-white">
+              ボイテキルームレック！
+            </Link>
+            <Link href="/quicksum" className="block hover:text-white">
+              QuickSum
+            </Link>
           </div>
         </div>
-
-        {/* 会社情報・コピーライト */}
-        <div className="mt-8 border-t pt-8">
-          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-            <div>
-              <Image
-                src="/logo.png"
-                alt="Voitex"
-                width={169}
-                height={34}
-                className="mb-2"
-              />
-              <p>© {new Date().getFullYear()} KTGS.llc</p>
-            </div>
-            <nav className="flex flex-wrap gap-4 text-xs">
-              <Link href="/agreement" className="hover:text-blue-600">
-                利用規約
-              </Link>
-              <Link href="/privacy-policy" className="hover:text-blue-600">
-                プライバシーポリシー
-              </Link>
-              <Link href="/security" className="hover:text-blue-600">
-                セキュリティ方針
-              </Link>
-            </nav>
+        <div>
+          <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-slate-400">
+            ソリューション
+          </p>
+          <div className="space-y-2">
+            <Link href="/#issues" className="block hover:text-white">
+              カスハラ対策
+            </Link>
+            <Link href="/#issues" className="block hover:text-white">
+              応対品質向上
+            </Link>
+            <Link href="/#issues" className="block hover:text-white">
+              業務効率化
+            </Link>
+            <Link href="/#issues" className="block hover:text-white">
+              営業分析
+            </Link>
           </div>
+        </div>
+        <div>
+          <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-slate-400">
+            会社情報
+          </p>
+          <div className="space-y-2">
+            <Link href="/news" className="block hover:text-white">
+              お知らせ
+            </Link>
+            <Link href="/faq" className="block hover:text-white">
+              FAQ
+            </Link>
+            <Link href="/ai" className="block hover:text-white">
+              AI向け情報
+            </Link>
+            <Link href="/privacy-policy" className="block hover:text-white">
+              プライバシーポリシー
+            </Link>
+            <Link href="/contact" className="block hover:text-white">
+              お問い合わせ
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto mt-10 flex max-w-6xl flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+        <span>© 2025 ボイテキ！ All rights reserved.</span>
+        <div className="flex gap-4">
+          <Link href="/privacy-policy" className="hover:text-white">
+            プライバシーポリシー
+          </Link>
+          <Link href="/agreement" className="hover:text-white">
+            利用規約
+          </Link>
         </div>
       </div>
     </footer>

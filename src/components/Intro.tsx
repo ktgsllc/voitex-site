@@ -17,7 +17,7 @@ export default function Intro() {
             <br />
             営業トークの効果、顧客の反応、成功要因の分析——。
             <br />
-            <span className="font-medium text-[#172a88]">
+            <span className="font-medium text-[var(--primary)]">
               「声の中にある兆候」
             </span>
             を見える化することで、

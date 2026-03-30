@@ -5,9 +5,43 @@
   --foreground: #171717;
 
   /* Voitexブランドカラー */
-  --primary: #172a88;
-  --primary-light: #3b4fc4;
-  --primary-dark: #0e1c66;
+  --primary: #17324d;
+  --primary-light: #5b8def;
+  --primary-dark: #10273d;
+
+  /* ブランドトークン（B2Bソフト） */
+  --brand-core: #17324d;
+  --brand-core-soft: #23425f;
+  --brand-accent: #3b82f6;
+  --brand-accent-hover: #2f6fd6;
+  --brand-accent-light: #d8e8ff;
+  --brand-cta-bg: #17324d;
+  --brand-cta-fg: #17324d;
+  --brand-cta-subtle: #f2f6ff;
+
+  /* 製品カラー */
+  --product-cloud: #5b8def;
+  --product-cloud-soft-bg: #eef4ff;
+  --product-cloud-soft-text: #476fbe;
+  --product-cloud-strong-text: #355b9a;
+
+  --product-onprem: #7c83d6;
+  --product-onprem-soft-bg: #f3f4ff;
+
+  --product-quicksum: #56bfa8;
+  --product-quicksum-soft-bg: #edf9f6;
+  --product-quicksum-soft-accent: #d7f5ee;
+
+  --product-rec: #6fa8dc;
+  --product-rec-soft-bg: #eef4ff;
+  --product-rec-soft-text: #294d77;
+
+  --product-roomrec: #e58a8a;
+  --product-roomrec-urgent: #c16f6f;
+  --product-roomrec-badge: #cf7a7a;
+  --product-roomrec-soft-bg: #fff1f1;
+  --product-roomrec-soft-text: #7d4a4a;
+  --product-roomrec-soft-accent: #ffe7e7;
 }
 
 @theme inline {
@@ -23,9 +57,41 @@
     --background: #0a0a0a;
     --foreground: #ededed;
 
-    --primary: #3b4fc4; /* 明るめブルーに変更してもOK */
-    --primary-light: #6372e6;
-    --primary-dark: #0b1b66;
+    --primary: #5b8def;
+    --primary-light: #7ba7f7;
+    --primary-dark: #122a43;
+
+    --brand-core: #122a43;
+    --brand-core-soft: #1c3b58;
+    --brand-accent: #5b8def;
+    --brand-accent-hover: #4b79cf;
+    --brand-accent-light: #d8e8ff;
+    --brand-cta-bg: #122a43;
+    --brand-cta-fg: #122a43;
+    --brand-cta-subtle: #eaf1ff;
+
+    --product-cloud: #5b8def;
+    --product-cloud-soft-bg: #1f2f46;
+    --product-cloud-soft-text: #b8d2ff;
+    --product-cloud-strong-text: #d8e8ff;
+
+    --product-onprem: #7c83d6;
+    --product-onprem-soft-bg: #2a2e4f;
+
+    --product-quicksum: #56bfa8;
+    --product-quicksum-soft-bg: #1d3d38;
+    --product-quicksum-soft-accent: #c6eee5;
+
+    --product-rec: #6fa8dc;
+    --product-rec-soft-bg: #203244;
+    --product-rec-soft-text: #b7d8f7;
+
+    --product-roomrec: #e58a8a;
+    --product-roomrec-urgent: #cf7a7a;
+    --product-roomrec-badge: #d98686;
+    --product-roomrec-soft-bg: #442c2c;
+    --product-roomrec-soft-text: #ffdede;
+    --product-roomrec-soft-accent: #ffe7e7;
   }
 }
 

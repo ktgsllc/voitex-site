@@ -10,76 +10,74 @@ export const metadata: Metadata = generateMetadata(
 
 export default function ProductsPage() {
   return (
-    <main className="bg-gray-50 py-12">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="mb-10 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-primary">製品一覧</h1>
-          <p className="mx-auto max-w-3xl text-lg text-gray-600">
-            ボイテキ！製品群を、導入形態に応じて分かりやすく再編しました。
-            <br />
-            クラウド運用とオンプレ運用の要件に合わせて最適な形を選択できます。
+    <main className="bg-slate-50 py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-12 rounded-2xl bg-slate-900 px-8 py-12 text-white">
+          <p className="text-sm tracking-[0.2em] text-blue-200">製品一覧</p>
+          <h1 className="mt-3 text-4xl font-bold md:text-5xl">製品一覧</h1>
+          <p className="mt-4 max-w-3xl text-slate-200">
+            ボイテキ！製品ファミリーを、導入形態と活用目的で整理しています。
+            クラウドで素早く始めるか、オンプレで統制要件に対応するかを比較できます。
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <section className="rounded-xl bg-white p-8 shadow-sm">
-            <p className="mb-2 text-sm font-semibold text-primary">
-              クラウド提供
-            </p>
-            <h2 className="mb-3 text-2xl font-bold text-gray-900">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold text-blue-700">クラウド提供</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900">
               ボイテキクラウド！
             </h2>
-            <p className="mb-6 text-gray-600">
-              既存サービスを名称整理したクラウド提供版です。短期間導入と運用負荷の低さを重視する企業に適しています。
+            <p className="mt-3 text-slate-600">
+              短期導入・従量課金を重視する企業向け。運用負荷を抑えながら、
+              会話品質分析とカスハラ対策を迅速に立ち上げられます。
             </p>
-            <div className="space-y-3">
+            <div className="mt-6 space-y-3">
               <Link
-                href="/what-is-voitex"
-                className="block rounded-lg bg-primary px-4 py-3 text-center font-semibold text-white transition-colors hover:bg-primary-dark"
+                href="/products/voitex2/cloud"
+                className="block rounded-lg bg-blue-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-blue-500"
               >
                 ボイテキクラウド！の詳細を見る
               </Link>
               <Link
                 href="/products/compare"
-                className="block rounded-lg border border-primary px-4 py-3 text-center font-semibold text-primary transition-colors hover:bg-primary/5"
+                className="block rounded-lg border border-blue-600 px-4 py-3 text-center font-semibold text-blue-700 transition hover:bg-blue-50"
               >
                 クラウド/オンプレ比較を見る
               </Link>
             </div>
           </section>
 
-          <section className="rounded-xl bg-white p-8 shadow-sm">
-            <p className="mb-2 text-sm font-semibold text-primary">
-              オンプレ提供
-            </p>
-            <h2 className="mb-3 text-2xl font-bold text-gray-900">
+          <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold text-slate-700">オンプレ提供</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900">
               ボイテキオンプレ！
             </h2>
-            <p className="mb-6 text-gray-600">
-              通話分析をオンプレミス環境で運用したい企業向け。データ統制や認証連携など厳格な要件に対応します。
+            <p className="mt-3 text-slate-600">
+              閉域ネットワークや厳格な統制要件に対応した個別設計向け。 FUJI
+              RAG連携を前提に、運用・認証まで含めた設計が可能です。
             </p>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <Link
                 href="/products/voitex2"
-                className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+                className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
               >
                 製品概要
               </Link>
               <Link
                 href="/products/voitex2/onprem"
-                className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+                className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
               >
                 オンプレ詳細
               </Link>
               <Link
                 href="/products/voitex2/cloud"
-                className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+                className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
               >
                 クラウド詳細
               </Link>
               <Link
                 href="/products/compare"
-                className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+                className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
               >
                 比較ページ
               </Link>
@@ -87,28 +85,35 @@ export default function ProductsPage() {
           </section>
         </div>
 
-        <section className="mt-8 rounded-xl bg-white p-8 shadow-sm">
-          <h2 className="mb-4 text-2xl font-bold text-gray-900">
-            姉妹サービス
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-3">
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-900">姉妹サービス</h2>
+          <p className="mt-2 text-slate-600">
+            録音・要約サービスと組み合わせることで、業務全体を最適化できます。
+          </p>
+          <div className="grid gap-3 sm:grid-cols-4">
             <Link
               href="/quicksum"
-              className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+              className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
             >
               QuickSum
             </Link>
             <Link
               href="/voitex-rec"
-              className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+              className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
             >
               ボイテキレック！
             </Link>
             <Link
               href="/voitex-converter"
-              className="rounded-lg border px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-50"
+              className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
             >
               ボイテキコンバーター！
+            </Link>
+            <Link
+              href="/voitex-room-rec"
+              className="rounded-lg border border-slate-300 px-4 py-3 text-center text-slate-700 transition hover:bg-slate-50"
+            >
+              ボイテキルームレック！
             </Link>
           </div>
         </section>

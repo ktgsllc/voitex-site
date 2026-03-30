@@ -392,84 +392,97 @@ export default function FaqPage() {
   return (
     <>
       <StructuredData type="faq" />
-      <main className="p-8">
-        <h1 className="mb-6 text-3xl font-bold text-primary">よくあるご質問</h1>
-        <p className="mb-8 text-gray-500">
-          ボイテキ！製品ファミリー（ボイテキクラウド！・ボイテキオンプレ！）について、よくいただくご質問と回答をまとめています。
-        </p>
+      <main className="bg-slate-50 py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-2xl bg-slate-900 px-8 py-12 text-white">
+            <p className="text-sm tracking-[0.2em] text-blue-200">FAQ</p>
+            <h1 className="mt-3 text-4xl font-bold md:text-5xl">
+              よくあるご質問
+            </h1>
+            <p className="mt-4 max-w-3xl text-slate-200">
+              ボイテキ！製品ファミリーに関する主要な質問をカテゴリ別に整理しています。
+            </p>
+          </div>
 
-        {/* 検索フィールド */}
-        <div className="mb-6">
-          <input
-            type="text"
-            placeholder="キーワードで検索"
-            className="w-full rounded-md border p-2"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-
-        {/* カテゴリフィルター - ボタン形式 */}
-        <div className="mb-6">
-          <h3 className="mb-3 text-sm font-medium text-gray-700">
-            カテゴリで絞り込み
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-                selectedCategory === 'all'
-                  ? 'bg-primary text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              すべて
-            </button>
-            {availableCategories.map((category) => (
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <input
+              type="text"
+              placeholder="キーワードで検索"
+              className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-blue-500"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <div className="mt-4 flex flex-wrap gap-2">
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-                  selectedCategory === category
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                onClick={() => setSelectedCategory('all')}
+                className={`rounded-md px-4 py-2 text-sm font-medium transition ${
+                  selectedCategory === 'all'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
-                {category}
+                すべて
               </button>
-            ))}
-          </div>
-        </div>
-
-        {/* FAQ一覧 */}
-        {Object.entries(groupedFaqs).map(([category, items]) => (
-          <div key={category} className="mb-8">
-            <h2 className="mb-4 text-xl font-semibold text-gray-800">
-              {category}
-            </h2>
-            <div className="space-y-4">
-              {items.map((item) => (
-                <div
-                  key={item.id}
-                  className="rounded-lg border border-gray-200 p-4"
+              {availableCategories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`rounded-md px-4 py-2 text-sm font-medium transition ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  }`}
                 >
-                  <h3 className="mb-2 font-medium text-gray-900">
-                    {item.question}
-                  </h3>
-                  <p className="text-gray-600">{item.answer}</p>
-                </div>
+                  {category}
+                </button>
               ))}
             </div>
           </div>
-        ))}
 
-        {filteredFaqs.length === 0 && (
-          <div className="py-8 text-center">
-            <p className="text-gray-500">
-              該当する質問が見つかりませんでした。
+          {Object.entries(groupedFaqs).map(([category, items]) => (
+            <section key={category} className="mt-8">
+              <h2 className="text-2xl font-bold text-slate-900">{category}</h2>
+              <div className="mt-4 space-y-3">
+                {items.map((item) => (
+                  <details
+                    key={item.id}
+                    className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+                  >
+                    <summary className="cursor-pointer text-sm font-semibold text-slate-900">
+                      {item.question}
+                    </summary>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">
+                      {item.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          ))}
+
+          {filteredFaqs.length === 0 && (
+            <div className="mt-8 rounded-xl bg-white p-8 text-center">
+              <p className="text-slate-500">
+                該当する質問が見つかりませんでした。
+              </p>
+            </div>
+          )}
+
+          <div className="mt-8 rounded-2xl bg-blue-900 px-8 py-10 text-center text-white">
+            <h2 className="text-2xl font-bold">
+              解決しない場合は直接ご相談ください
+            </h2>
+            <p className="mt-3 text-blue-100">
+              要件に合わせて、導入パターンと運用方法をご案内します。
             </p>
+            <a
+              href="/contact"
+              className="mt-6 inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-900"
+            >
+              お問い合わせ
+            </a>
           </div>
-        )}
+        </div>
       </main>
     </>
   );

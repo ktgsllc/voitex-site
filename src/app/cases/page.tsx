@@ -12,180 +12,78 @@ export default function Page() {
   return (
     <>
       <StructuredData type="softwareApplication" />
-      <main className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-6xl text-center">
-            <h1 className="mb-6 text-3xl font-bold text-primary">導入事例</h1>
-
-            <div className="mb-8 rounded-xl bg-gray-50 p-8">
-              <h2 className="mb-4 text-2xl font-semibold text-gray-800">
-                現在の導入状況
-              </h2>
-              <p className="mb-6 text-lg leading-relaxed text-gray-700">
-                「ボイテキクラウド！」「ボイテキオンプレ！」は現在、以下の業種の企業様にて
-                <br />
-                <span className="font-semibold text-primary">
-                  トライアル導入
-                </span>
-                をいただいています。
-              </p>
-
-              <div className="mx-auto mb-6 grid max-w-4xl grid-cols-1 gap-4 text-left text-gray-800 sm:grid-cols-2 lg:grid-cols-3">
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">証券会社</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">生命保険会社</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">損害保険会社</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">弁護士事務所</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">税理士事務所</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">通信販売会社</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">不動産会社</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">建築業</span>
-                  </div>
-                </div>
-                <div className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="mb-2 flex items-center">
-                    <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                      ✓
-                    </div>
-                    <span className="font-medium">コールセンター事業社</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 rounded-lg bg-green-50 p-6">
-                <h3 className="mb-4 text-xl font-semibold text-green-800">
-                  トライアルでの期待される効果
-                </h3>
-                <p className="mb-4 text-green-700">
-                  現在実施中のトライアルでは、以下のような効果が期待されています：
-                </p>
-                <ul className="space-y-2 text-sm text-green-700">
-                  <li>
-                    •
-                    会話の品質が数値で見えるようになり、指導のポイントが明確になることが期待できます
-                  </li>
-                  <li>
-                    •
-                    顧客の感情が分かるようになり、クレームの予兆を早期に察知できる可能性があります
-                  </li>
-                  <li>
-                    •
-                    NGワード検出により、コンプライアンス違反を未然に防ぐことが期待できます
-                  </li>
-                </ul>
-                <p className="mt-4 text-xs text-green-600">
-                  ※ 本格導入後、実際の効果については随時更新いたします。
-                </p>
-              </div>
-
-              <p className="mb-6 text-sm text-gray-500">
-                ※ 実際にご導入いただいたお客様からのお声は、順次掲載予定です。
-              </p>
-            </div>
-
-            <div className="rounded-xl bg-blue-50 p-6">
-              <h3 className="mb-4 text-xl font-semibold text-blue-800">
-                導入事例を掲載予定
-              </h3>
-              <p className="mb-4 text-blue-700">
-                お客様のご協力をいただき、実際の導入事例や効果について
-                <br />
-                詳細なレポートを準備中です。
-              </p>
-              <p className="text-sm text-blue-600">
-                ・応対品質の向上効果
-                <br />
-                ・カスハラ対策への活用事例
-                <br />
-                ・業務効率化の実績
-                <br />
-                ・導入後の運用状況
-              </p>
-            </div>
-
-            <div className="mt-12 rounded-xl bg-gradient-to-r from-primary to-blue-600 p-8 text-white">
-              <h3 className="mb-4 text-2xl font-bold">
-                導入事例の掲載をご希望の方
-              </h3>
-              <p className="mb-6 text-lg opacity-90">
-                ボイテキクラウド！またはボイテキオンプレ！をご利用中の企業様で、
-                <br />
-                導入事例の掲載をご希望の方はお気軽にお問い合わせください。
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center rounded-lg bg-white px-8 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
-              >
-                お問い合わせ
-                <svg
-                  className="ml-2 h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
-            </div>
+      <main className="bg-slate-50 py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-2xl bg-slate-900 px-8 py-12 text-white">
+            <p className="text-sm tracking-[0.2em] text-blue-200">CASES</p>
+            <h1 className="mt-3 text-4xl font-bold md:text-5xl">
+              導入事例・対応業種
+            </h1>
+            <p className="mt-4 max-w-3xl text-slate-200">
+              ボイテキ！は、金融・士業・不動産・コールセンターなど、
+              多様な業種でトライアル導入が進んでいます。
+            </p>
           </div>
+
+          <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-slate-900">対応業種</h2>
+            <div className="mt-6 grid gap-3 md:grid-cols-3">
+              {[
+                '証券会社',
+                '生命保険会社',
+                '損害保険会社',
+                '弁護士事務所',
+                '税理士事務所',
+                '通信販売会社',
+                '不動産会社',
+                '建築業',
+                'コールセンター事業者',
+              ].map((industry) => (
+                <div
+                  key={industry}
+                  className="rounded-full border border-slate-300 px-4 py-2 text-center text-sm font-medium text-slate-700"
+                >
+                  {industry}
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mt-8 grid gap-6 lg:grid-cols-3">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">品質向上</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                会話品質を数値で可視化し、指導の属人化を減らす運用を支援。
+              </p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">リスク管理</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                NGワード検知・感情分析で、ハラスメントやクレーム兆候の早期把握を支援。
+              </p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">業務効率化</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                要約と検索の活用で、アフターコールワークや振り返り工数を削減。
+              </p>
+            </article>
+          </section>
+
+          <section className="mt-8 rounded-2xl bg-blue-900 px-8 py-10 text-center text-white">
+            <h2 className="text-2xl font-bold">
+              導入事例の掲載にご協力いただける企業様へ
+            </h2>
+            <p className="mt-3 text-blue-100">
+              活用背景・導入効果・運用体制を含めたケースとして掲載準備を進めています。
+            </p>
+            <a
+              href="/contact"
+              className="mt-6 inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-900 transition hover:bg-blue-50"
+            >
+              お問い合わせ
+            </a>
+          </section>
         </div>
       </main>
     </>

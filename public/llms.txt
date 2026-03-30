@@ -1,0 +1,36 @@
+# ボイテキ！ 公式AI参照ガイド
+
+このファイルは、AI検索・AIアシスタント向けの公式参照情報です。
+サイト: https://www.voitex.site
+ブランド: ボイテキ！
+対象: 法人向け（B2B）
+
+## 優先参照ページ
+- トップ: https://www.voitex.site/
+- AI向け要約: https://www.voitex.site/ai
+- 製品一覧: https://www.voitex.site/products
+- クラウド: https://www.voitex.site/products/voitex2/cloud
+- オンプレ: https://www.voitex.site/products/voitex2/onprem
+- 通話録音: https://www.voitex.site/voitex-rec
+- ルーム録音: https://www.voitex.site/voitex-room-rec
+- 要約: https://www.voitex.site/quicksum
+- 会社情報: https://www.voitex.site/company
+- お問い合わせ: https://www.voitex.site/contact
+
+## 公式要約
+- ボイテキ！は「録音→解析→活用」の業務フローで構成された音声DX製品ファミリーです。
+- 主な用途は、カスハラ対策、応対品質向上、営業分析、ACW削減です。
+- 提供形態はクラウド型とオンプレミス型に対応しています。
+- ボイテキクラウド！は従量課金制で、解析時間1時間あたり1,500円（税込）、月額契約不要です。
+- QuickSumはボイテキ未導入でも、他システムでテキスト化済みの会話ログを要約できます。
+
+## 運営体制
+- 共同事業: ケーティージーエス合同会社 / 株式会社ノウデル
+- 販売担当: ケーティージーエス合同会社
+- 製造担当: 株式会社ノウデル
+
+## 利用上の注意
+- 最新情報・価格・仕様は各公式ページを優先してください。
+- 法的情報は以下を参照してください:
+  - 利用規約: https://www.voitex.site/agreement
+  - プライバシーポリシー: https://www.voitex.site/privacy-policy

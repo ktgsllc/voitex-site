@@ -1,12 +1,6 @@
-'use client';
-
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import Image from 'next/image';
 import StructuredData from '@/components/StructuredData';
 
 export default function Features() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const features = [
     {
       id: 'file-upload',
@@ -153,199 +147,57 @@ export default function Features() {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
     <>
       <StructuredData type="softwareApplication" />
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-7xl">
-            <motion.div
-              className="mb-12 text-center"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="mb-4 text-3xl font-bold text-primary">
-                ボイテキクラウド！の機能一覧
-              </h2>
-              <p className="text-lg text-gray-600">
-                音声の可視化・分析・改善提案までを1つのサービスで完結。柔軟で強力なツール群をご紹介します。
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="grid gap-8 md:grid-cols-2"
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {features.map((feature, idx) => (
-                <motion.div
-                  key={feature.id}
-                  className="rounded-xl bg-gray-50 p-6 shadow transition-all duration-300 hover:scale-105 hover:shadow-md"
-                  variants={itemVariants}
-                >
-                  <div className="mb-4 flex items-start">
-                    <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      {idx + 1}
-                    </div>
-                    <h3 className="text-xl font-semibold text-primary">
-                      {feature.title}
-                    </h3>
-                  </div>
-
-                  {feature.image && (
-                    <div className="mb-4">
-                      <Image
-                        src={feature.image}
-                        alt={`${feature.title}の画面イメージ`}
-                        width={400}
-                        height={192}
-                        className="h-48 w-full cursor-pointer rounded-lg object-cover shadow-sm transition-opacity hover:opacity-80"
-                        onClick={() => setSelectedImage(feature.image)}
-                      />
-                    </div>
-                  )}
-
-                  <p className="mb-4 ml-11 text-gray-700">
-                    {feature.description}
-                  </p>
-                  <ul className="ml-11 list-inside list-disc space-y-1 text-sm text-gray-600">
-                    {feature.points.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </motion.div>
-
-            <motion.div
-              className="mt-16 rounded-xl bg-gradient-to-r from-primary to-blue-600 p-8 text-center text-white"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <h3 className="mb-4 text-2xl font-bold">
-                ボイテキクラウド！を導入しませんか？
-              </h3>
-              <p className="mb-6 text-lg opacity-90">
-                音声分析の可能性を体験してください。
-                <br />
-                専門スタッフが丁寧にサポートいたします。
-              </p>
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
-                >
-                  デモを申し込む
-                  <svg
-                    className="ml-2 h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary"
-                >
-                  お問い合わせ
-                  <svg
-                    className="ml-2 h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </motion.div>
+      <main className="bg-slate-50 py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-2xl bg-slate-900 px-8 py-12 text-white">
+            <p className="text-sm tracking-[0.2em] text-blue-200">FEATURES</p>
+            <h1 className="mt-3 text-4xl font-bold md:text-5xl">機能一覧</h1>
+            <p className="mt-4 max-w-3xl text-slate-200">
+              音声の収集から解析、評価、可視化、運用改善までを一気通貫でカバーします。
+            </p>
           </div>
-        </div>
 
-        {/* 画像拡大モーダル */}
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedImage(null)}
-            >
-              <motion.div
-                className="relative max-h-full max-w-7xl"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                onClick={(e) => e.stopPropagation()}
+          <section className="mt-8 grid gap-5 md:grid-cols-2">
+            {features.map((feature, idx) => (
+              <article
+                key={feature.id}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
-                <Image
-                  src={selectedImage}
-                  alt="拡大表示"
-                  width={800}
-                  height={600}
-                  className="h-auto max-h-[98vh] w-full rounded-lg object-contain shadow-2xl"
-                />
-                <button
-                  onClick={() => setSelectedImage(null)}
-                  className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-90 text-gray-800 shadow-lg transition-all duration-200 hover:bg-opacity-100"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </section>
+                <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                  {idx + 1}
+                </div>
+                <h2 className="text-xl font-bold text-slate-900">
+                  {feature.title}
+                </h2>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {feature.description}
+                </p>
+                <ul className="mt-4 space-y-1 text-sm text-slate-700">
+                  {feature.points.map((point, i) => (
+                    <li key={i}>・{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </section>
+
+          <section className="mt-8 rounded-2xl bg-blue-900 px-8 py-10 text-center text-white">
+            <h2 className="text-2xl font-bold">導入前の機能相談も可能です</h2>
+            <p className="mt-3 text-blue-100">
+              業種・目的に合わせて、必要な機能セットを提案します。
+            </p>
+            <a
+              href="/contact"
+              className="mt-6 inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-900 transition hover:bg-blue-50"
+            >
+              お問い合わせ
+            </a>
+          </section>
+        </div>
+      </main>
     </>
   );
 }
