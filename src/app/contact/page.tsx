@@ -200,12 +200,12 @@ export default function Page() {
                 htmlFor="00NNn00000CosSv"
                 className="mb-2 block text-sm font-medium text-slate-700"
               >
-                Web流入元詳細
+                お問い合わせ製品
               </label>
               <select
                 id="00NNn00000CosSv"
                 name="00NNn00000CosSv"
-                title="Web流入元詳細"
+                title="お問い合わせ製品"
                 defaultValue=""
                 className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               >
