@@ -3,8 +3,8 @@ import Script from 'next/script';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
-  'お問い合わせ｜ボイテキクラウド！・ボイテキオンプレ！',
-  'ボイテキクラウド！とボイテキオンプレ！に関するお問い合わせページです。導入相談、デモ、料金、活用方法までお気軽にご相談ください。',
+  'お問い合わせ｜ボイテキシリーズ！',
+  'ボイテキシリーズ！に関するお問い合わせページです。導入相談、デモ、料金、活用方法までお気軽にご相談ください。',
   '/contact'
 );
 

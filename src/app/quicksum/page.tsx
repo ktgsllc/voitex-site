@@ -31,9 +31,7 @@ export default function QuickSumPage() {
               通話後の記録、
               <br />
               もう
-              <span className="text-[#7dd3d8]">
-                迷わない。
-              </span>
+              <span className="text-[#7dd3d8]">迷わない。</span>
             </h1>
             <p className="mt-4 text-slate-100">
               テキスト化された会話をプロンプト指定で即座に要約。
