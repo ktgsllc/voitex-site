@@ -20,63 +20,36 @@ export default function Page() {
           function timestamp() {
             var response = document.getElementById("g-recaptcha-response");
             if (response == null || response.value.trim() === "") {
-              var settingsFields = document.getElementsByName("captcha_settings");
-              if (!settingsFields || settingsFields.length === 0) return;
-
+              var fields = document.getElementsByName("captcha_settings");
+              if (!fields || !fields[0]) return;
               try {
-                var elems = JSON.parse(settingsFields[0].value || "{}");
+                var elems = JSON.parse(fields[0].value);
                 elems["ts"] = JSON.stringify(new Date().getTime());
-                settingsFields[0].value = JSON.stringify(elems);
-              } catch (error) {
-                console.warn("captcha_settings parse failed", error);
-              }
+                fields[0].value = JSON.stringify(elems);
+              } catch (e) {}
             }
           }
           setInterval(timestamp, 500);
 
-          (function resolveWebSource() {
-            var defaultSource = "ボイテキ！サイト";
+          (function preselectWebSourceFromQuery() {
             var map = {
-              top: "ボイテキ！サイト",
               fujirag: "FUJIRAG",
-              corp: "コーポレートページ",
               cloud: "ボイテキクラウド！",
               onprem: "ボイテキオンプレ！",
               rec: "ボイテキレック！",
               roomrec: "ボイテキルームレック！",
               quicksum: "QuickSUM"
             };
-            var query = new URLSearchParams(window.location.search);
-            var sourceKey = query.get("source");
-            var source = map[sourceKey || ""] || "";
-
-            var hiddenField = document.getElementById("web_source_detail");
-            var selectWrap = document.getElementById("web_source_selector_wrap");
-            var select = document.getElementById("web_source_selector");
-            var form = document.querySelector('form[action*="servlet.WebToLead"]');
-
-            if (!hiddenField) return;
-            hiddenField.value = defaultSource;
-
-            if (source) {
-              hiddenField.value = source;
-              if (selectWrap) selectWrap.classList.add("hidden");
-            } else {
-              if (selectWrap) selectWrap.classList.remove("hidden");
-              if (select) {
-                select.required = true;
-                select.addEventListener("change", function (event) {
-                  var value = event.target && event.target.value ? event.target.value : "";
-                  hiddenField.value = value;
-                });
+            var key = new URLSearchParams(window.location.search).get("source");
+            var value = map[key || ""] || "";
+            if (!value) return;
+            var sel = document.getElementById("00NNn00000CosSv");
+            if (!sel || sel.tagName !== "SELECT") return;
+            for (var i = 0; i < sel.options.length; i++) {
+              if (sel.options[i].value === value) {
+                sel.selectedIndex = i;
+                break;
               }
-            }
-
-            if (form) {
-              form.addEventListener("submit", function () {
-                var value = (hiddenField.value || "").trim();
-                if (!value) hiddenField.value = defaultSource;
-              });
             }
           })();
         `}
@@ -108,14 +81,7 @@ export default function Page() {
             <input
               type="hidden"
               name="retURL"
-              value="https://www.voitex.site/thanks?source=contact"
-            />
-            <input type="hidden" name="lead_source" value="Web" />
-            <input
-              type="hidden"
-              id="web_source_detail"
-              name="00NNn00000CosSv"
-              value=""
+              value="https://www.voitex.site/thanks"
             />
 
             <div>
@@ -127,9 +93,9 @@ export default function Page() {
               </label>
               <input
                 id="company"
+                maxLength={40}
                 name="company"
                 type="text"
-                required
                 className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
             </div>
@@ -143,6 +109,7 @@ export default function Page() {
               </label>
               <input
                 id="state"
+                maxLength={20}
                 name="state"
                 type="text"
                 className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
@@ -158,42 +125,43 @@ export default function Page() {
               </label>
               <input
                 id="city"
+                maxLength={40}
                 name="city"
                 type="text"
                 className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              <div>
-                <label
-                  htmlFor="first_name"
-                  className="mb-2 block text-sm font-medium text-slate-700"
-                >
-                  名
-                </label>
-                <input
-                  id="first_name"
-                  name="first_name"
-                  type="text"
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="last_name"
-                  className="mb-2 block text-sm font-medium text-slate-700"
-                >
-                  姓 <span className="text-rose-600">*</span>
-                </label>
-                <input
-                  id="last_name"
-                  name="last_name"
-                  type="text"
-                  required
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
+            <div>
+              <label
+                htmlFor="last_name"
+                className="mb-2 block text-sm font-medium text-slate-700"
+              >
+                姓
+              </label>
+              <input
+                id="last_name"
+                maxLength={80}
+                name="last_name"
+                type="text"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="first_name"
+                className="mb-2 block text-sm font-medium text-slate-700"
+              >
+                名
+              </label>
+              <input
+                id="first_name"
+                maxLength={40}
+                name="first_name"
+                type="text"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
             </div>
 
             <div>
@@ -201,13 +169,13 @@ export default function Page() {
                 htmlFor="email"
                 className="mb-2 block text-sm font-medium text-slate-700"
               >
-                メールアドレス <span className="text-rose-600">*</span>
+                メール
               </label>
               <input
                 id="email"
+                maxLength={80}
                 name="email"
-                type="email"
-                required
+                type="text"
                 className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
             </div>
@@ -217,34 +185,32 @@ export default function Page() {
                 htmlFor="description"
                 className="mb-2 block text-sm font-medium text-slate-700"
               >
-                説明 <span className="text-rose-600">*</span>
+                説明
               </label>
               <textarea
                 id="description"
                 name="description"
                 rows={6}
-                required
                 className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
             </div>
 
-            <div id="web_source_selector_wrap" className="hidden">
+            <div>
               <label
-                htmlFor="web_source_selector"
+                htmlFor="00NNn00000CosSv"
                 className="mb-2 block text-sm font-medium text-slate-700"
               >
-                お問い合わせ製品 <span className="text-rose-600">*</span>
+                Web流入元詳細
               </label>
               <select
-                id="web_source_selector"
-                title="お問い合わせ製品"
+                id="00NNn00000CosSv"
+                name="00NNn00000CosSv"
+                title="Web流入元詳細"
                 defaultValue=""
                 className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               >
-                <option value="">選択してください</option>
-                <option value="ボイテキ！サイト">ボイテキ！サイト</option>
+                <option value="">--なし--</option>
                 <option value="FUJIRAG">FUJIRAG</option>
-                <option value="コーポレートページ">コーポレートページ</option>
                 <option value="ボイテキクラウド！">ボイテキクラウド！</option>
                 <option value="ボイテキオンプレ！">ボイテキオンプレ！</option>
                 <option value="ボイテキレック！">ボイテキレック！</option>
@@ -253,9 +219,6 @@ export default function Page() {
                 </option>
                 <option value="QuickSUM">QuickSUM</option>
               </select>
-              <p className="mt-2 text-xs text-slate-500">
-                グローバルメニュー経由のお問い合わせでは、対象製品を選択してください。
-              </p>
             </div>
 
             <div
@@ -263,21 +226,9 @@ export default function Page() {
               data-sitekey="6Lccip0sAAAAAGsS9gqyGyx8KnJJbwJKKWRHxlup"
             ></div>
 
-            <label className="block text-xs leading-6 text-slate-500">
-              <input type="checkbox" required className="mr-2 align-middle" />
-              <a
-                href="https://ktgs.llc/privacy-policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2"
-              >
-                プライバシーポリシー
-              </a>
-              に同意のうえ送信します。
-            </label>
-
             <button
               type="submit"
+              name="submit"
               className="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 md:w-auto"
             >
               送信する
