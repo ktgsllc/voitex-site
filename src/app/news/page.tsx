@@ -11,11 +11,21 @@ export const metadata: Metadata = generateMetadata(
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '11',
+    title:
+      '📣 【お知らせ】ボイテキクラウド！料金改定のご案内（2026年5月1日より）',
+    date: '2026-04-20',
+    category: 'お知らせ',
+    pinned: true,
+    excerpt:
+      '2026年5月1日より、ボイテキクラウド！の月額基本料を¥0から¥5,000（税抜）へ改定いたします。解析1時間あたり1,500円（税抜）の従量課金は据え置き、初期費用・解約違約金はゼロを継続します。',
+    slug: 'voitex-cloud-pricing-revision-2026-05',
+  },
+  {
     id: '10',
     title: '📢 2026年4月「ボイテキオンプレ！」リリース予定のお知らせ',
     date: '2026-03-19',
     category: 'リリース',
-    pinned: true,
     excerpt:
       'オンプレミス環境向け新製品「ボイテキオンプレ！」を2026年4月にリリース予定です。通話音声の要点・感情・リスク兆候の可視化を、閉域運用や統制要件に対応した形で提供します。',
     slug: 'voitex-onprem-release-scheduled-2026-04',
@@ -113,12 +123,14 @@ const categoryStyle: Record<string, string> = {
   リリース: 'bg-emerald-100 text-emerald-800',
   アップデート: 'bg-blue-100 text-blue-800',
   セキュリティ: 'bg-amber-100 text-amber-800',
+  お知らせ: 'bg-slate-200 text-slate-800',
 };
 
 const categoryLabelMap: Record<string, string> = {
   リリース: '製品リリース',
   アップデート: '機能改善',
   セキュリティ: 'セキュリティ情報',
+  お知らせ: 'お知らせ',
 };
 
 export default function NewsPage() {

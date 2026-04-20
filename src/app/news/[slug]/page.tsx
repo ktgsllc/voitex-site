@@ -8,6 +8,114 @@ import NewsDetailClient from './NewsDetailClient';
 // ハードコーディングされたニュースデータ
 const newsData = [
   {
+    id: '11',
+    title:
+      '📣 【お知らせ】ボイテキクラウド！料金改定のご案内（2026年5月1日より）',
+    date: '2026-04-20',
+    category: 'お知らせ',
+    excerpt:
+      '2026年5月1日より、ボイテキクラウド！の月額基本料を¥0から¥5,000（税抜）へ改定いたします。解析1時間あたり1,500円（税抜）の従量課金は据え置き、初期費用・解約違約金はゼロを継続します。',
+    slug: 'voitex-cloud-pricing-revision-2026-05',
+    content: `
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">📣 料金改定のお知らせ</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          平素より「ボイテキクラウド！」をご愛顧いただき、誠にありがとうございます。
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          このたび、基盤AIおよびクラウドインフラの仕入原価の上昇を受け、サービスを安定的にご提供し続けるために、
+          <strong>2026年5月1日（金）</strong>より<strong>ボイテキクラウド！の月額基本料</strong>を以下のとおり改定させていただくこととなりました。
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          従量課金の単価、初期費用、解約違約金、無料トライアル、標準エンジン無料といった従来からの料金上のお約束は、引き続きこれまで通り維持してまいります。
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">💴 改定内容</h2>
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+          <table class="w-full text-left text-gray-700">
+            <thead>
+              <tr class="border-b border-blue-200">
+                <th class="py-2 pr-4">項目</th>
+                <th class="py-2 pr-4">現行</th>
+                <th class="py-2">改定後（2026年5月1日〜）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-blue-100">
+                <td class="py-2 pr-4 font-medium">月額基本料</td>
+                <td class="py-2 pr-4">¥0</td>
+                <td class="py-2"><strong>¥5,000（税抜）</strong></td>
+              </tr>
+              <tr class="border-b border-blue-100">
+                <td class="py-2 pr-4 font-medium">解析時間 1時間あたり</td>
+                <td class="py-2 pr-4">¥1,500（税抜）</td>
+                <td class="py-2">¥1,500（税抜）<span class="text-xs text-gray-500">（据え置き）</span></td>
+              </tr>
+              <tr class="border-b border-blue-100">
+                <td class="py-2 pr-4 font-medium">初期費用</td>
+                <td class="py-2 pr-4">¥0</td>
+                <td class="py-2">¥0 <span class="text-xs text-gray-500">（据え置き）</span></td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4 font-medium">解約違約金</td>
+                <td class="py-2 pr-4">¥0</td>
+                <td class="py-2">¥0 <span class="text-xs text-gray-500">（据え置き）</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-sm text-gray-600">※ 表示価格はすべて税抜です。</p>
+      </div>
+
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">📅 適用日と対象</h2>
+        <div class="bg-gradient-to-r from-slate-50 to-gray-50 p-6 rounded-lg border border-slate-200">
+          <ul class="space-y-2 text-gray-700">
+            <li>・<strong>適用開始日:</strong> 2026年5月1日（金）</li>
+            <li>・<strong>対象:</strong> 新規ご契約・既存ご契約いずれも、2026年5月ご利用分より新料金を適用させていただきます</li>
+            <li>・<strong>既存のお客様:</strong> すでに個別にご案内の上、ご了承をいただいております。改めて契約書の改定手続きは発生しません</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">🛡️ 改定の背景</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          音声解析基盤として利用する外部AIサービスおよびクラウドインフラの利用料が、継続的に上昇傾向にあります。
+          これまでは月額基本料を無料とする形でご提供してまいりましたが、サービス品質と提供体制を中長期にわたり安定的に維持するため、最低限の月額基本料を設定させていただくこととなりました。
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          従量課金の単価（1時間あたり1,500円・税抜）については据え置きとしており、従量課金に外部AIサービスの利用料が含まれる点にも変更はございません。
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">✅ 従来どおり変わらないこと</h2>
+        <div class="bg-gradient-to-r from-emerald-50 to-green-50 p-6 rounded-lg border border-emerald-200">
+          <ul class="space-y-2 text-gray-700">
+            <li>・初期費用は引き続き<strong>¥0</strong></li>
+            <li>・解約違約金は引き続き<strong>¥0</strong>（いつでも解約可能）</li>
+            <li>・無料トライアル（導入前のお試しご利用）は継続</li>
+            <li>・標準エンジンは引き続き無料でご利用いただけます</li>
+            <li>・国内データセンターでの処理・専任スタッフによるサポート体制も継続</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-primary to-blue-700 p-8 rounded-lg text-white">
+        <h3 class="text-2xl font-bold mb-3">ご不明点はお気軽にお問い合わせください</h3>
+        <p class="text-blue-100 leading-relaxed mb-4">
+          料金改定や契約内容に関するご質問は、問い合わせフォームよりご連絡ください。専任スタッフが丁寧にご案内します。
+        </p>
+        <a href="/contact" class="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-900 transition hover:bg-blue-50">
+          お問い合わせはこちら
+        </a>
+      </div>
+    `,
+  },
+  {
     id: '10',
     title: '📢 2026年4月「ボイテキオンプレ！」リリース予定のお知らせ',
     date: '2026-03-19',
@@ -1637,6 +1745,7 @@ const categoryLabelMap: Record<string, string> = {
   リリース: '製品リリース',
   アップデート: '機能改善',
   セキュリティ: 'セキュリティ情報',
+  お知らせ: 'お知らせ',
 };
 
 // 動的メタデータ生成

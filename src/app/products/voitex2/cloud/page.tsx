@@ -4,7 +4,7 @@ import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   'ボイテキクラウド！— まず使ってみる。すぐ、効果が出る。| ボイテキ！',
-  '音声ファイルをアップロードするだけ。感情分析・NGワード検知・品質スコアリングを即日開始。月額契約不要、従量課金1,500円/時間で投資リスクゼロ。',
+  '音声ファイルをアップロードするだけ。感情分析・NGワード検知・品質スコアリングを即日開始。月額基本料5,000円＋解析1時間あたり1,500円（税抜）、初期費用・違約金ゼロ。',
   '/products/voitex2/cloud'
 );
 
@@ -37,7 +37,7 @@ const issues = [
   [
     '💰',
     '導入コストが読めない',
-    '月額固定費ゼロ。1,500円/時間の従量課金で、使った分だけ。投資対効果を管理しやすい。',
+    '月額基本料5,000円＋1,500円/時間の従量課金（税抜）。初期費用・違約金ゼロで、投資対効果を管理しやすい。',
   ],
 ] as const;
 
@@ -107,7 +107,7 @@ export default function Voitex2CloudPage() {
             <br />
             感情分析・NGワード検知・品質スコアリングを即日開始。
             <br />
-            月額契約不要、従量課金で投資リスクゼロ。
+            月額基本料5,000円＋従量課金、初期費用・違約金ゼロ。
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
@@ -269,24 +269,58 @@ export default function Voitex2CloudPage() {
           <p className="mt-2 text-sm text-slate-600">
             本ページはボイテキクラウド！の料金です。
             <br />
-            従量課金制で、使った分だけお支払いいただきます。
+            月額基本料＋解析時間に応じた従量課金のシンプルな料金体系です。
             <br />
-            月額契約不要、トライアル利用も可能です。
+            初期費用・解約違約金はゼロ、トライアル利用も可能です。
+          </p>
+          <p className="mt-2 text-xs text-slate-500">
+            ※ 2026年5月1日より月額基本料を改定しました。詳細は
+            <Link
+              href="/news/voitex-cloud-pricing-revision-2026-05"
+              className="underline underline-offset-2 hover:text-slate-700"
+            >
+              料金改定のお知らせ
+            </Link>
+            をご確認ください。
           </p>
 
           <h3 className="mt-8 text-lg font-bold text-slate-900">基本料金</h3>
           <p className="mt-2 text-sm text-slate-600">
-            解析時間に応じた従量課金制
+            月額基本料＋解析時間に応じた従量課金（表示価格はすべて税抜）
           </p>
 
-          <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-xs font-semibold text-slate-500">月額基本料</p>
+              <p className="mt-1 text-sm font-medium text-slate-700">
+                ご利用開始月から毎月
+              </p>
+              <p className="mt-2 text-2xl font-bold text-slate-900">¥5,000</p>
+              <p className="mt-1 text-xs text-slate-600">税抜/月</p>
+            </article>
             <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-xs font-semibold text-slate-500">解析時間</p>
               <p className="mt-1 text-sm font-medium text-slate-700">
                 音声解析時間 1時間あたり
               </p>
               <p className="mt-2 text-2xl font-bold text-slate-900">¥1,500</p>
-              <p className="mt-1 text-xs text-slate-600">税込/時間</p>
+              <p className="mt-1 text-xs text-slate-600">税抜/時間</p>
+            </article>
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-xs font-semibold text-slate-500">初期費用</p>
+              <p className="mt-1 text-sm font-medium text-slate-700">
+                導入時に一切かかりません
+              </p>
+              <p className="mt-2 text-2xl font-bold text-slate-900">¥0</p>
+              <p className="mt-1 text-xs text-slate-600">不要</p>
+            </article>
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <p className="text-xs font-semibold text-slate-500">解約違約金</p>
+              <p className="mt-1 text-sm font-medium text-slate-700">
+                いつでも解約可能
+              </p>
+              <p className="mt-2 text-2xl font-bold text-slate-900">¥0</p>
+              <p className="mt-1 text-xs text-slate-600">違約金なし</p>
             </article>
             <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
               <p className="text-xs font-semibold text-slate-500">
@@ -308,24 +342,16 @@ export default function Voitex2CloudPage() {
               <p className="mt-2 text-2xl font-bold text-slate-900">別途見積</p>
               <p className="mt-1 text-xs text-slate-600">ご相談ください</p>
             </article>
-            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-              <p className="text-xs font-semibold text-slate-500">月額費用</p>
-              <p className="mt-1 text-sm font-medium text-slate-700">
-                基本料金
-              </p>
-              <p className="mt-2 text-2xl font-bold text-slate-900">¥0</p>
-              <p className="mt-1 text-xs text-slate-600">月額契約不要</p>
-            </article>
           </div>
 
           <h3 className="mt-8 text-lg font-bold text-slate-900">料金の特徴</h3>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {[
               [
-                '従量課金制',
-                '実際の解析時間に応じて請求。1時間50分なら1時間分の料金',
+                '基本料＋従量のシンプル設計',
+                '月額基本料5,000円＋実際の解析時間に応じた従量課金',
               ],
-              ['月額契約不要', '固定費用なし。必要な時だけ利用'],
+              ['初期費用ゼロ', '導入コストなし。すぐに始められます'],
               ['トライアル対応', '導入前に無料でお試しいただけます'],
               [
                 '標準エンジン無料',
@@ -358,8 +384,9 @@ export default function Voitex2CloudPage() {
                 営業部門が10名程度、またはコールセンターが20名程度の企業
               </p>
               <p className="mt-3 text-xl font-bold text-slate-900">
-                月額: ¥150,000（税込）
+                月額: ¥150,000（税抜）
               </p>
+              <p className="mt-1 text-xs text-slate-600">＋ 基本料 ¥5,000</p>
             </article>
             <article className="rounded-lg border border-slate-200 bg-white p-4">
               <p className="text-sm font-semibold text-slate-900">
@@ -371,8 +398,9 @@ export default function Voitex2CloudPage() {
                 営業部門が30-50名程度、またはコールセンターが50-100名程度の企業
               </p>
               <p className="mt-3 text-xl font-bold text-slate-900">
-                月額: ¥750,000（税込）
+                月額: ¥750,000（税抜）
               </p>
+              <p className="mt-1 text-xs text-slate-600">＋ 基本料 ¥5,000</p>
             </article>
             <article className="rounded-lg border border-slate-200 bg-white p-4">
               <p className="text-sm font-semibold text-slate-900">
@@ -384,8 +412,9 @@ export default function Voitex2CloudPage() {
                 営業部門が100名以上、またはコールセンターが100名以上の企業
               </p>
               <p className="mt-3 text-xl font-bold text-slate-900">
-                月額: ¥1,500,000（税込）
+                月額: ¥1,500,000（税抜）
               </p>
+              <p className="mt-1 text-xs text-slate-600">＋ 基本料 ¥5,000</p>
             </article>
           </div>
 
@@ -455,7 +484,7 @@ export default function Voitex2CloudPage() {
             </Link>
           </div>
           <div className="mt-5 flex flex-wrap justify-center gap-2 text-xs">
-            {['法人のみ', '月額契約不要', '国内サーバー', '専任サポート'].map(
+            {['法人のみ', '初期費用ゼロ', '国内サーバー', '専任サポート'].map(
               (x) => (
                 <span key={x} className="rounded-full bg-white/10 px-3 py-1">
                   {x}

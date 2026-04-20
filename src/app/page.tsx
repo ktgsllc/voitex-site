@@ -79,6 +79,12 @@ const industries = [
 
 const topNewsItems = [
   {
+    date: '2026-04-20',
+    title: '【お知らせ】ボイテキクラウド！料金改定のご案内（2026年5月1日より）',
+    href: '/news/voitex-cloud-pricing-revision-2026-05',
+    category: 'お知らせ',
+  },
+  {
     date: '2026-03-19',
     title: '2026年4月「ボイテキオンプレ！」リリース予定のお知らせ',
     href: '/news/voitex-onprem-release-scheduled-2026-04',
@@ -296,7 +302,7 @@ export default function Home() {
                   ボイテキクラウド！
                 </p>
                 <p className="mt-1 text-xs text-slate-600">
-                  クラウド型・従量課金。月額不要で即日から使える音声AI解析サービス。
+                  クラウド型・基本料金＋従量課金。初期費用ゼロで即日から使える音声AI解析サービス。
                 </p>
                 <p className="mt-3 inline-flex items-center gap-1 rounded-md bg-[var(--brand-cta-subtle)] px-2.5 py-1 text-xs font-semibold text-[var(--brand-accent)]">
                   クリックして詳細を見る
@@ -520,7 +526,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs">
-            {['法人のみ', '月額契約不要', '国内サーバー', '専任サポート'].map(
+            {['法人のみ', '初期費用ゼロ', '国内サーバー', '専任サポート'].map(
               (x) => (
                 <span key={x} className="rounded-full bg-white/10 px-3 py-1">
                   {x}

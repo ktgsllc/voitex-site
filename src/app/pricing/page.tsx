@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import StructuredData from '@/components/StructuredData';
 import { generateMetadata } from '@/libs/seo';
 
 export const metadata: Metadata = generateMetadata(
   '料金・導入について｜ボイテキクラウド！',
-  'ボイテキ！製品ファミリーのうち、ボイテキクラウド！の料金ページです。従量課金制で必要な分だけ利用でき、オンプレ導入は比較ページから確認できます。',
+  'ボイテキ！製品ファミリーのうち、ボイテキクラウド！の料金ページです。月額基本料5,000円＋解析1時間あたり1,500円（税抜）の従量課金。初期費用・解約違約金はゼロ。',
   '/pricing'
 );
 
@@ -20,24 +21,47 @@ export default function Page() {
               料金・導入について
             </h1>
             <p className="mt-4 max-w-3xl text-slate-200">
-              ボイテキクラウド！は従量課金制です。月額契約不要で、必要な分だけ利用できます。
+              ボイテキクラウド！は「月額基本料＋従量課金」のシンプルな料金体系です。初期費用・解約違約金はゼロ、標準エンジンは無料でご利用いただけます。
+            </p>
+            <p className="mt-2 max-w-3xl text-xs text-blue-200">
+              ※ 2026年5月1日より月額基本料を改定しました。詳細は
+              <Link
+                href="/news/voitex-cloud-pricing-revision-2026-05"
+                className="underline underline-offset-2 hover:text-white"
+              >
+                料金改定のお知らせ
+              </Link>
+              をご確認ください。
             </p>
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-slate-900">基本料金</h2>
+              <p className="mt-2 text-xs text-slate-500">
+                表示価格はすべて税抜です。
+              </p>
               <div className="mt-6 space-y-3">
+                <div className="flex items-center justify-between rounded-xl bg-blue-50 p-4">
+                  <p className="font-medium text-slate-800">月額基本料</p>
+                  <p className="text-xl font-bold text-blue-700">
+                    ¥5,000（税抜）
+                  </p>
+                </div>
                 <div className="flex items-center justify-between rounded-xl bg-blue-50 p-4">
                   <p className="font-medium text-slate-800">
                     解析時間 1時間あたり
                   </p>
                   <p className="text-xl font-bold text-blue-700">
-                    ¥1,500（税込）
+                    ¥1,500（税抜）
                   </p>
                 </div>
                 <div className="flex items-center justify-between rounded-xl bg-slate-50 p-4">
-                  <p className="font-medium text-slate-800">月額基本料</p>
+                  <p className="font-medium text-slate-800">初期費用</p>
+                  <p className="font-bold text-slate-700">¥0</p>
+                </div>
+                <div className="flex items-center justify-between rounded-xl bg-slate-50 p-4">
+                  <p className="font-medium text-slate-800">解約違約金</p>
                   <p className="font-bold text-slate-700">¥0</p>
                 </div>
                 <div className="flex items-center justify-between rounded-xl bg-slate-50 p-4">
@@ -76,24 +100,27 @@ export default function Page() {
                 <h3 className="font-semibold text-slate-900">
                   小規模（100時間/月）
                 </h3>
-                <p className="mt-2 text-sm text-slate-600">月額目安</p>
+                <p className="mt-2 text-sm text-slate-600">月額目安（税抜）</p>
                 <p className="mt-1 text-xl font-bold text-blue-700">¥150,000</p>
+                <p className="mt-1 text-xs text-slate-600">＋ 基本料 ¥5,000</p>
               </article>
               <article className="rounded-xl bg-slate-50 p-5">
                 <h3 className="font-semibold text-slate-900">
                   中規模（500時間/月）
                 </h3>
-                <p className="mt-2 text-sm text-slate-600">月額目安</p>
+                <p className="mt-2 text-sm text-slate-600">月額目安（税抜）</p>
                 <p className="mt-1 text-xl font-bold text-blue-700">¥750,000</p>
+                <p className="mt-1 text-xs text-slate-600">＋ 基本料 ¥5,000</p>
               </article>
               <article className="rounded-xl bg-slate-50 p-5">
                 <h3 className="font-semibold text-slate-900">
                   大規模（1000時間/月）
                 </h3>
-                <p className="mt-2 text-sm text-slate-600">月額目安</p>
+                <p className="mt-2 text-sm text-slate-600">月額目安（税抜）</p>
                 <p className="mt-1 text-xl font-bold text-blue-700">
                   ¥1,500,000
                 </p>
+                <p className="mt-1 text-xs text-slate-600">＋ 基本料 ¥5,000</p>
               </article>
             </div>
           </section>
